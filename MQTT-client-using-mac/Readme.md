@@ -67,7 +67,9 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/co
       }
 ```      
 
-6) [Download connection kit]를 선택하여 "connect_device_package.zip" 파일을 적당한 폴더에 다운로드하고 압축을 풉니다. 
+6) [Download connection kit]를 선택하여 "connect_device_package.zip" 파일을 적당한 폴더에 다운로드하고 압축을 풉니다. 압축을 풀면 아래와 같은 파일들이 있음을 확인 할 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/167256956-31bc75e7-8368-494d-bc59-f42b57aaaa02.png)
 
 7) command로 아래와 같이 다운로드한 폴더로 이동하여, "chmod +x start.sh" 명령어로 "start.sh"를 실행가능하도록 퍼미션을 변경합니다. 
 
@@ -131,6 +133,21 @@ from topic:
 sdk/test/Python
 --------------
 ```
+
+
+## 실제적인 동작
+
+"start.sh"파일을 열면 실제적인 실행은 아래 명령어로 이루어짐을 알 수 있습니다. 
+
+```c
+python aws-iot-device-sdk-python/samples/basicPubSub/basicPubSub.py -e abcdefghijk-ats.iot.ap-northeast-2.amazonaws.com -r root-CA.crt -c mymac.cert.pem -k mymac.private.key
+```
+
+여기에 대한 상세한 설명은 [Use your Windows or Linux PC or Mac as an AWS IoT device](https://docs.aws.amazon.com/iot/latest/developerguide/using-laptop-as-device.html)을 참고합니다. 
+
+상기 명령어의 "abcdefghijk-ats.iot.ap-northeast-2.amazonaws.com"은 iot endpoint로서 [IoT Console] - [Settings] - [Device data endpoint]에서 아래와 같이 확인 할 수 있습니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167257301-6457f0d3-974b-4076-9da6-24568bbb188b.png)
 
 
 # Trouble Shooting
