@@ -132,6 +132,39 @@ sdk/test/Python
 --------------
 ```
 
+
+# Trouble Shooting
+
+## Failed to build awscrt
+
+"Failed to build awscrt"에러 발생시 [AWS CRT Python](https://pypi.org/project/awscrt/)에 따라 아래와 같이 설치를 진행합니다.
+
+```c
+git clone https://github.com/awslabs/aws-crt-python.git
+cd aws-crt-python
+git submodule update --init
+python3 -m pip install .
+```
+
+## CMake executable is not found
+
+"CMake executable is not found"에러시 [npm install failed - CMake executable is not found](https://github.com/cmusphinx/node-pocketsphinx/issues/24)에 따라서 아래처럼 설치 합니다. 
+
+```c
+brew install cmake
+```
+
+## ModuleNotFoundError: No module named 'AWSIoTPythonSDK'
+
+[AWS IoT Device SDK for Python](https://github.com/aws/aws-iot-device-sdk-python)에 따라 아래와 같이 설치를 진행합니다. 
+
+```c
+git clone https://github.com/aws/aws-iot-device-sdk-python.git
+cd aws-iot-device-sdk-python
+python setup.py install
+```
+
+
 ## Reference 
 
 [Use your Windows or Linux PC or Mac as an AWS IoT device](https://docs.aws.amazon.com/iot/latest/developerguide/using-laptop-as-device.html)
