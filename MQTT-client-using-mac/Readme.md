@@ -147,6 +147,11 @@ python aws-iot-device-sdk-python/samples/basicPubSub/basicPubSub.py \
         -k mymac.private.key
 ```
 
+여기에 대한 상세한 설명은 [Use your Windows or Linux PC or Mac as an AWS IoT device](https://docs.aws.amazon.com/iot/latest/developerguide/using-laptop-as-device.html)을 참고합니다.
+
+
+## 실행하는 코드 분석
+
 [basicPubSub.py](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/MQTT-client-using-mac/basicPubSub/basicPubSub.py)의 주요 내용은 아래와 같습니다.
 
 MQTT connection을 연결합니다. 
@@ -177,10 +182,10 @@ while True:
     time.sleep(1)
 ```    
 
+ 
 
 
-
-여기에 대한 상세한 설명은 [Use your Windows or Linux PC or Mac as an AWS IoT device](https://docs.aws.amazon.com/iot/latest/developerguide/using-laptop-as-device.html)을 참고합니다. 
+## IoT Endpoint
 
 상기 명령어의 "abcdefghijk-ats.iot.ap-northeast-2.amazonaws.com"은 iot endpoint로서 [IoT Console] - [Settings] - [Device data endpoint]에서 아래와 같이 확인 할 수 있습니다. 
 
