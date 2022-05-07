@@ -140,7 +140,11 @@ sdk/test/Python
 "start.sh"파일을 열면 실제적인 실행은 아래 명령어로 이루어짐을 알 수 있습니다. 
 
 ```c
-python aws-iot-device-sdk-python/samples/basicPubSub/basicPubSub.py -e abcdefghijk-ats.iot.ap-northeast-2.amazonaws.com -r root-CA.crt -c mymac.cert.pem -k mymac.private.key
+python aws-iot-device-sdk-python/samples/basicPubSub/basicPubSub.py \
+        -e abcdefghijk-ats.iot.ap-northeast-2.amazonaws.com \
+        -r root-CA.crt \
+        -c mymac.cert.pem \
+        -k mymac.private.key
 ```
 
 여기에 대한 상세한 설명은 [Use your Windows or Linux PC or Mac as an AWS IoT device](https://docs.aws.amazon.com/iot/latest/developerguide/using-laptop-as-device.html)을 참고합니다. 
@@ -148,6 +152,17 @@ python aws-iot-device-sdk-python/samples/basicPubSub/basicPubSub.py -e abcdefghi
 상기 명령어의 "abcdefghijk-ats.iot.ap-northeast-2.amazonaws.com"은 iot endpoint로서 [IoT Console] - [Settings] - [Device data endpoint]에서 아래와 같이 확인 할 수 있습니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/167257301-6457f0d3-974b-4076-9da6-24568bbb188b.png)
+
+
+## 등록된 Device 확인 
+
+아래와 같이 [AWS IoT] - [Manage] - [Things]에 접속하면 아래와 같이 "mymac"이 등록된것을 확인 할 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/167257509-fab07a76-a934-48c3-acda-8602d6889012.png)
+
+아래와 같이 "mymac"의 ARN은 "thing/mymac"으로 등록되어 있음을 확인 할 수 있습니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167257547-97a7d420-24b6-4341-a130-9548f1c02319.png)
 
 
 # Trouble Shooting
@@ -182,6 +197,6 @@ python setup.py install
 ```
 
 
-## Reference 
+# Reference 
 
 [Use your Windows or Linux PC or Mac as an AWS IoT device](https://docs.aws.amazon.com/iot/latest/developerguide/using-laptop-as-device.html)
