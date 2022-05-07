@@ -147,6 +147,39 @@ python aws-iot-device-sdk-python/samples/basicPubSub/basicPubSub.py \
         -k mymac.private.key
 ```
 
+[basicPubSub.py](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/MQTT-client-using-mac/basicPubSub/basicPubSub.py)의 주요 내용은 아래와 같습니다.
+
+MQTT connection을 연결합니다. 
+
+```python
+# Connect and subscribe to AWS IoT
+myAWSIoTMQTTClient.connect()
+if args.mode == 'both' or args.mode == 'subscribe':
+    myAWSIoTMQTTClient.subscribe(topic, 1, customCallback)
+time.sleep(2)
+```
+
+루프를 돌면서 publish를 수행합니다.
+
+```python
+# Publish to the same topic in a loop forever
+loopCount = 0
+while True:
+    if args.mode == 'both' or args.mode == 'publish':
+        message = {}
+        message['message'] = args.message
+        message['sequence'] = loopCount
+        messageJson = json.dumps(message)
+        myAWSIoTMQTTClient.publish(topic, messageJson, 1)
+        if args.mode == 'publish':
+            print('Published topic %s: %s\n' % (topic, messageJson))
+        loopCount += 1
+    time.sleep(1)
+```    
+
+
+
+
 여기에 대한 상세한 설명은 [Use your Windows or Linux PC or Mac as an AWS IoT device](https://docs.aws.amazon.com/iot/latest/developerguide/using-laptop-as-device.html)을 참고합니다. 
 
 상기 명령어의 "abcdefghijk-ats.iot.ap-northeast-2.amazonaws.com"은 iot endpoint로서 [IoT Console] - [Settings] - [Device data endpoint]에서 아래와 같이 확인 할 수 있습니다. 
