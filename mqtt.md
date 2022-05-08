@@ -28,6 +28,32 @@
 
 - 토픽과 서버를 이용해 메시지를 중계하는 방식을 사용하기 때문에 송신자와 수신자는 IP주소와 같이 직접적으로 통신하기 위해 필요한 정보가 없어도 통신이 가능하다. 대신 송신자와 수신자는 서로의 정보 및 상태를 알 수 없다. 이 탓에 송신자는 자신이 보낸 메시지가 수신자에게 확실하게 전송되었는지 알 수 없다
 
+
+### Topic Names and Topic Filters
+
+- Topic은 Level Separator (‘/’)를 이용하여 아래와 같은 형태로 계층적으로 구성 가능합니다.
+
+```c
+“sport/tennis/player1”
+“sport/tennis/player1/ranking”
+“sport/tennis/player1/score/wimbledon”
+```
+
+1) Topic Filter에서의 wildcard 사용
+
+구독자는 Topic Filter를 사용하여 Topic를 구독합니다. Topic Filter에는 wildcard 문자가 포함될 수 있으며 구독자는 이 wildcard 문자를 이용하여 다수의 Topic을 한번에 Subscribe할 수 있습니다. 사용 가능한 wildcard 문자와 의미는 아래와 같습니다. 
+
+ 
+
+▶  “#”: Multi level wildcard. 
+
+여러 단계의 Topic Level을 대체할 수 있습니다. 
+
+Multi level wildcard는 단독으로 쓰이거나 Topic Filter의 마지막 Level에 위치 가능합니다. 
+[출처] MQTT 프로토콜 분석 ⑵ – 운영 동작의 이해|작성자 한컴인텔리전스
+
+
+
 - Topic Filter : Subscription 요청 시 포함되는 일종의 표현식. 하나 또는 여러 개의 Topic을 구독할 수 있습니다. Topic Filter는 Wildcard 문자가 포함될 수 있습니다.
 
 ## MQTT Control Packet 
@@ -51,7 +77,13 @@
   . RETAIN(bit 0) : 1일 경우, 서버는 해당 Topic의 최종 내용을 저장하고 있다가, 향후 구독하는 Client에게 이를 전달합니다.
 
 
+## Keep Alive
 
+- 'CONNECT' 타입의 MQTT 제어 패킷에 포함되어 전달되는 정보이며 16bit를 사용합니다. MQTT 프로토콜은 이 Keep Alive 필드를 이용하여 Keep Alive Interval을 설정합니다. 기본적으로 Client는 Keep Alive Interval이 지나기 전의 메시지 전송을 보장해야 합니다. 전송할 메시지가 없는 경우에도 Client는 Connection 연장을 위하여 메시지를 전달해야 하며 이때 사용되는 제어 패킷이 PINGREQ, PINGRESP 입니다.
+
+- Server는 Keep Alive 시간의 1.5배 내에 아무런 패킷이 들어오지 않으면 Client와의 연결을 끊겼다고 판단하고 Will 메시지 전송 등의 절차를 수행할 수 있습니다.
+
+- Keep Alive 설정의 최대값은 65535초, 즉 18시간 12분 15초입니다.
 
 
 ## QoS
@@ -60,6 +92,34 @@
 
 
 - 3개지 래벨 
+
+### QoS 0: At most once delivery
+
+- 최대 1번 전달을 보장하는 구조입니다. 수신자(Broker)가 응답을 보낼 필요가 없기에 발신자(Publisher)는 수신자가 메시지를 제대로 받았는지 확인하지 않습니다. 응답을 받지 않기에 발신자는 재전송도 하지 않습니다. 수신자는 받은 메시지를 저장하지 않고 바로 구독자에게 발송합니다. 메시지가 누락될 가능성이 있기에 메시지는 0 or 1번 전달됩니다.
+
+![image](https://user-images.githubusercontent.com/52392004/167319083-cea51867-4bbe-469b-80a9-df6ae75e990d.png)
+
+### QoS 1: At least once delivery
+
+- 최소 1번 이상의 메시지 전송을 보장하는 방식입니다. 메시지 전송 시 발신자(Publisher)은 Packet ID를 포함하여 보내고 수신자(Broker)는 메시지를 받으면, 메시지를 저장한 이후 구독자에게 메시지를 보내고 메시지를 삭제합니다. 이후 메시지 수신 시 받은 Packet ID를 사용하여 PUBACK 메시지를 발신자에게 전송하면서 메시지 전달이 완료됩니다. 송신 측은 PUBACK 메시지로 수신 측이 메시지를 받았는지 확인할 수 있습니다.
+
+- PUBACK 단계에서 Network 이슈 등으로 지연이 발생되었을 때, 발신자(Publisher)는 응답이 없기에 메시지를 재전송 할 수 있습니다. 이때 수신자가 메시지를 구독자에게 이미 발생하고 삭제한 상태라면 수신자는 메시지 중복여부를 판별할 수 없기에 구독자에게 동일한 메시지를 다시 보낼 수 있습니다. 이렇기에 QoS 1은 메시지가 미 전송되는 상황은 막을 수 있으나 메시지가 중복으로 전달될 가능성이 존재합니다.
+
+![image](https://user-images.githubusercontent.com/52392004/167319122-1ad062ae-cb6e-4f8f-9ce5-023aba3472de.png)
+
+### QoS 2: Exactly once delivery
+
+- 가장 높은 QoS 레벨입니다. QoS 1에서와 같이 발신자(Publisher)는 메시지 전송 후 응답을 받아 메시지 전송성공 여부를 판단합니다. 다만 QoS 2에서는 4-way handshaking 를 사용하여 정확히 한번의 메시지 전송을 보장합니다.
+
+- QoS 2에서 수신자는(Broker)는 자신이 가지고 있는 메시지를 삭제하기 전에 구독자에게 메시지를 전달했음을 발신자에게 알려줍니다. 이후 발신자에게 확인 메시지를 다시 받고 나서야 수신자는 자신이 저장하고 있는 메시지를 삭제합니다. PUBREC 단계에게 지연이 발생되어 발신자가 메시지를 재전송한다 하더라도 수신자는 이전에 받은 메시지를 가지고 있기에 메시지를 구독자에게 재전송하지 않습니다. 또한 PUBCOMP 단계에서 지연이 발생되었다 하더라도 이미 이전에 PUBREC를 받음으로써 메시지를 구독자에게 보냈음을 확인되었기에 구독자에게 메시지가 재전송되는 상황은 없게 됩니다.
+
+- QoS 2는 처리에 소모되는 리소스가 크지만 이러한 방식으로 정확히 1번 구독자가 메시지를 받게 되는 것을 보장합니다. 메시지 중복 전달 시 문제가 발생되는 데이터의 경우에 사용할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/167319139-fa8b9b01-8d29-4de1-bfd8-b71fe1aa18ea.png)
+
+
+
+
 
 - QoS 레벨 0에서는 메시지가 최대 한 번 전송된다. 송신자는 PUBLISH 패킷을 전송한 후 메시지가 제대로 도착했는지 확인하지 않는다. 메시지는 중간에서 손실될 수 있다
 
