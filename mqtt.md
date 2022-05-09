@@ -4,9 +4,13 @@
 
 - publish-subscribe 통신 모델 기반의 메시지 전송 프로토콜
 
+- MQTT는 1999년 IBM에서 개발된 프로토콜로서 제한된 컴퓨팅 성능과 네트워크 연결 환경에서의 동작을 고려하여 설계된 대용량 메시지 전달 프로토콜
+
+
+
 - ISO/IEC PRF 20922
 
-- OASIS 에서 Spec에 대한 유지 보수를 담당. (2020년 기준) 최신 버전은 5.0, 가장 널리 쓰이는 버전은 3.1.1 (ISO 표준으로 등록), IoT Core 지원 버전은 3.1.1
+- OASIS( (Organization for the Advancement of Structured Information Standards)) 에서 Spec에 대한 유지 보수를 담당. (2020년 기준) 최신 버전은 5.0, 가장 널리 쓰이는 버전은 3.1.1 (ISO 표준으로 등록), IoT Core 지원 버전은 3.1.1
 
 
 - 비동기식: 송신자는 메시지를 전송한 이후 그에 대한 메시지 수신자의 응답을 기다리지 않고 즉시 다음 작업을 수행
@@ -194,3 +198,5 @@ IoT Core 구조는 LB을 쓰지 않고 Device - Device Gateway - Message Broker�
 [QoS Level 3: A Synchronous Communication Mechanism in MQTT Protocol for IoT](http://journal.auric.kr/kiee/XmlViewer/f404797)
 
 [MQTT 프로토콜 분석 (1) – 개요 및 패킷 구조 분석](https://blog.naver.com/mds_datasecurity/221989800838)
+
+[안정적인 사물인터넷 플랫폼을 위한 MQTT 기반 데이터 수집 솔루션 관한 연구](https://www.koreascience.or.kr/article/JAKO201614139534613.pdf)
