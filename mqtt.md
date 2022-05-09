@@ -123,6 +123,12 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 
 - MQTT keep alive 주기는 30 ~ 1200 초
 
+[Connection inactivity (keep-alive interval)](https://docs.aws.amazon.com/general/latest/gr/iot-core.html#limits_iot)
+
+![image](https://user-images.githubusercontent.com/52392004/167326641-7db3f13c-ac0a-41b2-adfb-69d5386c82f4.png)
+
+
+
 ## QoS
 
 - 클라이언트는 구독중인 토픽에 QoS 레벨을 각각 설정할 수 있다. 클라이언트가 서버와 통신하며 발행된 메시지를 받아볼 때 설정된 QoS 레벨이 적용된다. MQTT에서는 클라이언트와 서버 간의 통신에서만 QoS 레벨을 보장하며, 클라이언트와 클라이언트 간의 간접 통신에서는 QoS 레벨에 따른 신뢰도 보장을 지원하지 않는다.
