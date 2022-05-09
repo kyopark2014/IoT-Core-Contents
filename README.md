@@ -4,16 +4,6 @@
 
 [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서는 MQTT Protocal에 대해 설명합니다. 
 
-## Macbook을 MQTT client로 사용하기
-
-[Macbook을 MQTT client로 사용하기](https://github.com/kyopark2014/IoT-Core-Contents/tree/main/MQTT-client-using-mac)을 이용하여 MQTT를 테스트 할 수 있도록 IoT core에 Macbook을 등록하여 테스트 메시지를 발송합니다. 
-
-
-## CloudWatch Logging
-
-[Cloudwatch Logging](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/cloudwatch.md)을 참조하여 로그를 Enable 합니다. 
-
-
 ## AWS IoT Core limits and quotas
 
 [AWS IoT Core rules engine limits and quotas](https://docs.aws.amazon.com/general/latest/gr/iot-core.html#limits_iot)
@@ -41,6 +31,17 @@
 - Subscriptions per account: 100,000
 
 - WebSocket connection duration: 86,400s
+
+
+## Macbook을 MQTT client로 사용하기
+
+[Macbook을 MQTT client로 사용하기](https://github.com/kyopark2014/IoT-Core-Contents/tree/main/MQTT-client-using-mac)을 이용하여 MQTT를 테스트 할 수 있도록 IoT core에 Macbook을 등록하여 테스트 메시지를 발송합니다. 
+
+
+## CloudWatch Logging
+
+[Cloudwatch Logging](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/cloudwatch.md)을 참조하여 로그를 Enable 합니다. 
+
 
 ## Others
 
