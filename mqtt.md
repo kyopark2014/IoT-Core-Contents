@@ -161,12 +161,6 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 ![image](https://user-images.githubusercontent.com/52392004/167319139-fa8b9b01-8d29-4de1-bfd8-b71fe1aa18ea.png)
 
 
-### AWS IoT Core의 QoS 지원 
-
-![image](https://user-images.githubusercontent.com/52392004/167329175-da050080-7431-4e22-b25c-a1c1d6bd2ca4.png)
-
-
-
 - QoS 레벨 0에서는 메시지가 최대 한 번 전송된다. 송신자는 PUBLISH 패킷을 전송한 후 메시지가 제대로 도착했는지 확인하지 않는다. 메시지는 중간에서 손실될 수 있다
 
 - QoS 레벨 1과 2에서, 송신자가 PUBLISH 패킷 발행자(publisher)일 경우 수신자는 서버가 된다. 송신자가 서버일 경우엔 수신자가 토픽 구독자(subscriber)가 된다.
@@ -175,6 +169,14 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 
 
 - QoS 레벨 2는 4-way handshaking을 통해 메시지가 정확하게 한 번 전송되는 것을 보장한다. 송신자는 자신이 보낼 PUBLISH 패킷을 저장한 후 전송하고, 수신자는 받은 PUBLISH 패킷을 저장한 후 PUBREC 패킷으로 응답한다. PUBREC 패킷을 받은 송신자는 저장해 두었던 PUBLISH 패킷을 삭제한 후 PUBREL 패킷으로 응답한다. 수신자가 PUBREL 패킷을 받으면 저장해 두었던 PUBLISH 패킷을 삭제한 후 PUBCOMP 패킷으로 응답한다. 중간에 패킷이 손실되어 수신자가 PUBREC 패킷을 받지 못했을 경우 PUBLISH 패킷을 다시 한 번 보낸다. 수신자가 PUBCOMP 패킷을 받지 못했을 경우 PUBREL 패킷을 다시 한 번 보낸다.
+
+
+### AWS IoT Core의 QoS 지원 
+
+[MQTT 서비스 품질(QoS) 옵션](https://docs.aws.amazon.com/ko_kr/iot/latest/developerguide/mqtt.html)
+
+![image](https://user-images.githubusercontent.com/52392004/167329175-da050080-7431-4e22-b25c-a1c1d6bd2ca4.png)
+
 
 
 ## 신뢰성 
