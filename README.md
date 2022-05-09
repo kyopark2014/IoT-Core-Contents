@@ -1,4 +1,6 @@
-# IoT-Core-Contents
+# IoT Core Contents
+
+여기서는 IoT 관련된 중요 내용들을 요약 정리하고자 합니다. 
 
 ## MQTT: Message Queue Telemetry Transport
 
