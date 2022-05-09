@@ -13,8 +13,9 @@ System of your IoT devices. AWS IoT Greengrass allows you to run MQTT local rout
 between devices, data caching, AWS IoT shadow sync, local AWS Lambda functions,
 and machine learning algorithms. 
 
-MQTT: Message Queue Telemetry Transport
+## MQTT: Message Queue Telemetry Transport
 
+[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서는 MQTT Protocal에 대해 설명합니다. 
 
 ## Macbook을 MQTT client로 사용하기
 
