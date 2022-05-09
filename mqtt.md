@@ -172,6 +172,19 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 - [MQTT가 CoAP보다 딜레이가 적다. 메시지 크기가 작고, 패킷 손실률이 25% 이하일 때, CoAP는 MQTT보다 적은 추가 트래픽으로 신뢰성 있는 전송을 보장한다](http://journal.auric.kr/kiee/XmlViewer/f404797#bib12)
 
 
+## NLM (Network Load Balancer) Limitation
+
+[Connection idle timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html)
+
+For each TCP request that a client makes through a Network Load Balancer, the state of that connection is tracked. If no data is sent through the connection by either the client or target for longer than the idle timeout, the connection is closed. If a client or a target sends data after the idle timeout period elapses, it receives a TCP RST packet to indicate that the connection is no longer valid.
+
+Elastic Load Balancing sets the **idle timeout value for TCP flows to 350 seconds**. You cannot modify this value. Clients or targets can use TCP keepalive packets to reset the idle timeout. Keepalive packets sent to maintain TLS connections cannot contain data or payload.
+
+While UDP is connectionless, the load balancer maintains UDP flow state based on the source and destination IP addresses and ports, ensuring that packets that belong to the same flow are consistently sent to the same target. After the idle timeout period elapses, the load balancer considers the incoming UDP packet as a new flow and routes it to a new target. Elastic Load Balancing sets the idle timeout value for UDP flows to 120 seconds.
+
+EC2 instances must respond to a new request within 30 seconds in order to establish a return path.
+
+
 ## Reference 
 
 [QoS Level 3: A Synchronous Communication Mechanism in MQTT Protocol for IoT](http://journal.auric.kr/kiee/XmlViewer/f404797)
