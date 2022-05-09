@@ -94,6 +94,13 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 ![image](https://user-images.githubusercontent.com/52392004/167319599-d2f26b26-0d6d-4ba0-81cb-081c397b546f.png)
 
 
+## Message Format
+
+MQTT Message Format은 기본적으로 2Byte의 최소 헤더를 가지며, 데이터를 Publish할 때의 2Byte의 필수 정보를 담고 있다. 이 때 메시지의 타입과 데이터의 크기에 따라 헤더의 크기는 변한다. 최소
+2Byte로 동작할 수 있기 때문에 저전력으로 운용하는 것이 가능하고 낮은 대역폭에서의 성능이 우수하다. 
+
+![image](https://user-images.githubusercontent.com/52392004/167330304-77a5672b-0231-49ad-9eb2-4548cb7aeeec.png)
+
 
 
 ## MQTT Control Packet 
@@ -136,6 +143,8 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 ## QoS
 
 - 클라이언트는 구독중인 토픽에 QoS 레벨을 각각 설정할 수 있다. 클라이언트가 서버와 통신하며 발행된 메시지를 받아볼 때 설정된 QoS 레벨이 적용된다. MQTT에서는 클라이언트와 서버 간의 통신에서만 QoS 레벨을 보장하며, 클라이언트와 클라이언트 간의 간접 통신에서는 QoS 레벨에 따른 신뢰도 보장을 지원하지 않는다.
+
+![image](https://user-images.githubusercontent.com/52392004/167330360-5a7bad82-21f3-4dee-9004-b965f4695f89.png)
 
 
 - 3개지 래벨 
@@ -191,6 +200,22 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 ## IoT Core 구성
 
 IoT Core 구조는 LB을 쓰지 않고 Device - Device Gateway - Message Broker로 구성됨.
+
+## Broker 종류
+
+- Mosquitto 브로커는 MQTT 전용 브로커로 경량이며 브로커가 가져야 할 대부분의 기능을 충실히 지원한다는 장점이 있다. 그렇기 때문에 소형 디바이스를 사용하는 사물인터넷 환경에서 사용하기에 적합하다. 
+
+![image](https://user-images.githubusercontent.com/52392004/167330521-60a937e1-de5e-4b4a-81df-d6d00bc80574.png)
+
+## Web Scoket
+
+- Web Socket 프로토콜은 full-duplex을 제공하는 양방향 통신채널
+
+- 하나의 소켓을 통해 확장성과 실시간을 보장하여 웹 애플리케이션을 구축하는 것이 가능하고, 실시간이 요구되는 응용 프로그램을 한층 효과적으로 구현한다. 
+
+- Web Socket 프로토콜은 2011년 인터넷 표준화 기구인 IETF에서(IETF RFC 6455) 표준화되었고, 웹 소켓 응용 프로그래밍 인터페이스(API)는 월드 와이드 웹 컨소시엄인 W3C에서 표준화를 완료
+
+- Web Socket과 달리 Socket.io는 표준 기술이 아니고 Node.js 모듈로서 LearnBoost 회사의 저작물이며 MIT 라이센스를 가진 오픈소스이다. 
 
 
 ## Reference 
