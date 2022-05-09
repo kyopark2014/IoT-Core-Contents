@@ -27,7 +27,7 @@ and machine learning algorithms.
 [Cloudwatch Logging](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/cloudwatch.md)을 참조하여 로그를 Enable 합니다. 
 
 
-## AWS IoT Core rules engine limits and quotas
+## AWS IoT Core limits and quotas
 
 [AWS IoT Core rules engine limits and quotas](https://docs.aws.amazon.com/general/latest/gr/iot-core.html#limits_iot)
 
