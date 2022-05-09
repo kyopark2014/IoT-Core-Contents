@@ -43,6 +43,8 @@ and machine learning algorithms.
 
 - Outbound publish requests per second per account: 2000
 
+- Connection inactivity (keep-alive interval): 1200s
+
 - Persistent session expiry period: 3600s
 
 - Publish requests per second per connection: 100
