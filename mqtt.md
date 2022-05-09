@@ -172,6 +172,13 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 - [MQTT가 CoAP보다 딜레이가 적다. 메시지 크기가 작고, 패킷 손실률이 25% 이하일 때, CoAP는 MQTT보다 적은 추가 트래픽으로 신뢰성 있는 전송을 보장한다](http://journal.auric.kr/kiee/XmlViewer/f404797#bib12)
 
 
+## AWS IoT Core message broker and protocol limits and quotas
+
+[AWS IoT Core message broker and protocol limits and quotas](https://docs.aws.amazon.com/general/latest/gr/iot-core.html#limits_iot)
+
+![image](https://user-images.githubusercontent.com/52392004/167324981-c9e9b524-1bf7-48c0-8680-0bc448a643e4.png)
+
+
 ## NLB (Network Load Balancer) Limitation
 
 [Connection idle timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html)
