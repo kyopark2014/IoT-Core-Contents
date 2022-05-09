@@ -161,6 +161,9 @@ Topic중에는 '$'로 시작하는 특수 목적의 Topic이 있습니다. 이 T
 ![image](https://user-images.githubusercontent.com/52392004/167319139-fa8b9b01-8d29-4de1-bfd8-b71fe1aa18ea.png)
 
 
+### AWS IoT Core의 QoS 지원 
+
+![image](https://user-images.githubusercontent.com/52392004/167329175-da050080-7431-4e22-b25c-a1c1d6bd2ca4.png)
 
 
 
