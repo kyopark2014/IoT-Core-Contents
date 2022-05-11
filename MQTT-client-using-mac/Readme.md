@@ -203,6 +203,22 @@ while True:
 ![noname](https://user-images.githubusercontent.com/52392004/167257547-97a7d420-24b6-4341-a130-9548f1c02319.png)
 
 
+## Client 보낸 메시지를 AWS IoT Core에서 확인 
+
+[AWS IoT] - [Test]로 이동합니다.
+
+https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test
+
+[Subscribe to a topic]에서 [Topic filter]를 "sdk/test/Python"으로 입력하고, [Subscribe]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167955833-d690d068-eab6-4d45-848b-7ba1c50e0cb6.png)
+
+이후 아래처럼 메시지가 들어오는지 확인 합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/167956099-1b7810d7-c520-47a7-a26f-63322da3516f.png)
+
+
+
 # Trouble Shooting
 
 ## Failed to build awscrt
