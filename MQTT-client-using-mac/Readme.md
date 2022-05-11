@@ -235,8 +235,9 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/ru
 
 ![image](https://user-images.githubusercontent.com/52392004/167959759-7e1aa3e1-9e38-4534-8bb7-c484afc1e2b6.png)
 
+아래와 같이 [Rule name]을 "mymac"으로 하고 [Next]를 선택합니다. 
 
-
+![noname](https://user-images.githubusercontent.com/52392004/167960369-134b162c-bf1e-43a0-aaca-d3f5c7440275.png)
 
 
 # Trouble Shooting
