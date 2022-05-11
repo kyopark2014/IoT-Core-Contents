@@ -217,7 +217,7 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/te
 
 ![image](https://user-images.githubusercontent.com/52392004/167956099-1b7810d7-c520-47a7-a26f-63322da3516f.png)
 
-
+메시지 수신을 종료하려면 client에서 [Ctrl-C]를 눌러서 "start.sh"를 종료합니다.
 
 # Trouble Shooting
 
