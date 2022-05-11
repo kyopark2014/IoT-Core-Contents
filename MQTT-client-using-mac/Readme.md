@@ -219,6 +219,26 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/te
 
 메시지 수신을 종료하려면 client에서 [Ctrl-C]를 눌러서 "start.sh"를 종료합니다.
 
+## DynamoDB에 저장하기 
+
+DynamoDB console로 이동합니다. 
+
+https://ap-northeast-2.console.aws.amazon.com/dynamodbv2/home?region=ap-northeast-2#create-table
+
+아래와 같이 [Table name]으로 "mymac"으로 입력하고, [Partition key]로 "iot_message"를 입력한 후, [Sort key]에서 "iot_sequence"을 입력합니다. 이후, 아래로 스크롤하여 [Create table]을 선택합니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/167959345-e31751df-1539-4818-95b7-cc30c3333f8a.png)
+
+[AWS IoT Core] - [Act] - [Rules]로 이동하여 [Create rule]을 선택합니다. 
+
+https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/rulehub
+
+![image](https://user-images.githubusercontent.com/52392004/167959759-7e1aa3e1-9e38-4534-8bb7-c484afc1e2b6.png)
+
+
+
+
+
 # Trouble Shooting
 
 ## Failed to build awscrt
