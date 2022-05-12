@@ -1,4 +1,4 @@
-# Macbook을 MQTT client로 사용하기 
+# PC에서 MQTT client를 만들어서 IoT Core를 통해 DynamoDB로 데이터 전송하기 
 
 여기서는 사용하는 Macbook을 MQTT로 동작하는 IoT Device로 사용하고자 합니다.
 
