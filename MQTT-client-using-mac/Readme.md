@@ -221,7 +221,7 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/te
 
 ## DynamoDB에 저장하기 
 
-DynamoDB console로 이동합니다. 
+1) DynamoDB console로 이동합니다. 
 
 https://ap-northeast-2.console.aws.amazon.com/dynamodbv2/home?region=ap-northeast-2#create-table
 
@@ -229,7 +229,7 @@ https://ap-northeast-2.console.aws.amazon.com/dynamodbv2/home?region=ap-northeas
 
 ![noname](https://user-images.githubusercontent.com/52392004/167959345-e31751df-1539-4818-95b7-cc30c3333f8a.png)
 
-[AWS IoT Core] - [Act] - [Rules]로 이동하여 [Create rule]을 선택합니다. 
+2) [AWS IoT Core] - [Act] - [Rules]로 이동하여 [Create rule]을 선택합니다. 
 
 https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/rulehub
 
@@ -238,6 +238,58 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/ru
 아래와 같이 [Rule name]을 "mymac"으로 하고 [Next]를 선택합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/167960369-134b162c-bf1e-43a0-aaca-d3f5c7440275.png)
+
+3) [SQL statement]에서 "SELECT * FROM 'sdk/test/Python'"으로 아래와 같이 입력하고 [Next]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167967643-0c45a346-6a65-45a8-801c-104926c167ef.png)
+
+4) [Rule actions]에서 아래와 같이 [Partition key]로 "iot_message"를 입력하고, [Partition key value]로 "${message}"로 입력합니다. [Sort key]로 "iot_sequence"를 입력하고, [Sort key value]로 "${sequence}"를 입력합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167968251-ba9efa4b-8fd0-4a5b-bcc5-76f8b52d53fa.png)
+
+5) 아래와 같이 [IAM role]에서 [Create new role]을 선택합니다. 
+
+
+![noname](https://user-images.githubusercontent.com/52392004/167968862-04a5d5c0-6be4-4b02-a050-7d533b81655c.png)
+
+[Role name]으로 "IoT_DynamoDB"로 입력하고 [Create]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167968935-6e0b0768-b776-43d6-bdfb-415a82e02db8.png)
+
+다시 [IAM role]에서 "IoT_DynamoDB"를 선택하고, [View]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167969096-62c00f3b-a35c-4ff9-b813-af8c5eda6f81.png)
+
+[Trusted relationships]에서 Service로 "iot.amazons.com"이 포함되어 있음을 확인합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167969239-28e62d14-b61a-4a24-9c40-53c5233ed211.png)
+
+```java
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "iot.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+```
+
+[Permissions] - [Add Permissions]에서 [Create inline policy]를 아래와 같이 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167969612-c2982bb9-11f1-47e6-852b-7ffe0e14738a.png)
+
+아래와 
+아래와 같이 
+[J
+
+
+
+
 
 
 # Trouble Shooting
