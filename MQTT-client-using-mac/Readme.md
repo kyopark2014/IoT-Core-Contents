@@ -352,3 +352,5 @@ python setup.py install
 # Reference 
 
 [Use your Windows or Linux PC or Mac as an AWS IoT device](https://docs.aws.amazon.com/iot/latest/developerguide/using-laptop-as-device.html)
+
+[AWS IoT Core workshop for beginners (Korean)](https://catalog.us-east-1.prod.workshops.aws/workshops/f87a7c7a-0af8-416a-80ee-7c25c5789307/ko-KR/)
