@@ -283,11 +283,36 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/ru
 
 ![noname](https://user-images.githubusercontent.com/52392004/167969612-c2982bb9-11f1-47e6-852b-7ffe0e14738a.png)
 
-아래와 
-아래와 같이 
-[J
+아래와 같이 [JSON]에 아래의 퍼미션을 추가하고, [Review policy]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167969880-6cfa482d-4b9e-4ac7-b158-6a78e40d1c6e.png)
+
+```java
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "dynamodb:*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }        
+    ]
+}
+```
+이후, 아래와 같이 [policy name]으로 "IoT_DynamoDB]로 입력한 후, [Create policy]를 선택합니다.  
+
+![noname](https://user-images.githubusercontent.com/52392004/167970188-f8859d09-5dbb-4b08-bdd9-b08487870acb.png)
+
+6) 다시 [IoT Core] - [Attach rule actions]로 돌아가서, [Next]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/167970490-07c0400e-12d7-4bb5-9621-f8d8e0e852c9.png)
 
 
+7) client 화면으로 이동해서 다시 "start.sh"을 실행하여, [IoT Core]로 메시지를 전송합니다. 이후 아래처럼 DynamoDB로 가서 조회하면 수신된 메시지가 DyanmoDB에 잘 저장됨을 확인 할 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/167970686-99f4450e-6d13-42a9-892d-6a1edb543d36.png)
 
 
 
