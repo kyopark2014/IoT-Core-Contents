@@ -48,3 +48,6 @@ http://127.0.0.1:1880/
 ## Reference
 
 [Node-RED](https://nodered.org/)
+
+[AWS IoT Core 설치 : 정책설정, 사물 Things 만들기, mqtt 테스트, 인증서만들기](https://www.youtube.com/watch?v=GRSWxdj2qA4)
+
