@@ -108,7 +108,9 @@ http://127.0.0.1:1880/
 
 ![noname](https://user-images.githubusercontent.com/52392004/168451565-56b72c8d-7b8c-4d66-9a67-c6110700afe2.png)
 
-5) 
+5) 인증서 옆의 파일버튼을 클릭하여 ".crt"파일을 선택합니다. 비밀키로는 "node-red.private.key"를 선택하고, CA인증서로는 "node-red.cert.pem"을 선택합니다. 이후 [추가]를 선택합니다. 
+
+6) 노드 수정화면으로 가면 [변경]을 선택하고, 이후 [완료]를 선택합니다. 
 
 
 
