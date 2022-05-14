@@ -8,7 +8,7 @@ It provides a browser-based editor that makes it easy to wire together flows usi
 
 
 
-## 설치 
+## Local에서 실행 
 
 node 설치 
 
@@ -20,6 +20,12 @@ node-red 설치
 
 ```c
 $ sudo npm install -g --unsafe-perm node-red
+```
+
+## Docker에서 실행
+
+```c
+$ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
 ```
 
 ## 실행화면 
@@ -43,7 +49,6 @@ http://127.0.0.1:1880/
 실행화면 
 
 <img width="518" alt="image" src="https://user-images.githubusercontent.com/52392004/168412478-1e94dd07-b2cc-4b18-aa05-3d0e0425bdd1.png">
-
 
 ## Reference
 
