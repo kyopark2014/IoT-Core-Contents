@@ -10,15 +10,13 @@ It provides a browser-based editor that makes it easy to wire together flows usi
 
 ## 설치 
 
-- Prerequeisition: node 설치 
+node 설치 
 
 ```c
 $ brew install node
 ```
 
-
-- node-red 설치 
-
+node-red 설치 
 
 ```c
 $ sudo npm install -g --unsafe-perm node-red
