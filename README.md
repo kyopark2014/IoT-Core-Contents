@@ -48,6 +48,10 @@ AWS IoT Architecutre에는 아래와 같은 서비스들이 있습니다.
 
 [Cloudwatch Logging](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/cloudwatch.md)을 참조하여 로그를 Enable 합니다. 
 
+## Node-Red로 시험하기
+
+[Node-Red](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/node-red.md)로 MQTT를 시험할 수 있습니다. 
+
 
 ## Others
 
