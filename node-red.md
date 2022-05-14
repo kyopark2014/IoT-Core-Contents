@@ -46,8 +46,9 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/th
 5) [Actions] - [Download]를 선택하여 인증서파일(.crt)을 적절한 폴더에 다운로드 합니다. 
 
 
+## Node-RED를 설치
 
-## Local에서 실행 
+#### Local에서 실행 
 
 node 설치 
 
@@ -61,13 +62,13 @@ node-red 설치
 $ sudo npm install -g --unsafe-perm node-red
 ```
 
-## Docker에서 실행
+#### Docker에서 실행
 
 ```c
 $ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
 ```
 
-## 실행화면 
+#### 실행화면 
 
 1) node-red 실행
 
@@ -88,6 +89,29 @@ http://127.0.0.1:1880/
 실행화면 
 
 <img width="518" alt="image" src="https://user-images.githubusercontent.com/52392004/168412478-1e94dd07-b2cc-4b18-aa05-3d0e0425bdd1.png">
+
+
+## Node-RED로 IoT Core로 메시지 보내기 
+
+1) Chrome에서 Node-RED에 접속후, 좌측메뉴에서 "Inject"를 선택합여 플로우로 옯깁니다. 옮긴후에 이름이 "타임스템프"로 아래처럼 변경됩니다. 
+
+2) 좌측 메뉴에서 아래로 이동하여 [network]에서 "mqtt out"을 선택하고, 그 둘을 아래처럼 연결합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/168451422-b1c3faa2-7264-4059-a5b0-2320cc4dfe02.png)
+
+3) "mqtt out"을 더불 클릭하여 아래처럼 [토픽]에 "topic_1"을 입력하고, "QoS"에 "0"을 선택합니다. 서버 설정을 변경하기 위하여 아래처럼 수정 아이콘을 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/168451503-abb6336e-6a19-4941-aa3d-794145c22549.png)
+
+
+4) 아래와 같이 서버의 주소로 IoT Core의 Endpoint를 입력하고, 포트는 "8883"으로 설정합니다. "사용 TLS"을 enable 한 후에 수정 버튼을 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/168451565-56b72c8d-7b8c-4d66-9a67-c6110700afe2.png)
+
+5) 
+
+
+
 
 ## Reference
 
