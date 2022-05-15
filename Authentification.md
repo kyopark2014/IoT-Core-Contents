@@ -57,7 +57,7 @@ ECC 384 bit key: Amazon Root CA 4. Reserved for future use.
 
 These certificates are all cross-signed by the Starfield Root CA Certificate. All new AWS IoT Core regions, beginning with the May 9, 2018 launch of AWS IoT Core in the Asia Pacific (Mumbai) Region, serve only ATS certificates.
 
-IoT device의 인증을 위하여 상기의 [Amazon Root CA 1](https://www.amazontrust.com/repository/AmazonRootCA1.pem)을 다운로드 합니다.
+IoT device의 인증을 위하여 상기의 [Amazon Root CA 1](https://www.amazontrust.com/repository/AmazonRootCA1.pem)를 선택한후, 저장하기를 선택하여 "AmazonRootCA1.cer"로 적당한 폴더에 다운로드 합니다. 
 
 
 ## Reference
