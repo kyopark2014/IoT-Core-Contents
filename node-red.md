@@ -98,14 +98,23 @@ http://127.0.0.1:1880/
 
 ![noname](https://user-images.githubusercontent.com/52392004/168451565-56b72c8d-7b8c-4d66-9a67-c6110700afe2.png)
 
-5) 인증서 옆의 파일버튼을 클릭하여 ".crt"파일을 선택합니다. 비밀키로는 "node-red.private.key"를 선택하고, CA인증서로는 "node-red.cert.pem"을 선택합니다. 이후 [추가]를 선택합니다. 
+5) 인증서 옆의 파일버튼을 클릭하여 ".pem"파일을 선택합니다. 비밀키로는 ".private.key"를 선택하고, CA인증서로는 "AmazonRooTCA1.cer"을 선택합니다. 이후 [변경]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/168474813-5e28979a-2cf7-404f-81ac-100389b69b01.png)
 
 6) 노드 수정화면으로 가면 [변경]을 선택하고, 이후 [완료]를 선택합니다. 
 
+7) 상단의 [배포하기] 선택시 아래처럼 "접속됨"으로 표시되면 정상적으로 연결된것을 확인 할 수 있습니다. 
 
-## [To-Do] 
+![image](https://user-images.githubusercontent.com/52392004/168474893-c6648fea-5d6d-40d5-9b2f-c6868107a819.png)
 
-![image](https://user-images.githubusercontent.com/52392004/168467365-e74a4048-1cd3-4555-973e-11a2829122ab.png)
+8) [AWS IoT] - [MQTT test clinet]에서 Node-RED로 부터 들어온 메시지를 확인 할 수 있습니다. 
+
+https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test
+
+아래와 같이 [Test] - [Subscribe to a topic]에서 [Topic filter]를 "topic_1"으로 설정합니다. 이후 [Subscribe]를 선택하고, Node-RED에서 메시지 전송시 아래와 같이 "topic_1"으로 메시지가 들어오는 것을 확인 할 수 있습니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/168475158-0e9d061b-d27a-4b32-93a0-31fc19023ee5.png)
 
 
 ## Reference
