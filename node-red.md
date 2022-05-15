@@ -66,8 +66,6 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/th
 
 
 
-
-
 ## Node-RED를 설치
 
 #### Local에서 실행 
@@ -147,6 +145,21 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/te
 아래와 같이 [Test] - [Subscribe to a topic]에서 [Topic filter]를 "topic_1"으로 설정합니다. 이후 [Subscribe]를 선택하고, Node-RED에서 메시지 전송시 아래와 같이 "topic_1"으로 메시지가 들어오는 것을 확인 할 수 있습니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/168475158-0e9d061b-d27a-4b32-93a0-31fc19023ee5.png)
+
+
+
+## Topic_1으로 들어오는 메시지 받아보기 
+
+1) 아래 그림처럼, "mqtt in"을 플로우에 추가하고, 결과를 볼 수 있도록 "debug"을 붙입니다.
+
+![image](https://user-images.githubusercontent.com/52392004/168476733-7e72cc43-e848-4b67-bc18-28e5b66e7540.png)
+
+2) "mqtt in"이 "mqtt out"과 동일하게 IoT Core를 보고 있는지 확인합니다. 이후 상단의 [배포하기]를 선택하고 mqtt가 모두 접속됨으로 표시되는지 확인 합니다. 
+
+3) "타임스템프"를 선택하여 메시지 발신시, "디버그"에서 아래처럼 표시됨을 확인 합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/168476845-e4a680a6-a649-4f2b-a0e5-e57074281510.png)
+
 
 
 ## Reference
