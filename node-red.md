@@ -34,7 +34,7 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/co
 
 5) [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에 따라 CA 인증서를 다운로드 합니다. 
 
-## Node-RED를 Policy에 추가 
+## Node-RED client를 허용하도록 Policy에 추가 
 
 1) [AWS IoT] - [Manage] - {Things]로 이동합니다. 
 
