@@ -44,7 +44,9 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/se
 
 
 
-### Amazon Trust Services Endpoints (preferred)
+### ATS(Amazon Trust Service) 인증서 다운로드 
+
+Amazon Trust Services Endpoints (preferred)
 
 
 RSA 2048 bit key: [Amazon Root CA 1](https://www.amazontrust.com/repository/AmazonRootCA1.pem).
@@ -59,6 +61,11 @@ These certificates are all cross-signed by the Starfield Root CA Certificate. Al
 
 IoT device의 인증을 위하여 상기의 [Amazon Root CA 1](https://www.amazontrust.com/repository/AmazonRootCA1.pem)를 선택한후, 저장하기를 선택하여 "AmazonRootCA1.cer"로 적당한 폴더에 다운로드 합니다. 
 
+아래와 같이 curl 명령어로도 다운로드 가능합니다. 
+
+```c
+$ curl https://www.amazontrust.com/repository/AmazonRootCA1.pem > AmazonRootCA1.cer
+```
 
 ## Reference
 
