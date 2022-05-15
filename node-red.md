@@ -45,9 +45,6 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/th
 
 5) [Actions] - [Download]를 선택하여 인증서파일(.crt)을 적절한 폴더에 다운로드 합니다. 
 
-## [To-Do] 
-
-![image](https://user-images.githubusercontent.com/52392004/168467365-e74a4048-1cd3-4555-973e-11a2829122ab.png)
 
 
 ## Node-RED를 설치
@@ -117,6 +114,9 @@ http://127.0.0.1:1880/
 6) 노드 수정화면으로 가면 [변경]을 선택하고, 이후 [완료]를 선택합니다. 
 
 
+## [To-Do] 
+
+![image](https://user-images.githubusercontent.com/52392004/168467365-e74a4048-1cd3-4555-973e-11a2829122ab.png)
 
 
 ## Reference
