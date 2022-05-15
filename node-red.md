@@ -152,7 +152,9 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/te
 
 1) 아래 그림처럼, "mqtt in"을 플로우에 추가하고, 결과를 볼 수 있도록 "debug"을 붙입니다.
 
-![image](https://user-images.githubusercontent.com/52392004/168476733-7e72cc43-e848-4b67-bc18-28e5b66e7540.png)
+
+![noname](https://user-images.githubusercontent.com/52392004/168476956-0aadd3d2-f6f5-4c61-bb4e-34489c3e4f0f.png)
+
 
 2) "mqtt in"이 "mqtt out"과 동일하게 IoT Core를 보고 있는지 확인합니다. 이후 상단의 [배포하기]를 선택하고 mqtt가 모두 접속됨으로 표시되는지 확인 합니다. 
 
