@@ -62,6 +62,11 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/th
 5) [Policy statements]에서 [JSON]을 선택한 후, 아래와 같이 "iot:Connect"에 "arn:aws:iot:ap-northeast-2:[account number]:client/nodered_* "를 입력 합니다. 이렇게 함으로써, Node-RED client도 접속이 가능해집니다. 아후, 아래의 "Active policy"를 enable하고 [Save as new version]을 선택합니다. 
 
 
+![noname](https://user-images.githubusercontent.com/52392004/168476475-ae3e5c4a-2731-4fda-9eb6-9e8289b40e9c.png)
+
+
+
+
 
 ## Node-RED를 설치
 
