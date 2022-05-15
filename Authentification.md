@@ -26,7 +26,7 @@ Use iot:Data-ATS endpoints unless your device requires Symantec or Verisign CA c
 아래 명령어 또는 Console에서 확인 가능합니다. 
 
 ```c
-aws iot describe-endpoint --endpoint-type iot:Data-ATS
+$ aws iot describe-endpoint --endpoint-type iot:Data-ATS
 ```
 
 상기 명령어로 확인된 Endpoint 정보입니다.
