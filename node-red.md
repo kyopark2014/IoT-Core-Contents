@@ -28,22 +28,11 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/co
 
 ![noname](https://user-images.githubusercontent.com/52392004/168450896-224e1e26-6521-497a-a53f-510490274d69.png)
 
-4) [Linux/OSX]를 선택하여 파일을 적절한 폴더에 다운로드 합니다. "connect_device_package.zip" 파일이 다운로드 됩니다. 이후 [Next step]을 선택합니다. 해당 파일에는 아래와 같이 pem과 public/private key가 있습니다.
+4) [Linux/OSX]를 선택하여 파일을 적절한 폴더에 다운로드 합니다. "connect_device_package.zip" 파일이 다운로드 됩니다. 이후 [Next step]을 선택합니다. 해당 파일에는 아래와 같이 client 인증서인 .pem과 public/private key가 있습니다.
 
 <img width="459" alt="image" src="https://user-images.githubusercontent.com/52392004/168450946-51a04436-c36f-436d-8b5e-5e7449c1ea7a.png">
 
-
-5) [AWS-IoT] - [Manage] - [Things]로 이동하여, "node-red"로 생성한 thing을 선택합니다. 
-
-https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/thinghub
-
-![noname](https://user-images.githubusercontent.com/52392004/168451002-7617c020-5f04-4c60-add3-e59f4169e945.png)
-
-4) [Certificaties]에서 "Certificate ID"을 선택합니다. 
-
-![noname](https://user-images.githubusercontent.com/52392004/168451252-3d4c7a1a-7950-4e88-9d5b-654fd0807a2b.png)
-
-5) [Actions] - [Download]를 선택하여 인증서파일(.crt)을 적절한 폴더에 다운로드 합니다. 
+5) [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에 따라 CA 인증서를 다운로드 합니다. 
 
 
 
