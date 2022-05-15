@@ -34,6 +34,33 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/co
 
 5) [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에 따라 CA 인증서를 다운로드 합니다. 
 
+## Node-RED를 Policy에 추가 
+
+1) [AWS IoT] - [Manage] - {Things]로 이동합니다. 
+
+https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/thinghub
+
+아래와 같이 "node-red"를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/168475788-b98bd854-1f37-4019-b6e7-3709a9673bcc.png)
+
+
+2) [Certificates] - [Certificate ID]를 선택하여 아래처럼 들어갑니다. 
+
+
+![noname](https://user-images.githubusercontent.com/52392004/168475890-3f445497-df2c-4047-b70b-77366b9b6f83.png)
+
+
+3) 아래처럼 "node-red-Policy"를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/168475933-469725e0-2de1-410a-a102-64df92f8ccb2.png)
+
+4) [Edit active version]을 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/168476057-504dd99d-0356-4aeb-99e0-d12aa89a7194.png)
+
+5) [Policy statements]에서 [JSON]을 선택한 후, 아래와 같이 "iot:Connect"에 "arn:aws:iot:ap-northeast-2:[account number]:client/nodered_* "를 입력 합니다. 이렇게 함으로써, Node-RED client도 접속이 가능해집니다. 아후, 아래의 "Active policy"를 enable하고 [Save as new version]을 선택합니다. 
+
 
 
 ## Node-RED를 설치
