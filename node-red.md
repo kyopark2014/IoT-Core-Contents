@@ -1,4 +1,4 @@
-# Node Red
+# Node Red를 이용하여 MQTT로 AWS IoT Core에 데이터 보내고 받기
 
 Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
 
