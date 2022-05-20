@@ -12,6 +12,23 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/169607592-5604d6c9-743f-4f55-8a30-8e4aa7b1881e.png)
 
+
+## AWS IOT EDUKIT
+
+[AWS Edukit Workshop](https://edukit.workshop.aws/en/)에서 펌웨어 업그레이드 및 MQTT 등에 대한 상세한 정보를 제공합니다. 
+
+
+## MQTT
+
+[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md) is a lightweight based on publish / subscribe messaging protocol.
+
+It is established upon TCP/IP protocol and published by IBM at 1999.
+
+The MQTT protocol is a good choice for the wireless networks that experience varying levels of latency due to ocasional bandwith constraints or unrealiable connection and the lightweight feature allows it being able to run in a resouce-constrained embeded devices or processor.
+
+![mqtt](https://user-images.githubusercontent.com/52392004/169608426-054b8204-94f6-4e34-af77-a57974e39a7c.png)
+
+
 ## M5Stack Core2
 [M5Stack Core2](https://docs.platformio.org/en/latest/boards/espressif32/m5stack-core2.html?utm_source=platformio&utm_medium=piohome)
 
@@ -70,3 +87,10 @@ Hard resetting via RTS pin...
 ---  4: /dev/cu.wlan-debug   'n/a'
 --- Enter port index or full name: 4
 ```  
+
+
+## Android App
+
+ESP Maker(https://play.google.com/store/apps/details?id=com.espressif.rainmaker)을 통해 Android 단말에서 device에 접속할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/169607992-ad91bd7c-af2b-419f-8a25-c51dd85e74e6.png)
