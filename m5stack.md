@@ -13,10 +13,6 @@
 ![image](https://user-images.githubusercontent.com/52392004/169607592-5604d6c9-743f-4f55-8a30-8e4aa7b1881e.png)
 
 
-## AWS IOT EDUKIT
-
-[AWS Edukit Workshop](https://edukit.workshop.aws/en/)에서 펌웨어 업그레이드 및 MQTT 등에 대한 상세한 정보를 제공합니다. 
-
 
 
 
@@ -84,11 +80,15 @@ Hard resetting via RTS pin...
 
 [AWS Edukit(M5Stack)](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack-upgrade.md)에서 업그레이드 방법에 대해 설명합니다.
 
+[AWS Edukit Workshop](https://edukit.workshop.aws/en/)에는 Edukit 사용에 대한 여러 사례를 설명합니다.
+
+
+
 
 
 ## MQTT
 
-AWS Edukit은 아래와 같이 MQTT Protocol을 이용하여 통신합니다. [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서 상세하게 MQTT에 대해 설명합니다.
+AWS Edukit은 아래와 같이 MQTT Protocol을 이용하여 AWS IoT Core와 통신합니다. [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서 상세하게 MQTT에 대해 설명합니다.
 
 ![mqtt](https://user-images.githubusercontent.com/52392004/169608426-054b8204-94f6-4e34-af77-a57974e39a7c.png)
 
