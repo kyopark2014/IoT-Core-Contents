@@ -18,15 +18,7 @@
 [AWS Edukit Workshop](https://edukit.workshop.aws/en/)에서 펌웨어 업그레이드 및 MQTT 등에 대한 상세한 정보를 제공합니다. 
 
 
-## MQTT
 
-[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md) is a lightweight based on publish / subscribe messaging protocol.
-
-It is established upon TCP/IP protocol and published by IBM at 1999.
-
-The MQTT protocol is a good choice for the wireless networks that experience varying levels of latency due to ocasional bandwith constraints or unrealiable connection and the lightweight feature allows it being able to run in a resouce-constrained embeded devices or processor.
-
-![mqtt](https://user-images.githubusercontent.com/52392004/169608426-054b8204-94f6-4e34-af77-a57974e39a7c.png)
 
 
 ## M5Stack Core2
@@ -102,7 +94,15 @@ Hard resetting via RTS pin...
 
 
 
+## MQTT
 
+[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md) is a lightweight based on publish / subscribe messaging protocol.
+
+It is established upon TCP/IP protocol and published by IBM at 1999.
+
+The MQTT protocol is a good choice for the wireless networks that experience varying levels of latency due to ocasional bandwith constraints or unrealiable connection and the lightweight feature allows it being able to run in a resouce-constrained embeded devices or processor.
+
+![mqtt](https://user-images.githubusercontent.com/52392004/169608426-054b8204-94f6-4e34-af77-a57974e39a7c.png)
 
 
 ## Android App
