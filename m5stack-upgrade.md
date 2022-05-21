@@ -16,7 +16,7 @@
 아래와 같이 m5stack에 대한 sample을 git으로 다운로드 합니다.
 
 ```c
-git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
+$ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ```
 
 
