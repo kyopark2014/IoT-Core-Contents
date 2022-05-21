@@ -26,6 +26,11 @@
 
 - MQTT는 총 14개의 패킷으로 구성, 14개의 패킷을 표시하기 위해 할당하는 바이트 수는 4바이트, 0과 15는 사용하지 않는 번호
 
+- MQTT is a lightweight based on publish / subscribe messaging protocol and established upon TCP/IP protocol and published by IBM at 1999.
+
+- The MQTT protocol is a good choice for the wireless networks that experience varying levels of latency due to ocasional bandwith constraints or unrealiable connection and the lightweight feature allows it being able to run in a resouce-constrained embeded devices or processor.
+
+
 ## Topic
 
 - MQTT에서 송신자가 특정한 토픽(topic)으로 메시지를 발행하면 해당 토픽을 구독중인 수신자들은 같은 토픽으로 발행된 모든 메시지를 받아볼 수 있다. 송신자들은 같은 방식으로 토픽에 메시지를 발행할 수 있다. 클라이언트들은 서버를 사이에 두고 통신한다. 서버는 토픽들의 리스트와 각 토픽을 구독 중인 수신자들의 리스트를 가지고 있다. 송신자가 토픽을 설정해 둔 메시지를 발행하면 서버는 발행된 메시지의 토픽을 구독중인 수신자들에게 전달함으로써 메시지를 중계해준다.
