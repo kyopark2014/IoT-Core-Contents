@@ -52,6 +52,9 @@ AWS IoT Architecutre에는 아래와 같은 서비스들이 있습니다.
 
 [Node-Red](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/node-red.md)로 MQTT를 시험할 수 있습니다. 
 
+## AWS Edukit Upgrade
+
+[AWS Edukit(M5Stack)](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack-upgrade.md)에서 업그레이드 방법에 대해 소개합니다.
 
 ## Others
 
