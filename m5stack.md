@@ -88,11 +88,7 @@ Hard resetting via RTS pin...
 
 ## MQTT
 
-[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md) is a lightweight based on publish / subscribe messaging protocol.
-
-It is established upon TCP/IP protocol and published by IBM at 1999.
-
-The MQTT protocol is a good choice for the wireless networks that experience varying levels of latency due to ocasional bandwith constraints or unrealiable connection and the lightweight feature allows it being able to run in a resouce-constrained embeded devices or processor.
+AWS Edukit은 아래와 같이 MQTT Protocol을 이용하여 통신합니다. [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서 상세하게 MQTT에 대해 설명합니다.
 
 ![mqtt](https://user-images.githubusercontent.com/52392004/169608426-054b8204-94f6-4e34-af77-a57974e39a7c.png)
 
