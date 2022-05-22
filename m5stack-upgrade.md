@@ -85,6 +85,16 @@ $ pio run --environment core2foraws --target erase
 ![image](https://user-images.githubusercontent.com/52392004/169673964-8b4deb0c-0c08-46e5-a573-696737b108f6.png)
 
 
+## Firware 수정
+
+"sdkconfig"의 값을 아래와 같이 변경합니다. 
+
+### MQTT Server
+
+```c
+CONFIG_ESP_RMAKER_MQTT_HOST="a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com"
+```
+
 ### NTP Server
 
 [아래의 표](https://zetawiki.com/wiki/%EA%B3%B5%EC%9A%A9_NTP_%EC%84%9C%EB%B2%84_%EB%AA%A9%EB%A1%9D)를 보고 적절한 NTP Server를 지정합니다.
@@ -97,9 +107,9 @@ CONFIG_ESP_RMAKER_SNTP_SERVER_NAME="pool.ntp.org"
 
 ### Timezone
 
-[Supported Timezone values](https://rainmaker.espressif.com/docs/time-service.html#supported-timezone-values)에서 Seoul을 검색할 수 있습니다.
+기본값은 "Asia/Shanghai"입니다. 아래를 참조하여 "Asia/Seoul"로 변경합니다.
 
-이후 "sdkconfig"의 값을 아래와 같이 변경합니다. (기본값은 "Asia/Shanghai"입니다.)
+[Supported Timezone values](https://rainmaker.espressif.com/docs/time-service.html#supported-timezone-values)에서 Seoul을 검색할 수 있습니다.
 
 ```c
 CONFIG_ESP_RMAKER_DEF_TIMEZONE="Asia/Seoul"
