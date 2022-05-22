@@ -82,4 +82,5 @@ ESP Maker(https://play.google.com/store/apps/details?id=com.espressif.rainmaker)
 $ pio run --environment core2foraws --target erase
 ```
 
+![image](https://user-images.githubusercontent.com/52392004/169673964-8b4deb0c-0c08-46e5-a573-696737b108f6.png)
 
