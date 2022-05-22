@@ -29,3 +29,24 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ![noname](https://user-images.githubusercontent.com/52392004/169672768-978ad794-a39b-4030-a42d-921e8465acf9.png)
 
 여기서 "CP2104 USB to UART Bridge Controller"의 USB port name을 복사해 놓습니다. 상기의 경우에는 "/dev/cu.SLAB_USBtoUART" 입니다. 
+
+
+## 첫 프로젝트 다운로드 하기 
+
+1) 아래와 같이 [PlatformIO] - [Open] - [Open Project]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/169673061-f2593512-d7da-4c4b-98da-3bd058fdc2f0.png)
+
+2) 다운로드 받은 "Core2-for-AWS-IoT-Edukit"으로 이동하여, "Getting-Started"을 선택후에 [Open "Getting-Started"을 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/169673127-a84f49e9-ca12-4261-8670-d9c14ff80022.png)
+
+3) 아래와 같이 [PlatformIO] - [Miscellaneous] - [New Terminal]을 연 후에, "pio run --environment core2foraws"을 입력하고 [Enter]를 누릅니다.
+
+
+
+
+
+
+
+
