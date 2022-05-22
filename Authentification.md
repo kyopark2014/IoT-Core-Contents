@@ -7,7 +7,7 @@ When your device or other client attempts to connect to AWS IoT Core, the AWS Io
 When your devices or other clients establish a TLS connection to an AWS IoT Core endpoint, AWS IoT Core presents a certificate chain that the devices use to verify that they're communicating with AWS IoT Core and not another server impersonating AWS IoT Core. The chain that is presented depends on a combination of the type of endpoint the device is connecting to and the cipher suite that the client and AWS IoT Core negotiated during the TLS handshake.
 
 
-## Enpoint types
+## Endpoint types
 
 AWS IoT Core supports two different data endpoint types, iot:Data and iot:Data-ATS. 
 
