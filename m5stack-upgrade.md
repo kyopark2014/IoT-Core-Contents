@@ -74,6 +74,12 @@ ESP Maker(https://play.google.com/store/apps/details?id=com.espressif.rainmaker)
 
 
 
+## Firmware 삭제 
 
+다른 펌웨어를 설치하기 전에 또는 새로 빌드한 device 펌웨어의 문제로 무한 재부팅등의 오류가 발생하면 아래 명령어로 펌웨어를 제거합니다. 
+
+```c
+$ pio run --environment core2foraws --target erase
+```
 
 
