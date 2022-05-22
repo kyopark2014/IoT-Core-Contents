@@ -24,6 +24,9 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 1) M5Stack을 컴퓨터와 연결합니다. 이때 자동으로 전원이 들어오지만, 안들어오는 경우에 Power on 버튼을 선택하여 Device를 켭니다. 
 
+![image](https://user-images.githubusercontent.com/52392004/169696860-08630181-79d6-411b-8c48-3363342cc4d9.png)
+
+
 2) Visual Studio Code의 왼쪽 메뉴에서 [PlatformIO]를 선택 후, [Devices]를 선택후, 오른쪽에서 [Refresh]를 선택하면 아래와 같이 Device 정보를 확인 할 수 있습니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/169672768-978ad794-a39b-4030-a42d-921e8465acf9.png)
