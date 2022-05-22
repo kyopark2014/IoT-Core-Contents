@@ -93,8 +93,3 @@ AWS Edukit은 아래와 같이 MQTT Protocol을 이용하여 AWS IoT Core와 통
 ![mqtt](https://user-images.githubusercontent.com/52392004/169608426-054b8204-94f6-4e34-af77-a57974e39a7c.png)
 
 
-## Android App
-
-ESP Maker(https://play.google.com/store/apps/details?id=com.espressif.rainmaker)을 통해 Android 단말에서 device에 접속할 수 있습니다.
-
-![image](https://user-images.githubusercontent.com/52392004/169607992-ad91bd7c-af2b-419f-8a25-c51dd85e74e6.png)
