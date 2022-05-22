@@ -87,7 +87,7 @@ $ pio run --environment core2foraws --target erase
 
 ### NTP Server
 
-아래의 표를 보고 적절한 NTP Server를 지정합니다.
+[아래의 표](https://zetawiki.com/wiki/%EA%B3%B5%EC%9A%A9_NTP_%EC%84%9C%EB%B2%84_%EB%AA%A9%EB%A1%9D)를 보고 적절한 NTP Server를 지정합니다.
 
 <img width="484" alt="image" src="https://user-images.githubusercontent.com/52392004/169686035-eaef3c7a-f576-47e7-abbc-7b48c5d66bd8.png">
 
