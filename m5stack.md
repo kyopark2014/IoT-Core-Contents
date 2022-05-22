@@ -48,33 +48,7 @@ Platform Espressif 32: Espressif Systems is a privately held fabless semiconduct
 * 2.4Ghz Wifi
 
 
-```c
-$ pio run --environment core2foraws
 
-$ pio run --environment core2foraws --target upload --target monitor
-
-Compressed 1521216 bytes to 879603...
-Writing at 0x00020000... (1 %)
-Writing at 0x00024000... (3 %)
-Writing at 0x000ec000... (96 %)
-Writing at 0x000f0000... (98 %)
-Writing at 0x000f4000... (100 %)
-Wrote 1521216 bytes (879603 compressed) at 0x00020000 in 15.7 seconds (effective 777.4 kbit/s)...
-Hash of data verified.
-
-Leaving...
-Hard resetting via RTS pin...
-==================================== [SUCCESS] Took 87.87 seconds ====================================
---- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
---- More details at https://bit.ly/pio-monitor-filters
-
---- Available ports:
----  1: /dev/cu.Bluetooth-Incoming-Port 'n/a'
----  2: /dev/cu.SLAB_USBtoUART 'CP2104 USB to UART Bridge Controller'
----  3: /dev/cu.usbserial-02430F5F 'CP2104 USB to UART Bridge Controller'
----  4: /dev/cu.wlan-debug   'n/a'
---- Enter port index or full name: 4
-```  
 
 ## AWS Edukit Upgrade
 
