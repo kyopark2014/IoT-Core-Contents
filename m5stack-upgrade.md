@@ -124,3 +124,47 @@ For POSIX timezone, i.e. esp_rmaker_time_set_timezone_posix() or esp.param.tz_po
 
 <img width="657" alt="image" src="https://user-images.githubusercontent.com/52392004/169685877-c6eca590-8112-4457-a23b-172f3bc993c0.png">
 
+
+## Trouble Shooting
+
+#### Error message
+
+```c
+WARNING: There was an error checking the latest version of pip.
+LibraryLoadError: Unable to find cryptoauthlib. You may need to reinstall:
+  File "/Users/admin/.platformio/penv/lib/python3.8/site-packages/platformio/builder/main.py", line 192:
+    env.SConscript(item, exports="env")
+  File "/Users/admin/.platformio/packages/tool-scons/scons-local-4.3.0/SCons/Script/SConscript.py", line 597:
+    return _SConscript(self.fs, *files, **subst_kw)
+  File "/Users/admin/.platformio/packages/tool-scons/scons-local-4.3.0/SCons/Script/SConscript.py", line 285:
+    exec(compile(scriptdata, scriptname, 'exec'), call_stack[-1].globals)
+  File "/Users/admin/Documents/iot/edukit/Core2-for-AWS-IoT-EduKit/Blinky-Hello-World/register_thing.py", line 69:
+    import certs_handler
+  File "/Users/admin/Documents/iot/edukit/Core2-for-AWS-IoT-EduKit/Blinky-Hello-World/utilities/trustplatform/assets/python/certs_handler/__init__.py", line 1:
+    from .certs_handler import *
+  File "/Users/admin/Documents/iot/edukit/Core2-for-AWS-IoT-EduKit/Blinky-Hello-World/utilities/trustplatform/assets/python/certs_handler/certs_handler.py", line 18:
+    from .create_cert_defs import *
+  File "/Users/admin/Documents/iot/edukit/Core2-for-AWS-IoT-EduKit/Blinky-Hello-World/utilities/trustplatform/assets/python/certs_handler/create_cert_defs.py", line 30:
+    from cryptoauthlib import *
+  File "/Users/admin/.platformio/penv/lib/python3.8/site-packages/cryptoauthlib/__init__.py", line 23:
+    raise error
+  File "/Users/admin/.platformio/penv/lib/python3.8/site-packages/cryptoauthlib/__init__.py", line 20:
+    load_cryptoauthlib()
+  File "/Users/admin/.platformio/penv/lib/python3.8/site-packages/cryptoauthlib/library.py", line 105:
+    raise LibraryLoadError('Unable to find cryptoauthlib. You may need to reinstall')
+============================================================== [FAILED] Took 1.59 seconds ==============================================================
+
+Environment             Status    Duration
+----------------------  --------  ------------
+core2foraws-device_reg  FAILED    00:00:01.587
+========================================================= 1 failed, 0 succeeded in 00:00:01.587 =========================================================
+```
+
+#### 해결방안 
+
+cryptoauthlib를 다시 설치해도 동일한 문제가 계속되면 아래와 같이 .platformio를 삭제후 처음부터 다시 설치해줍니다. 사내보안 시스템 등의 원인으로 platformio에서 다운로드에 실패할 수 있으니 주의 바랍니다. 
+
+```c
+$ cd
+$ rm -rf .platformio
+```
