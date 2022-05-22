@@ -84,3 +84,31 @@ $ pio run --environment core2foraws --target erase
 
 ![image](https://user-images.githubusercontent.com/52392004/169673964-8b4deb0c-0c08-46e5-a573-696737b108f6.png)
 
+
+### NTP Server
+
+아래의 표를 보고 적절한 NTP Server를 지정합니다.
+
+<img width="484" alt="image" src="https://user-images.githubusercontent.com/52392004/169686035-eaef3c7a-f576-47e7-abbc-7b48c5d66bd8.png">
+
+```c
+CONFIG_ESP_RMAKER_SNTP_SERVER_NAME="pool.ntp.org"
+```
+
+### Timezone
+
+[Supported Timezone values](https://rainmaker.espressif.com/docs/time-service.html#supported-timezone-values)에서 Seoul을 검색할 수 있습니다.
+
+이후 "sdkconfig"의 값을 아래와 같이 변경합니다. (기본값은 "Asia/Shanghai"입니다.)
+
+```c
+CONFIG_ESP_RMAKER_DEF_TIMEZONE="Asia/Seoul"
+```
+
+This list is a set of valid values for setting the timezone region string using esp_rmaker_time_set_timezone() API or the esp.param.tz parameter or the CONFIG_ESP_RMAKER_DEF_TIMEZONE config option.
+
+For POSIX timezone, i.e. esp_rmaker_time_set_timezone_posix() or esp.param.tz_posix, you may use other values, not covered here, but adhering to the first and second formats in GNU libc documentation for TZ.
+
+
+<img width="657" alt="image" src="https://user-images.githubusercontent.com/52392004/169685877-c6eca590-8112-4457-a23b-172f3bc993c0.png">
+
