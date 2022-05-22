@@ -43,6 +43,33 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 3) 아래와 같이 [PlatformIO] - [Miscellaneous] - [New Terminal]을 연 후에, "pio run --environment core2foraws"을 입력하고 [Enter]를 누릅니다.
 
+이후 아래와 같이 build가 수행됩니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/169673381-9627b281-f9d5-4df8-921c-0044e5afb93f.png)
+
+4) complied된 firmware를 device에 upload 합니다.
+
+```c
+$ pio run --environment core2foraws --target upload --target monitor
+```
+
+이후 아래와 같이 upload가 진행됩니다.
+
+![image](https://user-images.githubusercontent.com/52392004/169673476-0e408af7-25d4-4c35-938c-4c3ae8087126.png)
+
+업로드가 다 되면 아래와 같이 device가 재시작합니다.
+
+![image](https://user-images.githubusercontent.com/52392004/169673493-f6cd70f8-dc9f-494b-b760-4f94fb8196a6.png)
+
+재시후에 아래와 같은 QR Code가 보여집니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/169673610-c227b1e8-f2b2-4ae9-90c1-fc5b22217e83.png)
+
+5) App에서 Android App
+
+ESP Maker(https://play.google.com/store/apps/details?id=com.espressif.rainmaker)을 통해 Android 단말에서 device에 접속할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/169607992-ad91bd7c-af2b-419f-8a25-c51dd85e74e6.png)
 
 
 
