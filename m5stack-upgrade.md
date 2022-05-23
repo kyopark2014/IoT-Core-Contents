@@ -201,6 +201,18 @@ $ pio run --environment core2foraws --target upload --target monitor
 <img width="524" alt="image" src="https://user-images.githubusercontent.com/52392004/169728233-2e37c31d-98f8-4207-9384-d14321c55de7.png">
 
 
+## Blink 시험 
+
+아래와 같이 IoT core의 Test로 진입합니다. 
+
+https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test
+
+이후 아래와 같이 [Topic name]으로 device id에 blink을 포함하여 publish하면 M5Stack이 깝박임을 알 수 있습니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/169732254-626a905f-3531-4b38-897c-355c0a56e955.png)
+
+
+
 
 ## Firmware 삭제 
 
