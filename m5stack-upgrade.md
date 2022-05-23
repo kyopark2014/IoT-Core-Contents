@@ -45,7 +45,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ![noname](https://user-images.githubusercontent.com/52392004/169673061-f2593512-d7da-4c4b-98da-3bd058fdc2f0.png)
 
 
-2) 다운로드 받은 "Core2-for-AWS-IoT-Edukit"으로 이동하여, "Blinky-Hello=World"을 선택후에 [Open "Blinky-Hello-World"을 선택합니다. 
+2) 다운로드 받은 "Core2-for-AWS-IoT-Edukit"으로 이동하여, "Blinky-Hello-World"을 선택후에 [Open "Blinky-Hello-World"을 선택합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/169726454-31675dde-fcb1-4ccb-8c84-7eab9af85086.png)
 
