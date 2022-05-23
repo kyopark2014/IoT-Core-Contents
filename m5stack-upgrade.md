@@ -35,7 +35,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 ![noname](https://user-images.githubusercontent.com/52392004/169672768-978ad794-a39b-4030-a42d-921e8465acf9.png)
 
-여기서 "CP2104 USB to UART Bridge Controller"의 USB port name을 복사해 놓습니다. 상기의 경우에는 "/dev/cu.SLAB_USBtoUART" 입니다. 
+여기서 "CP2104 USB to UART Bridge Controller"의 USB port name이 "/dev/cu.SLAB_USBtoUART" 임을 알 수 있습니다.
 
 
 ## 첫 프로젝트 시작하기 
