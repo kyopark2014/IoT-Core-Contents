@@ -8,7 +8,12 @@
 
 아래와 같이 Visual Studio Code의 Extentions에서 "PlatformIO IDE"를 설치합니다. 
 
-![image](https://user-images.githubusercontent.com/52392004/169671706-b232090b-0c1a-4f8c-b31c-5f732729c48d.png)
+
+![noname](https://user-images.githubusercontent.com/52392004/169784302-dbc12af6-301b-4e72-8c6a-217ead799a3b.png)
+
+
+
+
 
 이후, 왼쪽의 메뉴에서 "PlatformIO"를 선택하면 [PLATFORM QUICK ACCESS]로 진입 할 수 있습니다.
 
