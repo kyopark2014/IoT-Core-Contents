@@ -1,7 +1,7 @@
 # AWS Edukit(M5Stack) Upgrade
 
 
-여기에서는 [AWS Edukit Workshop](https://edukit.workshop.aws/en/)에 따라 아래와 같이 M5Stack에 대한 펌웨어 업그레이드를 진행합니다.
+여기에서는 [AWS Edukit Workshop](https://edukit.workshop.aws/en/)에 따라 아래와 같이 [M5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)에 대한 펌웨어 업그레이드를 진행합니다.
 
 
 ## Visual Studio Code 환경 구성 
@@ -57,7 +57,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 3) Device Provisioning 을 진행합니다. 
 
-[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에 연결하기 위해서는 Device를 등록하여야 합니다. 
+[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)로 AWS IoT Core에 연결하기 위해서는 Device를 등록하여야 합니다. 
 
 ```c
 $ cd Blinky-Hello-World
