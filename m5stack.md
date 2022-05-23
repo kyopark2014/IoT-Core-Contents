@@ -64,7 +64,7 @@ Platform Espressif 32: Espressif Systems is a privately held fabless semiconduct
 
 ## MQTT
 
-AWS Edukit은 아래와 같이 MQTT Protocol을 이용하여 AWS IoT Core와 통신합니다. [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서 상세하게 MQTT에 대해 설명합니다.
+AWS Edukit은 아래와 같이 MQTT Protocol을 이용하여 AWS IoT Core와 통신합니다. [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서 상세하게 설명합니다.
 
 ![mqtt](https://user-images.githubusercontent.com/52392004/169608426-054b8204-94f6-4e34-af77-a57974e39a7c.png)
 
