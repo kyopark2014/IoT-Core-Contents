@@ -99,6 +99,16 @@ $ pio run --environment core2foraws --target erase
 
 "sdkconfig"의 값을 아래와 같이 변경합니다. 
 
+
+#### WiFi connection
+```c
+# AWS IoT EduKit Configuration
+#
+CONFIG_WIFI_SSID="AWSWorkshop"
+CONFIG_WIFI_PASSWORD="IoTP$AK1t"
+# end of AWS IoT EduKit Configuration
+```
+
 ### MQTT Server
 
 ```c
