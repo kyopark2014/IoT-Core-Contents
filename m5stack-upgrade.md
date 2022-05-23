@@ -74,7 +74,10 @@ $ pio run -e core2foraws-device_reg -t register_thing
 
 Certificates에 대한 정보는 아래와 같습니다. 여기서 Policy가 "Edukit_Policy"로 등록되어 있음을 알 수 있습니다.
 
-![noname](https://user-images.githubusercontent.com/52392004/169730537-cbeda606-faed-4de9-950a-8b2b2fcdd36a.png)
+![noname](https://user-images.githubusercontent.com/52392004/169788119-51c838e8-7198-4132-93d0-73531fabff53.png)
+
+
+
 
 Policy 내용은 아래와 같습니다.
 
