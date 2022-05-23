@@ -52,7 +52,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 3) Device Provisioning 을 진행합니다. 
 
-MQTT에 연결하기 위해서는 Device를 등록하여야 합니다. 
+[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에 연결하기 위해서는 Device를 등록하여야 합니다. 
 
 ```c
 $ cd Blinky-Hello-World
