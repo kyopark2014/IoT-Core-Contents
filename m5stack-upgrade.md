@@ -129,7 +129,7 @@ Policy 내용은 아래와 같습니다.
 
 4) WiFi 설정을 아래와 같이 진행합니다. 
 
-WiFi connection관련하여 "sdkconfig"의 값을 사용하는 WiFi 공유기(AP)의 값으로 변경합니다. 
+WiFi connection 관련하여 "sdkconfig"에서 아래의 WiFi 공유기(AP)의 값을 업데이트 합니다. 
 
 ```c
 # AWS IoT EduKit Configuration
