@@ -61,7 +61,9 @@ $ pio run -e core2foraws-device_reg -t register_thing
 
 상기와 같이 등록시에 아래처럼 "AWS_IoT_registration_helper/output_files"에 인증과 관련된 파일들이 생성됩니다.
 
-![image](https://user-images.githubusercontent.com/52392004/169722674-6449c5e5-86c7-45e9-b948-abb1899d4455.png)
+![noname](https://user-images.githubusercontent.com/52392004/169728933-1c352cf0-9553-430c-bb80-49fab7832fd3.png)
+
+
 
 
 4) WiFi 설정을 아래와 같이 진행합니다. 
