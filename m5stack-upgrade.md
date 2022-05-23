@@ -149,9 +149,7 @@ $ pio run --environment core2foraws --target upload --target monitor
 $ pio run --environment core2foraws --target erase
 ```
 
-![image](https://user-images.githubusercontent.com/52392004/169673964-8b4deb0c-0c08-46e5-a573-696737b108f6.png)
-
-
+![image](https://user-images.githubusercontent.com/52392004/169729531-9af52413-7c70-4c93-8752-b447919129af.png)
 
 
 
