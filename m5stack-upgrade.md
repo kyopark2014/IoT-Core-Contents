@@ -207,7 +207,7 @@ $ pio run --environment core2foraws --target upload --target monitor
 
 https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test
 
-이후 아래와 같이 [Topic name]으로 device id에 blink을 포함하여 publish하면 M5Stack이 깝박임을 알 수 있습니다.
+이후 아래와 같이 [Topic name]으로 device id에 blink을 포함하여 publish하면 M5Stack이 깝박임을 알 수 있습니다. 다시 한번 blink를 전송하면 깜박임이 멈춥니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/169732254-626a905f-3531-4b38-897c-355c0a56e955.png)
 
