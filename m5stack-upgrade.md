@@ -33,17 +33,19 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 여기서 "CP2104 USB to UART Bridge Controller"의 USB port name을 복사해 놓습니다. 상기의 경우에는 "/dev/cu.SLAB_USBtoUART" 입니다. 
 
 
-## 첫 프로젝트  하기 
+## 첫 프로젝트 시작하기 
 
 1) 아래와 같이 [PlatformIO] - [Open] - [Open Project]를 선택합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/169673061-f2593512-d7da-4c4b-98da-3bd058fdc2f0.png)
 
-2) 다운로드 받은 "Core2-for-AWS-IoT-Edukit"으로 이동하여, "Getting-Started"을 선택후에 [Open "Getting-Started"을 선택합니다. 
 
-![noname](https://user-images.githubusercontent.com/52392004/169673127-a84f49e9-ca12-4261-8670-d9c14ff80022.png)
+2) 다운로드 받은 "Core2-for-AWS-IoT-Edukit"으로 이동하여, "Blinky-Hello=World"을 선택후에 [Open "Blinky-Hello=World"을 선택합니다. 
 
-3) 아래와 같이 [PlatformIO] - [Miscellaneous] - [New Terminal]을 연 후에, "pio run --environment core2foraws"을 입력하고 [Enter]를 누릅니다.
+![noname](https://user-images.githubusercontent.com/52392004/169726454-31675dde-fcb1-4ccb-8c84-7eab9af85086.png)
+
+
+3) 아래와 같이 [PlatformIO] - [Miscellaneous] - [New Terminal]을 연 후에, "pio run --environment core2foraws"을 입력하고 [Enter]를 선택해서 Build를 진행합니다. 
 
 ```c
 $ pio run --environment core2foraws
@@ -61,7 +63,8 @@ $ pio run --environment core2foraws --target upload --target monitor
 
 이후 아래와 같이 upload가 진행됩니다.
 
-![image](https://user-images.githubusercontent.com/52392004/169673476-0e408af7-25d4-4c35-938c-4c3ae8087126.png)
+![image](https://user-images.githubusercontent.com/52392004/169726765-66bc9310-63e0-4336-a234-89fb892d62a2.png)
+
 
 업로드가 다 되면 아래와 같이 device가 재시작합니다.
 
