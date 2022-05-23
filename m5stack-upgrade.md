@@ -32,7 +32,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 ## Device 연결
 
-1) M5Stack을 컴퓨터와 연결합니다. 이때 자동으로 전원이 들어오지만, 안들어오는 경우에 Power on 버튼을 선택하여 Device를 켭니다. 
+1) M5Stack을 USB-C 케이블로 컴퓨터와 연결합니다. 이때 자동으로 전원이 들어오지만, 안들어오는 경우에 Power on 버튼을 선택하여 Device를 켭니다. 
 
 <img width="485" alt="image" src="https://user-images.githubusercontent.com/52392004/169696896-6e9d7c75-bd78-48de-8cd2-d7c9356afeb1.png">
 
