@@ -1,6 +1,6 @@
 ## AWS Edukit
 
-[M5Stack AWS](https://aws.amazon.com/ko/about-aws/whats-new/2020/12/introducing-aws-iot-edukit/)은 IoT Application을 개발할때 필요한 IoT hardwaware kit 입니다. 
+[M5Stack AWS](https://aws.amazon.com/ko/about-aws/whats-new/2020/12/introducing-aws-iot-edukit/)은 IoT Application을 개발할때 필요한 IoT hardware kit 입니다. 
 
 - 주요센서: 제어용 터치 스크린, 온도, 가속도계, 자이로, 마이크
 
