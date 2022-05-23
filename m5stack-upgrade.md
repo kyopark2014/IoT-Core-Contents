@@ -55,8 +55,8 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 MQTT에 연결하기 위해서는 Device를 등록하여야 합니다. 
 
 ```c
-cd Blinky-Hello-World
-pio run -e core2foraws-device_reg -t register_thing
+$ cd Blinky-Hello-World
+$ pio run -e core2foraws-device_reg -t register_thing
 ```
 
 상기와 같이 등록시에 아래처럼 "AWS_IoT_registration_helper/output_files"에 인증과 관련된 파일들이 생성됩니다.
