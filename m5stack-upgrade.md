@@ -45,6 +45,10 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 3) 아래와 같이 [PlatformIO] - [Miscellaneous] - [New Terminal]을 연 후에, "pio run --environment core2foraws"을 입력하고 [Enter]를 누릅니다.
 
+```c
+$ pio run --environment core2foraws
+```
+
 이후 아래와 같이 build가 수행됩니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/169673381-9627b281-f9d5-4df8-921c-0044e5afb93f.png)
