@@ -45,7 +45,25 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ![noname](https://user-images.githubusercontent.com/52392004/169726454-31675dde-fcb1-4ccb-8c84-7eab9af85086.png)
 
 
-3) 아래와 같이 [PlatformIO] - [Miscellaneous] - [New Terminal]을 연 후에, "pio run --environment core2foraws"을 입력하고 [Enter]를 선택해서 Build를 진행합니다. 
+3) Authentification 
+
+![image](https://user-images.githubusercontent.com/52392004/169722674-6449c5e5-86c7-45e9-b948-abb1899d4455.png)
+
+
+4) WiFi 설정
+
+WiFi connection관련하여 "sdkconfig"의 값을 사용하는 WiFi의 값으로 변경합니다. 
+
+```c
+# AWS IoT EduKit Configuration
+#
+CONFIG_WIFI_SSID="AWSWorkshop"
+CONFIG_WIFI_PASSWORD="IoTP$AK1t"
+# end of AWS IoT EduKit Configuration
+```
+
+
+5) 아래와 같이 [PlatformIO] - [Miscellaneous] - [New Terminal]을 연 후에, "pio run --environment core2foraws"을 입력하고 [Enter]를 선택해서 Build를 진행합니다. 
 
 ```c
 $ pio run --environment core2foraws
@@ -55,7 +73,9 @@ $ pio run --environment core2foraws
 
 ![image](https://user-images.githubusercontent.com/52392004/169673381-9627b281-f9d5-4df8-921c-0044e5afb93f.png)
 
-4) complied된 firmware를 device에 upload 합니다.
+
+
+6) complied된 firmware를 device에 upload 합니다.
 
 ```c
 $ pio run --environment core2foraws --target upload --target monitor
@@ -70,21 +90,10 @@ $ pio run --environment core2foraws --target upload --target monitor
 
 ![image](https://user-images.githubusercontent.com/52392004/169673493-f6cd70f8-dc9f-494b-b760-4f94fb8196a6.png)
 
-재시후에 아래와 같은 QR Code가 보여집니다.
-
-![noname](https://user-images.githubusercontent.com/52392004/169673610-c227b1e8-f2b2-4ae9-90c1-fc5b22217e83.png)
-
-5) App에서 Android App
-
-ESP Maker(https://play.google.com/store/apps/details?id=com.espressif.rainmaker)을 통해 Android 단말에서 device에 접속할 수 있습니다.
-
-![image](https://user-images.githubusercontent.com/52392004/169607992-ad91bd7c-af2b-419f-8a25-c51dd85e74e6.png)
 
 
 
-## Authentification 
 
-![image](https://user-images.githubusercontent.com/52392004/169722674-6449c5e5-86c7-45e9-b948-abb1899d4455.png)
 
 
 ## Firmware 삭제 
@@ -98,52 +107,7 @@ $ pio run --environment core2foraws --target erase
 ![image](https://user-images.githubusercontent.com/52392004/169673964-8b4deb0c-0c08-46e5-a573-696737b108f6.png)
 
 
-## Firware 수정
 
-"sdkconfig"의 값을 아래와 같이 변경합니다. 
-
-
-#### WiFi connection
-```c
-# AWS IoT EduKit Configuration
-#
-CONFIG_WIFI_SSID="AWSWorkshop"
-CONFIG_WIFI_PASSWORD="IoTP$AK1t"
-# end of AWS IoT EduKit Configuration
-```
-
-### MQTT Server
-
-```c
-CONFIG_ESP_RMAKER_MQTT_HOST="a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com"
-```
-
-### NTP Server
-
-[아래의 표](https://zetawiki.com/wiki/%EA%B3%B5%EC%9A%A9_NTP_%EC%84%9C%EB%B2%84_%EB%AA%A9%EB%A1%9D)를 보고 적절한 NTP Server를 지정합니다.
-
-<img width="484" alt="image" src="https://user-images.githubusercontent.com/52392004/169686035-eaef3c7a-f576-47e7-abbc-7b48c5d66bd8.png">
-
-```c
-CONFIG_ESP_RMAKER_SNTP_SERVER_NAME="pool.ntp.org"
-```
-
-### Timezone
-
-기본값은 "Asia/Shanghai"입니다. 아래를 참조하여 "Asia/Seoul"로 변경합니다.
-
-[Supported Timezone values](https://rainmaker.espressif.com/docs/time-service.html#supported-timezone-values)에서 Seoul을 검색할 수 있습니다.
-
-```c
-CONFIG_ESP_RMAKER_DEF_TIMEZONE="Asia/Seoul"
-```
-
-This list is a set of valid values for setting the timezone region string using esp_rmaker_time_set_timezone() API or the esp.param.tz parameter or the CONFIG_ESP_RMAKER_DEF_TIMEZONE config option.
-
-For POSIX timezone, i.e. esp_rmaker_time_set_timezone_posix() or esp.param.tz_posix, you may use other values, not covered here, but adhering to the first and second formats in GNU libc documentation for TZ.
-
-
-<img width="657" alt="image" src="https://user-images.githubusercontent.com/52392004/169685877-c6eca590-8112-4457-a23b-172f3bc993c0.png">
 
 
 ## Trouble Shooting
