@@ -66,7 +66,7 @@ $ pio run -e core2foraws-device_reg -t register_thing
 
 4) WiFi 설정을 아래와 같이 진행합니다. 
 
-WiFi connection관련하여 "sdkconfig"의 값을 사용하는 WiFi의 값으로 변경합니다. 
+WiFi connection관련하여 "sdkconfig"의 값을 사용하는 WiFi 공유기(AP)의 값으로 변경합니다. 
 
 ```c
 # AWS IoT EduKit Configuration
