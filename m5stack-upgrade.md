@@ -1,5 +1,9 @@
 # AWS Edukit(M5Stack) Upgrade
 
+
+여기에서는 [AWS Edukit Workshop](https://edukit.workshop.aws/en/)에 따라 아래와 같이 M5Stack에 대한 업그레이드를 진행합니다.
+
+
 ## Visual Studio Code 환경 구성 
 
 아래와 같이 Visual Studio Code의 Extentions에서 "PlatformIO IDE"를 설치합니다. 
@@ -9,6 +13,7 @@
 이후, 왼쪽의 메뉴에서 "PlatformIO"를 선택하면 [PLATFORM QUICK ACCESS]로 진입 할 수 있습니다.
 
 ![noname](https://user-images.githubusercontent.com/52392004/169671783-b558e864-78ee-40f9-957a-50490050ad31.png)
+
 
 
 ## AWS Sample Download
@@ -45,12 +50,21 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ![noname](https://user-images.githubusercontent.com/52392004/169726454-31675dde-fcb1-4ccb-8c84-7eab9af85086.png)
 
 
-3) Authentification 
+3) Device Provisioning 을 진행합니다. 
+
+MQTT에 연결하기 위해서는 Device를 등록하여야 합니다. 
+
+```c
+cd Blinky-Hello-World
+pio run -e core2foraws-device_reg -t register_thing
+```
+
+상기와 같이 등록시에 아래처럼 "AWS_IoT_registration_helper/output_files"에 인증과 관련된 파일들이 생성됩니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/169722674-6449c5e5-86c7-45e9-b948-abb1899d4455.png)
 
 
-4) WiFi 설정
+4) WiFi 설정을 아래와 같이 진행합니다. 
 
 WiFi connection관련하여 "sdkconfig"의 값을 사용하는 WiFi의 값으로 변경합니다. 
 
@@ -91,8 +105,37 @@ $ pio run --environment core2foraws --target upload --target monitor
 ![image](https://user-images.githubusercontent.com/52392004/169673493-f6cd70f8-dc9f-494b-b760-4f94fb8196a6.png)
 
 
+7) 설치가 완료 되면, Console에서 아래와 같이 진행사항 확인이 가능합니다.
 
+```c
+␛[0;32mI (6029) WIFI: Device IP address: 192.168.68.110␛[0m
+␛[0;32mI (6029) esp_netif_handlers: sta ip: 192.168.68.110, mask: 255.255.255.0, gw: 192.168.68.1␛[0m
+␛[0;32mI (6059) MAIN: Connecting to AWS IoT Core at samplel34rul5-ats.iot.ap-northeast-2.amazonaws.com:8883␛[0m
+␛[0;32mI (6079) aws_iot: Attempting to use device certificate from ATECC608␛[0m
+␛[0;32mI (7869) MAIN: Successfully connected to AWS IoT Core!␛[0m
+␛[0;32mI (7869) MAIN: Subscribing to '0123501CB56E162101/#'␛[0m
+␛[0;32mI (8009) MAIN: Subscribed to topic '0123501CB56E162101/#'␛[0m
+␛[0;32mI (8009) MAIN: 
+****************************************
+*  AWS client Id - 0123501CB56E162101  *
+****************************************
 
+␛[0m
+␛[0;32mI (11279) MAIN: Subscribe callback␛[0m
+␛[0;32mI (11279) MAIN: 0123501CB56E162101/      Hello from AWS IoT EduKit (QOS0) : 0 ␛[0m
+␛[0;32mI (11299) MAIN: Subscribe callback␛[0m
+␛[0;32mI (11299) MAIN: 0123501CB56E162101/      Hello from AWS IoT EduKit (QOS1) : 1 ␛[0m
+␛[0;32mI (14409) MAIN: Subscribe callback␛[0m
+␛[0;32mI (14409) MAIN: 0123501CB56E162101/      Hello from AWS IoT EduKit (QOS0) : 0 ␛[0m
+␛[0;32mI (14429) MAIN: Subscribe callback␛[0m
+␛[0;32mI (14429) MAIN: 0123501CB56E162101/      Hello from AWS IoT EduKit (QOS1) : 1 ␛[0m
+␛[0;32mI (17549) MAIN: Subscribe callback␛[0m
+␛[0;32mI (17549) MAIN: 0123501CB56E162101/      Hello from AWS IoT EduKit (QOS0) : 0 ␛[0m
+```
+
+이때, M5Stack은 아래와 같이 publish를 진행하고 있음을 확인 할 수 있습니다.
+
+<img width="524" alt="image" src="https://user-images.githubusercontent.com/52392004/169728233-2e37c31d-98f8-4207-9384-d14321c55de7.png">
 
 
 
