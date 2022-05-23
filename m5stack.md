@@ -6,6 +6,8 @@
 
 - Espressif ESP32 microcontroller 
 
+- 240MHz dual core processor
+
 - FreeRTOS, Arduino, MicroPython을 지원
 
 - 구매방법: Amazon.com 또는 M5Stack 스토어
