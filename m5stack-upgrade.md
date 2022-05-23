@@ -1,7 +1,7 @@
 # AWS Edukit(M5Stack) Upgrade
 
 
-여기에서는 [AWS Edukit Workshop](https://edukit.workshop.aws/en/)에 따라 아래와 같이 M5Stack에 대한 업그레이드를 진행합니다.
+여기에서는 [AWS Edukit Workshop](https://edukit.workshop.aws/en/)에 따라 아래와 같이 M5Stack에 대한 펌웨어 업그레이드를 진행합니다.
 
 
 ## Visual Studio Code 환경 구성 
