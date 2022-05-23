@@ -38,7 +38,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 여기서 "CP2104 USB to UART Bridge Controller"의 USB port name이 "/dev/cu.SLAB_USBtoUART" 임을 알 수 있습니다.
 
 
-## 첫 프로젝트 시작하기 
+## 프로젝트 시작하기 
 
 1) 아래와 같이 [PlatformIO] - [Open] - [Open Project]를 선택합니다. 
 
@@ -63,6 +63,67 @@ $ pio run -e core2foraws-device_reg -t register_thing
 
 ![noname](https://user-images.githubusercontent.com/52392004/169728933-1c352cf0-9553-430c-bb80-49fab7832fd3.png)
 
+[IoT Core에 등록된 device 정보](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/thinghub)는 아래와 같습니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/169730291-d534d7b4-154c-43fe-977f-44311a284af1.png)
+
+Certificates에 대한 정보는 아래와 같습니다. 여기서 Policy가 "Edukit_Policy"로 등록되어 있음을 알 수 있습니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/169730537-cbeda606-faed-4de9-950a-8b2b2fcdd36a.png)
+
+Policy 내용은 아래와 같습니다.
+
+```java
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Connect"
+      ],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:123456789012:client/${iot:Connection.Thing.ThingName}"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Publish",
+        "iot:Receive"
+      ],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:123456789012:topic/${iot:Connection.Thing.ThingName}/*",
+        "arn:aws:iot:ap-northeast-2:123456789012:topic/$aws/things/${iot:Connection.Thing.ThingName}/shadow/*",
+        "arn:aws:iot:ap-northeast-2:123456789012:topic/$aws/things/${iot:Connection.Thing.ThingName}/streams/*",
+        "arn:aws:iot:ap-northeast-2:123456789012:topic/$aws/things/${iot:Connection.Thing.ThingName}/jobs/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Subscribe"
+      ],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:123456789012:topicfilter/${iot:Connection.Thing.ThingName}/*",
+        "arn:aws:iot:ap-northeast-2:123456789012:topicfilter/$aws/things/${iot:Connection.Thing.ThingName}/shadow/*",
+        "arn:aws:iot:ap-northeast-2:123456789012:topicfilter/$aws/things/${iot:Connection.Thing.ThingName}/streams/*",
+        "arn:aws:iot:ap-northeast-2:123456789012:topicfilter/$aws/things/${iot:Connection.Thing.ThingName}/jobs/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:UpdateThingShadow",
+        "iot:GetThingShadow"
+      ],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:123456789012:topic/$aws/things/${iot:Connection.Thing.ThingName}/shadow/*"
+      ]
+    }
+  ]
+}
+```
 
 
 
