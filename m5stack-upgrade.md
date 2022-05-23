@@ -79,6 +79,10 @@ ESP Maker(https://play.google.com/store/apps/details?id=com.espressif.rainmaker)
 
 
 
+## Authentification 
+
+![image](https://user-images.githubusercontent.com/52392004/169722674-6449c5e5-86c7-45e9-b948-abb1899d4455.png)
+
 
 ## Firmware 삭제 
 
