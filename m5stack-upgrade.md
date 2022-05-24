@@ -55,7 +55,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ![noname](https://user-images.githubusercontent.com/52392004/169726454-31675dde-fcb1-4ccb-8c84-7eab9af85086.png)
 
 
-3) Device Provisioning 을 진행합니다. 
+3) Device Provisioning 을 진행합니다. 생성된 Device ID는 M5stack의 serial number입니다.
 
 [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)로 AWS IoT Core에 연결하기 위해서는 Device를 등록하여야 합니다. 
 
