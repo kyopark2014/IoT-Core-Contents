@@ -1,6 +1,6 @@
 # AWS Edukit(M5Stack) - Blinky
 
-## PlatformIO IDE Extension이 설치
+## PlatformIO IDE Extension 설치
 
 Visual Studio Code에 PlatformIO IDE Extension이 설치가 필요합니다. [Visual Studio Code에 PlatformIO IDE Extension 설치 및 활용](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-platformio.md)을 참조하여 [m5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)을 Visual Studio Code에 연결하여 디버깅할 수 있는 환경을 구성합니다. 
 
