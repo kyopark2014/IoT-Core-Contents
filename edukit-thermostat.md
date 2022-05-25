@@ -7,7 +7,7 @@ Visual Studio Code에 PlatformIO IDE Extension이 설치되어 있지 않다면,
 
 ## Thermostate 설정
 
-1) [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에 따라 접속해야 하는 IoT Core의 Endpoint를 확인 합니다. 
+1) [IoT Core Endpoint](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/endpoint.md)에 따라 접속해야 하는 IoT Core의 Endpoint를 확인 합니다. 
 
 2) [Device 인증서 생성](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/certification.md)을 따라서 M5Stack을 위한 인증서를 생성합니다. 이 과정을 진행하면, "M5Stack.cert.pem", "M5Stack.private.key", "M5Stack.public.key", "AmazonRootCA1.cer"가 생성됩니다.
 
