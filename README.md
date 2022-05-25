@@ -58,7 +58,7 @@ AWS IoT Architecutre에는 아래와 같은 서비스들이 있습니다.
 
 
 
-#### Visual Studio Code 환경 구성
+### 1) Visual Studio Code 환경 구성
 
 M5Stack에 펌웨어를 업그레이드 하거나 삭제하는 동작은 Visual Studio Code를 이용해 편리하게 할 수 있습니다. 
 
@@ -66,7 +66,7 @@ M5Stack에 펌웨어를 업그레이드 하거나 삭제하는 동작은 Visual 
 
 
 
-#### CLOUD CONNECTED BLINKY
+### 2) CLOUD CONNECTED BLINKY
 
 [CLOUD CONNECTED BLINKY](https://edukit.workshop.aws/en/blinky-hello-world.html)에서는 M5stack을 IoT Core에 등록하는 script를 실행 할 수 있고, 이를 통해 연결이 되면 MQTT로 IoT Core에 메시지를 보낼 수 있습니다. IoT Core에서 blinky 명령을 실행하면 M5Stack의 LED를 제어 할 수 있습니다. 
 
