@@ -1,4 +1,4 @@
-# Visual Studio Code에 PlatformIO Extension 설치 및 활용
+# Visual Studio Code에 PlatformIO IDE Extension 설치 및 활용
 
 ## Visual Studio Code 환경 구성 
 
