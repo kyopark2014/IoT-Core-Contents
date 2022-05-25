@@ -52,6 +52,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 
 
+![noname](https://user-images.githubusercontent.com/52392004/170182678-c6272162-6762-4dee-b887-db4aa334c3ad.png)
 
 
 
