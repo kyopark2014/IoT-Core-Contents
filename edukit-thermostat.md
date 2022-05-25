@@ -7,34 +7,33 @@ Visual Studio Code에 PlatformIO IDE Extension이 설치되어 있지 않다면,
 
 ## Thermostate 설정
 
-1) [IoT Core Endpoint](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/endpoint.md)에 따라 접속해야 하는 IoT Core의 Endpoint를 확인 합니다. 
+1) [Device 인증서 생성](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/certification.md)을 따라서 M5Stack을 위한 인증서를 생성합니다. 이 과정을 진행하면, "M5Stack.cert.pem", "M5Stack.private.key", "M5Stack.public.key", "AmazonRootCA1.cer"가 생성됩니다.
 
-2) [Device 인증서 생성](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/certification.md)을 따라서 M5Stack을 위한 인증서를 생성합니다. 이 과정을 진행하면, "M5Stack.cert.pem", "M5Stack.private.key", "M5Stack.public.key", "AmazonRootCA1.cer"가 생성됩니다.
-
-3) [Core2-for-AWS-IoT-EduKit](https://github.com/m5stack/Core2-for-AWS-IoT-EduKit)을 다운로드 하지 않았다면, 아래와 같이 Core2-for-AWS-IoT-EduKit을 다운로드 합니다. SMART THERMOSTAT은 Core2-for-AWS-IoT-EduKit의 하위 폴더에 있습니다.
+2) [Core2-for-AWS-IoT-EduKit](https://github.com/m5stack/Core2-for-AWS-IoT-EduKit)을 다운로드 하지 않았다면, 아래와 같이 Core2-for-AWS-IoT-EduKit을 다운로드 합니다. SMART THERMOSTAT은 Core2-for-AWS-IoT-EduKit의 하위 폴더에 있습니다.
 
 ```c
 $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ```
 
-4) Visual Studio Code를 실행하여 [File] - [Open Folder]를 선택 한 후, Core2-for-AWS-IoT-EduKit/Smart-Thermostate를 선택합니다. 
+3) Visual Studio Code를 실행하여 [File] - [Open Folder]를 선택 한 후, Core2-for-AWS-IoT-EduKit/Smart-Thermostate를 선택합니다. 
 
-5) 아래와 같이 "sdkconfig"에서 "CONFIG_WIFI_SSID"에 사용하는 AP의 이름을 넣고, "CONFIG_WIFI_PASSWORD"에 패스워드를 입력합니다. M5Stack은 2.4GHz WiFi만을 지원하므로 선택하는 AP는 2.4GHz를 지원하는 AP의 SSID를 지정하여야 합니다. 
+4) 아래와 같이 "sdkconfig"에서 "CONFIG_WIFI_SSID"에 사용하는 AP의 이름을 넣고, "CONFIG_WIFI_PASSWORD"에 패스워드를 입력합니다. M5Stack은 2.4GHz WiFi만을 지원하므로 선택하는 AP는 2.4GHz를 지원하는 AP의 SSID를 지정하여야 합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170207617-b76313fe-8313-4da7-807f-d415bb0f2a1a.png)
 
-6) 아래와 같이 "sdkconfig"에서 [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에서 확인한 IoT Core의 Endpoint를 CONFIG_AWS_IOT_MQTT_HOST에 입력합니다. 
+
+5) [IoT Core Endpoint](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/endpoint.md)에 따라 접속해야 하는 IoT Core의 Endpoint를 확인 합니다. 이후 아래와 같이 "sdkconfig"에서 "CONFIG_AWS_IOT_MQTT_HOST"에 IoT Core의 Endpoint를 입력합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170208495-680a41f2-8530-4e0b-8295-8243e93f387d.png)
 
-7) 아래와 같이 [SMART-THERMOSTAT] - [main] - [certs]에 가면, 아래의 3개의 파일이 있습니다. 
+6) 아래와 같이 [SMART-THERMOSTAT] - [main] - [certs]에 가면, 아래의 3개의 파일이 있습니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170208927-3fd07c1a-5ecc-4e3e-97a5-60eb92ea0144.png)
 
 "aws-root-ca.pem"은 "AmazonRootCA1.cer", "certificate.pem.crt"은 "M5Stack.cert.pem", "private.pem.key"은 "M5Stack.private.key"와 동일한 파일이므로, 파일을 열어서 동일하게 복사하여 줍니다. 
 
 
-8) 화씨(Fahrenheit)를 섭씨(Centigrade)로 변환합니다.
+7) 화씨(Fahrenheit)를 섭씨(Centigrade)로 변환합니다.
 
 "main.c"에서 구해진 temperature는 화씨입니다.
 
@@ -49,13 +48,13 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
  temperature = (temperature - 32) * 0.5556; // Centigrade
 ```
 
-9) 이벤트 생성 시점을 1초에서 10초로 변경합니다.
+8) 이벤트 생성 시점을 1초에서 10초로 변경합니다.
 
 "main.c"에서는 아래와 같이 1초 간격으로 temperature를 측정하여, json으로 전송하고 있습니다. 온도의 변화에 비하여 1초 간격이 너무 빠르므로 아래와 같이 10초로 조정하였습니다.  
 
 ![noname](https://user-images.githubusercontent.com/52392004/170298699-8c930b15-8b74-4ded-a68a-c2855ff1ba52.png)
 
-10) 이제 [PlatformIO]를 선택한 후 [PROJECT TASK]에서 "Build"와 "Uplaod and Monitor"를 순차적으로 선택하여, 빌드 및 펌웨어 업그레이드를 진행합니다. 
+9) 이제 [PlatformIO]를 선택한 후 [PROJECT TASK]에서 "Build"와 "Uplaod and Monitor"를 순차적으로 선택하여, 빌드 및 펌웨어 업그레이드를 진행합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170210914-d1fc38d6-d80a-4d42-ab47-7bd9bf5af4d0.png)
 
