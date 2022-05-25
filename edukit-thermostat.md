@@ -5,7 +5,7 @@
 Visual Studio Code에 PlatformIO IDE Extension이 설치되어 있지 않다면, [Visual Studio Code에 PlatformIO IDE Extension 설치 및 활용](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-platformio.md)에 따라 Visual Studio Code에서 [M5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)을 디버깅할 수 있는 환경을 구성합니다. 
 
 
-## Thermostate에 대한 설정 및 실행 결과 
+## Thermostate 설정
 
 1) [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에 따라 접속해야 하는 IoT Core의 Endpoint를 확인 합니다. 
 
@@ -33,48 +33,54 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 "aws-root-ca.pem"은 "AmazonRootCA1.cer", "certificate.pem.crt"은 "M5Stack.cert.pem", "private.pem.key"은 "M5Stack.private.key"와 동일한 파일이므로, 파일을 열어서 동일하게 복사하여 줍니다. 
 
-8) 이제 [PlatformIO]를 선택한 후 [PROJECT TASK]에서 "Build"와 "Uplaod and Monitor"를 순차적으로 선택하여, 빌드 및 펌웨어 업그레이드를 진행합니다. 
+
+8) 화씨(Fahrenheit)를 섭씨(Centigrade)로 변환합니다.
+
+- "main.c"에서는 아래와 같이 temperature를 이용해 화씨를 쓰고 있습니다. 
+
+```c
+  MPU6886_GetTempData(&temperature);
+  temperature = (temperature * 1.8)  + 32 - 50;   // Fahrenheit
+```
+
+이를, 아래 구분을 추가하여 섭씨로 변경합니다. 
+
+```c
+ temperature = (temperature - 32) * 0.5556; // Centigrade
+```
+
+9) 이벤트 생성 시점을 1초에서 10초로 변경합니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/170298699-8c930b15-8b74-4ded-a68a-c2855ff1ba52.png)
+
+10) 이제 [PlatformIO]를 선택한 후 [PROJECT TASK]에서 "Build"와 "Uplaod and Monitor"를 순차적으로 선택하여, 빌드 및 펌웨어 업그레이드를 진행합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170210914-d1fc38d6-d80a-4d42-ab47-7bd9bf5af4d0.png)
 
-9) 정상적으로 동작하면 아래와 같이 M5Stack이 IoT Core로 publish를 하게 됩니다. 
+
+
+## Thermostate 동작 결과
+
+아래와 같이 M5Stack이 IoT Core로 publish를 하게 됩니다. 
 
 <img width="514" alt="image" src="https://user-images.githubusercontent.com/52392004/170211449-45fb6882-54e8-4f24-9dcf-0361641a94b5.png">
 
 이때, Visual Studio Code에는 아래처럼 로그로 json형태로 device 상태가 IoT core로 전송중임을 알 수 있습니다. 
 
 ```c
-I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
-␛[0;32mI (6544) WIFI: Device IP address: 192.168.0.6␛[0m
-␛[0;32mI (6544) MAIN: Shadow Init␛[0m
-␛[0;32mI (6544) MAIN: Shadow Connect␛[0m
-␛[0;32mI (6544) esp_netif_handlers: sta ip: 192.168.0.6, mask: 255.255.255.0, gw: 192.168.0.1␛[0m
-␛[0;32mI (6574) aws_iot: Attempting to use device certificate from ATECC608␛[0m
-␛[0;32mI (8604) I2S: DMA Malloc info, datalen=blocksize=512, dma_buf_count=2␛[0m
-␛[0;32mI (8604) I2S: PLL_D2: Req RATE: 44100, real rate: 90909.000, BITS: 16, CLKM: 11, BCK: 5, MCLK: 11.338, SCLK: 2909088.000000, diva: 64, divb: 21␛[0m
-␛[0;32mI (8614) I2S: PLL_D2: Req RATE: 44100, real rate: 90909.000, BITS: 16, CLKM: 11, BCK: 5, MCLK: 11.338, SCLK: 2909088.000000, diva: 64, divb: 21␛[0m
-␛[0;32mI (8854) MAIN: *****************************************************************************************␛[0m
-␛[0;32mI (8854) MAIN: On Device: roomOccupancy false␛[0m
-␛[0;32mI (8854) MAIN: On Device: hvacStatus STANDBY␛[0m
-␛[0;32mI (8864) MAIN: On Device: temperature 57.139534␛[0m
-␛[0;32mI (8864) MAIN: On Device: sound 66␛[0m
-␛[0;32mI (8874) MAIN: Update Shadow: {"state":{"reported":{"temperature":57.139534,"sound":66,"roomOccupancy":false,"hvacStatus":"STANDBY"}}, "clientToken":"0123501CB56E162101-0"}␛[0m
-␛[0;32mI (11014) MAIN: *****************************************************************************************␛[0m
-␛[0;32mI (11014) MAIN: Stack remaining for task 'aws_iot_task' is 2036 bytes␛[0m
-␛[0;32mI (12024) MAIN: Update accepted␛[0m
-␛[0;32mI (12224) MAIN: *****************************************************************************************␛[0m
-␛[0;32mI (12224) MAIN: On Device: roomOccupancy false␛[0m
-␛[0;32mI (12224) MAIN: On Device: hvacStatus STANDBY␛[0m
-␛[0;32mI (12234) MAIN: On Device: temperature 57.640759␛[0m
-␛[0;32mI (12234) MAIN: On Device: sound 4␛[0m
-␛[0;32mI (12244) MAIN: Update Shadow: {"state":{"reported":{"temperature":57.640759,"sound":4,"roomOccupancy":false,"hvacStatus":"STANDBY"}}, "clientToken":"0123501CB56E162101-1"}␛[0m
-␛[0;32mI (12254) MAIN: *****************************************************************************************␛[0m
-␛[0;32mI (12264) MAIN: Stack remaining for task 'aws_iot_task' is 2036 bytes␛[0m
-␛[0;32mI (13274) MAIN: Update accepted␛[0m
+␛[0;32mI (634333) MAIN: Stack remaining for task 'aws_iot_task' is 2036 bytes␛[0m
+␛[0;31mE (644333) MAIN: Update timed out␛[0m
+␛[0;32mI (644533) MAIN: *****************************************************************************************␛[0m
+␛[0;32mI (644533) MAIN: On Device: roomOccupancy false␛[0m
+␛[0;32mI (644533) MAIN: On Device: hvacStatus STANDBY␛[0m
+␛[0;32mI (644543) MAIN: On Device: temperature 19.472862␛[0m
+␛[0;32mI (644543) MAIN: On Device: sound 6␛[0m
+␛[0;32mI (644553) MAIN: Update Shadow: {"state":{"reported":{"temperature":19.472862,"sound":6,"roomOccupancy":false,"hvacStatus":"STANDBY"}}, "clientToken":"0123501CB56E162101-62"}␛[0m
+␛[0;32mI (644563) MAIN: *****************************************************************************************␛[0m
 ```
 
 
-10) IoT Core로 publish되는 데이터는 아래와 같은 json입니다.
+IoT Core로 publish되는 데이터는 아래와 같은 json입니다.
 
 - Topic: $aws/things/0123501CB56E162101/shadow/update
 
@@ -82,13 +88,13 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
 {
   "state": {
     "reported": {
-      "temperature": 63.727047,
-      "sound": 2,
+      "temperature": 17.820343,
+      "sound": 8,
       "roomOccupancy": false,
       "hvacStatus": "STANDBY"
     }
   },
-  "clientToken": "0123501CB56E162101-26"
+  "clientToken": "0123501CB56E162101-77"
 }
 ```
 
@@ -98,8 +104,8 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
 {
   "state": {
     "reported": {
-      "temperature": 59.849449,
-      "sound": 4,
+      "temperature": 17.820343,
+      "sound": 8,
       "roomOccupancy": false,
       "hvacStatus": "STANDBY"
     }
@@ -107,22 +113,22 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
   "metadata": {
     "reported": {
       "temperature": {
-        "timestamp": 1653478558
+        "timestamp": 1653492409
       },
       "sound": {
-        "timestamp": 1653478558
+        "timestamp": 1653492409
       },
       "roomOccupancy": {
-        "timestamp": 1653478558
+        "timestamp": 1653492409
       },
       "hvacStatus": {
-        "timestamp": 1653478558
+        "timestamp": 1653492409
       }
     }
   },
-  "version": 9444,
-  "timestamp": 1653478558,
-  "clientToken": "0123501CB56E162101-25"
+  "version": 11214,
+  "timestamp": 1653492409,
+  "clientToken": "0123501CB56E162101-77"
 }
 ```
 
@@ -134,8 +140,8 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
   "previous": {
     "state": {
       "reported": {
-        "temperature": 58.075886,
-        "sound": 223,
+        "temperature": 17.272562,
+        "sound": 6,
         "roomOccupancy": false,
         "hvacStatus": "STANDBY"
       }
@@ -143,26 +149,26 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
     "metadata": {
       "reported": {
         "temperature": {
-          "timestamp": 1653478557
+          "timestamp": 1653492399
         },
         "sound": {
-          "timestamp": 1653478557
+          "timestamp": 1653492399
         },
         "roomOccupancy": {
-          "timestamp": 1653478557
+          "timestamp": 1653492399
         },
         "hvacStatus": {
-          "timestamp": 1653478557
+          "timestamp": 1653492399
         }
       }
     },
-    "version": 9443
+    "version": 11213
   },
   "current": {
     "state": {
       "reported": {
-        "temperature": 59.849449,
-        "sound": 4,
+        "temperature": 17.820343,
+        "sound": 8,
         "roomOccupancy": false,
         "hvacStatus": "STANDBY"
       }
@@ -170,22 +176,22 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
     "metadata": {
       "reported": {
         "temperature": {
-          "timestamp": 1653478558
+          "timestamp": 1653492409
         },
         "sound": {
-          "timestamp": 1653478558
+          "timestamp": 1653492409
         },
         "roomOccupancy": {
-          "timestamp": 1653478558
+          "timestamp": 1653492409
         },
         "hvacStatus": {
-          "timestamp": 1653478558
+          "timestamp": 1653492409
         }
       }
     },
-    "version": 9444
+    "version": 11214
   },
-  "timestamp": 1653478558,
-  "clientToken": "0123501CB56E162101-25"
+  "timestamp": 1653492409,
+  "clientToken": "0123501CB56E162101-77"
 }
 ```
