@@ -73,7 +73,6 @@ Workshop sample중 하나인 [CLOUD CONNECTED BLINKY](https://edukit.workshop.aw
 [AWS Edukit(M5Stack) - Blinky](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-blinky.md)에서는 M5Stack을 IoT Core에 등록하는 script를 실행하고, M5Stack에 펌웨어 업그레이드를 진행하고, IoT Core에서 전송한 명령어로 Blinky 동작을 수행하는 과정을 설명합니다.
 
 
-[AWS Edukit(M5Stack)](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack-upgrade.md)에서 업그레이드 방법에 대해 소개합니다.
 
 ## Others
 
