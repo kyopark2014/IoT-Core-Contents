@@ -68,9 +68,9 @@ M5Stack에 펌웨어를 업그레이드 하거나 삭제하는 동작은 Visual 
 
 ### 2) CLOUD CONNECTED BLINKY
 
-[CLOUD CONNECTED BLINKY](https://edukit.workshop.aws/en/blinky-hello-world.html)에서는 M5stack을 IoT Core에 등록하는 script를 실행 할 수 있고, 이를 통해 연결이 되면 MQTT로 IoT Core에 메시지를 보낼 수 있습니다. IoT Core에서 blinky 명령을 실행하면 M5Stack의 LED를 제어 할 수 있습니다. 
+Workshop sample중 하나인 [CLOUD CONNECTED BLINKY](https://edukit.workshop.aws/en/blinky-hello-world.html)에서는 M5stack을 IoT Core에 등록하는 script를 실행 할 수 있고, 이를 통해 연결이 되면 MQTT로 IoT Core에 메시지를 보낼 수 있습니다. IoT Core에서 blinky 명령을 실행하면 M5Stack의 LED를 제어 할 수 있습니다. 
 
-AWS IoT Core - Blinky에서 M5Stack을 등록하고 제어하는 것을 실습해 볼 수 있습니다. 
+[AWS Edukit(M5Stack) - Blinky](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-blinky.md)에서는 M5Stack을 IoT Core에 등록하는 script를 실행하고, M5Stack에 펌웨어 업그레이드를 진행하고, IoT Core에서 전송한 명령어로 Blinky 동작을 수행하는 과정을 설명합니다.
 
 
 [AWS Edukit(M5Stack)](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack-upgrade.md)에서 업그레이드 방법에 대해 소개합니다.
