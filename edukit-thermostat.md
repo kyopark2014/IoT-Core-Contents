@@ -75,16 +75,117 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
 
 
 10) IoT Core로 publish되는 데이터는 아래와 같은 json입니다.
+
+- Topic: $aws/things/0123501CB56E162101/shadow/update
+
 ```java
 {
-   "state":{
-      "reported":{
-         "temperature":57.640759,
-         "sound":4,
-         "roomOccupancy":false,
-         "hvacStatus":"STANDBY"
+  "state": {
+    "reported": {
+      "temperature": 63.727047,
+      "sound": 2,
+      "roomOccupancy": false,
+      "hvacStatus": "STANDBY"
+    }
+  },
+  "clientToken": "0123501CB56E162101-26"
+}
+```
+
+- Topic: $aws/things/0123501CB56E162101/shadow/update/accepted
+
+```java
+{
+  "state": {
+    "reported": {
+      "temperature": 59.849449,
+      "sound": 4,
+      "roomOccupancy": false,
+      "hvacStatus": "STANDBY"
+    }
+  },
+  "metadata": {
+    "reported": {
+      "temperature": {
+        "timestamp": 1653478558
+      },
+      "sound": {
+        "timestamp": 1653478558
+      },
+      "roomOccupancy": {
+        "timestamp": 1653478558
+      },
+      "hvacStatus": {
+        "timestamp": 1653478558
       }
-   },
-   "clientToken":"0123501CB56E162101-1"
+    }
+  },
+  "version": 9444,
+  "timestamp": 1653478558,
+  "clientToken": "0123501CB56E162101-25"
+}
+```
+
+
+- $aws/things/0123501CB56E162101/shadow/update/documents
+
+```java
+{
+  "previous": {
+    "state": {
+      "reported": {
+        "temperature": 58.075886,
+        "sound": 223,
+        "roomOccupancy": false,
+        "hvacStatus": "STANDBY"
+      }
+    },
+    "metadata": {
+      "reported": {
+        "temperature": {
+          "timestamp": 1653478557
+        },
+        "sound": {
+          "timestamp": 1653478557
+        },
+        "roomOccupancy": {
+          "timestamp": 1653478557
+        },
+        "hvacStatus": {
+          "timestamp": 1653478557
+        }
+      }
+    },
+    "version": 9443
+  },
+  "current": {
+    "state": {
+      "reported": {
+        "temperature": 59.849449,
+        "sound": 4,
+        "roomOccupancy": false,
+        "hvacStatus": "STANDBY"
+      }
+    },
+    "metadata": {
+      "reported": {
+        "temperature": {
+          "timestamp": 1653478558
+        },
+        "sound": {
+          "timestamp": 1653478558
+        },
+        "roomOccupancy": {
+          "timestamp": 1653478558
+        },
+        "hvacStatus": {
+          "timestamp": 1653478558
+        }
+      }
+    },
+    "version": 9444
+  },
+  "timestamp": 1653478558,
+  "clientToken": "0123501CB56E162101-25"
 }
 ```
