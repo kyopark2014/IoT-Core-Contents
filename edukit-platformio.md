@@ -48,11 +48,27 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ![noname](https://user-images.githubusercontent.com/52392004/169726454-31675dde-fcb1-4ccb-8c84-7eab9af85086.png)
 
 
-3) 아래와 같이 
-
-
+3) 아래와 같이 [PlatformIO] - [QUICK ACCESS] - [Open] - [Open Project[로도 원하는 프로젝트를 열수 있는데, 이때 [PROJECT TASKS] - [General]에는 아래와 같이 "Build", "Upload", "Monitor", "Upload and Monitor", "Clean", "Clean All"과 같은 메뉴를 제공하고 있습니다. 이를 선택하여 펌웨어 빌드, 업로드, 삭제(clean), 로그 보기(Monitor)등의 동작을 수행 할 수 있습니다. 또한 메뉴가 아니라 아래처럼 명령어로도 조작할 수 있으니 참고 바랍니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170182678-c6272162-6762-4dee-b887-db4aa334c3ad.png)
 
+#### 펌웨어 관련 명령어 
+
+-  Build
+
+```c
+$ pio run --environment core2foraws
+```
+
+```c
+- Flash the Firmware and Monitor
+```
+
+pio run --environment core2foraws --target upload --target monitor 
 
 
+- Monitoring the device
+
+```c
+pio run --environment core2foraws --target monitor
+```
