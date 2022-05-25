@@ -127,7 +127,7 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
 ```
 
 
-- $aws/things/0123501CB56E162101/shadow/update/documents
+- Topic: $aws/things/0123501CB56E162101/shadow/update/documents
 
 ```java
 {
