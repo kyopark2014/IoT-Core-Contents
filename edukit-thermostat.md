@@ -36,7 +36,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 8) 화씨(Fahrenheit)를 섭씨(Centigrade)로 변환합니다.
 
-- "main.c"에서는 아래와 같이 temperature를 이용해 화씨를 쓰고 있습니다. 
+"main.c"에서는 아래와 같이 temperature를 이용해 화씨를 쓰고 있습니다. 
 
 ```c
   MPU6886_GetTempData(&temperature);
