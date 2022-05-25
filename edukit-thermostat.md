@@ -72,3 +72,19 @@ I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
 ␛[0;32mI (12264) MAIN: Stack remaining for task 'aws_iot_task' is 2036 bytes␛[0m
 ␛[0;32mI (13274) MAIN: Update accepted␛[0m
 ```
+
+
+10) IoT Core로 publish되는 데이터는 아래와 같은 json입니다.
+```java
+{
+   "state":{
+      "reported":{
+         "temperature":57.640759,
+         "sound":4,
+         "roomOccupancy":false,
+         "hvacStatus":"STANDBY"
+      }
+   },
+   "clientToken":"0123501CB56E162101-1"
+}
+```
