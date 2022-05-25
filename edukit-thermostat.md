@@ -23,7 +23,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 ![noname](https://user-images.githubusercontent.com/52392004/170207617-b76313fe-8313-4da7-807f-d415bb0f2a1a.png)
 
-6) 아래와 같이 "sdkconfig"에서 [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에서 확인한 IoT Core의 Endpoint를 입력합니다. 
+6) 아래와 같이 "sdkconfig"에서 [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에서 확인한 IoT Core의 Endpoint를 CONFIG_AWS_IOT_MQTT_HOST에 입력합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170208495-680a41f2-8530-4e0b-8295-8243e93f387d.png)
 
