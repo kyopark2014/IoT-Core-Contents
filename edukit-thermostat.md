@@ -6,3 +6,7 @@ Visual Studio Code에 PlatformIO IDE Extension이 설치되어 있지 않다면,
 
 
 ## Device Provisioning
+
+1) [Authentification](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/Authentification.md)에 따라 접속해야 하는 IoT Core의 Endpoint를 확인 합니다. 
+
+2) 
