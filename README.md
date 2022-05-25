@@ -56,9 +56,14 @@ AWS IoT Architecutre에는 아래와 같은 서비스들이 있습니다.
 
 [AWS IoT Edukit Workshop](https://edukit.workshop.aws/en/)에는 M5stack을 위한 여러가지 예제를 제공하고 있습니다. 해당 예제를 통해 M5stack을 제어하고 AWS IoT Core와 연결 할 수 있습니다. 
 
+
+
 #### Visual Studio Code 환경 구성
 
 M5Stack에 펌웨어를 업그레이드 하거나 삭제하는 동작은 Visual Studio Code를 이용해 편리하게 할 수 있습니다. 
+
+[Visual Studio Code에 PlatformIO IDE Extension 설치 및 활용](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-platformio.md)에서는 M5Stack을 Visual Studio Code에 연결 후 Build, Upload, Monitoring 하는 방법을 설명하고 있습니다.
+
 
 
 #### CLOUD CONNECTED BLINKY
