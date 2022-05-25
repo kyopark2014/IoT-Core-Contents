@@ -60,15 +60,15 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 $ pio run --environment core2foraws
 ```
 
-```c
+
 - Flash the Firmware and Monitor
+
+```c
+$ pio run --environment core2foraws --target upload --target monitor 
 ```
-
-pio run --environment core2foraws --target upload --target monitor 
-
 
 - Monitoring the device
 
 ```c
-pio run --environment core2foraws --target monitor
+$ pio run --environment core2foraws --target monitor
 ```
