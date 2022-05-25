@@ -1,4 +1,4 @@
-# Device 인증서 
+# Device 인증서 생성
 
 1) Device 인증서를 받기 위하여 [AWS IoT] - [Connect to AWS IoT] - [Get started]로 진입합니다. 이후 단계를 확인 한 후, [Get started]를 선택합니다.
 
