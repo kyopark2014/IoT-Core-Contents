@@ -36,3 +36,36 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 8) 이제 [PlatformIO]를 선택한 후 [PROJECT TASK]에서 "Build"와 "Uplaod and Monitor"를 순차적으로 선택합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170210914-d1fc38d6-d80a-4d42-ab47-7bd9bf5af4d0.png)
+
+9) 정상적으로 
+ㅅㅣㄹ행이 
+
+```c
+I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+␛[0;32mI (6544) WIFI: Device IP address: 192.168.0.6␛[0m
+␛[0;32mI (6544) MAIN: Shadow Init␛[0m
+␛[0;32mI (6544) MAIN: Shadow Connect␛[0m
+␛[0;32mI (6544) esp_netif_handlers: sta ip: 192.168.0.6, mask: 255.255.255.0, gw: 192.168.0.1␛[0m
+␛[0;32mI (6574) aws_iot: Attempting to use device certificate from ATECC608␛[0m
+␛[0;32mI (8604) I2S: DMA Malloc info, datalen=blocksize=512, dma_buf_count=2␛[0m
+␛[0;32mI (8604) I2S: PLL_D2: Req RATE: 44100, real rate: 90909.000, BITS: 16, CLKM: 11, BCK: 5, MCLK: 11.338, SCLK: 2909088.000000, diva: 64, divb: 21␛[0m
+␛[0;32mI (8614) I2S: PLL_D2: Req RATE: 44100, real rate: 90909.000, BITS: 16, CLKM: 11, BCK: 5, MCLK: 11.338, SCLK: 2909088.000000, diva: 64, divb: 21␛[0m
+␛[0;32mI (8854) MAIN: *****************************************************************************************␛[0m
+␛[0;32mI (8854) MAIN: On Device: roomOccupancy false␛[0m
+␛[0;32mI (8854) MAIN: On Device: hvacStatus STANDBY␛[0m
+␛[0;32mI (8864) MAIN: On Device: temperature 57.139534␛[0m
+␛[0;32mI (8864) MAIN: On Device: sound 66␛[0m
+␛[0;32mI (8874) MAIN: Update Shadow: {"state":{"reported":{"temperature":57.139534,"sound":66,"roomOccupancy":false,"hvacStatus":"STANDBY"}}, "clientToken":"0123501CB56E162101-0"}␛[0m
+␛[0;32mI (11014) MAIN: *****************************************************************************************␛[0m
+␛[0;32mI (11014) MAIN: Stack remaining for task 'aws_iot_task' is 2036 bytes␛[0m
+␛[0;32mI (12024) MAIN: Update accepted␛[0m
+␛[0;32mI (12224) MAIN: *****************************************************************************************␛[0m
+␛[0;32mI (12224) MAIN: On Device: roomOccupancy false␛[0m
+␛[0;32mI (12224) MAIN: On Device: hvacStatus STANDBY␛[0m
+␛[0;32mI (12234) MAIN: On Device: temperature 57.640759␛[0m
+␛[0;32mI (12234) MAIN: On Device: sound 4␛[0m
+␛[0;32mI (12244) MAIN: Update Shadow: {"state":{"reported":{"temperature":57.640759,"sound":4,"roomOccupancy":false,"hvacStatus":"STANDBY"}}, "clientToken":"0123501CB56E162101-1"}␛[0m
+␛[0;32mI (12254) MAIN: *****************************************************************************************␛[0m
+␛[0;32mI (12264) MAIN: Stack remaining for task 'aws_iot_task' is 2036 bytes␛[0m
+␛[0;32mI (13274) MAIN: Update accepted␛[0m
+```
