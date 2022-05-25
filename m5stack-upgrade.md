@@ -1,15 +1,16 @@
-# AWS Edukit(M5Stack) Upgrade
+# AWS Edukit(M5Stack) - Blinky
+
+## PlatformIO IDE Extension이 설치
+
+Visual Studio Code에 PlatformIO IDE Extension이 설치가 필요합니다. [Visual Studio Code에 PlatformIO IDE Extension 설치 및 활용](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-platformio.md)을 참조하여 [m5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)을 Visual Studio Code에 연결하여 디버깅할 수 있는 환경을 구성합니다. 
 
 
-[Visual Studio Code에 PlatformIO IDE Extension 설치 및 활용](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-platformio.md)에서 Device를 Visual Studio Code에서 디버깅할 수 있는 환경을 제공합니다. 
+## Device Provisioning
 
-
-여기에서는 [AWS Edukit Workshop](https://edukit.workshop.aws/en/)에 따라 아래와 같이 [M5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)에 대한 펌웨어 업그레이드를 진행합니다.
-
-
-3) Device Provisioning 을 진행합니다. 생성된 Device ID는 M5stack의 serial number입니다.
-
-[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)로 AWS IoT Core에 연결하기 위해서는 Device를 등록하여야 합니다. 
+[M5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)은 [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md) Protocol을 이용하여 AWS IoT Core와 연결할 수 있습니다. 이를 위해서는 Device Provisioning 동작이 필요합니다. 여기서는 Device를 등록할 수 있는 script를 이용하여 AWS IoT Core에 M5stack을 Provisioning 합니다. 이때 자동으로 생성한 Device ID는 M5stack의 serial number입니다.
+ 
+ Device Provisioning 동작 명령어는 아래와 같습니다.
+ 
 
 ```c
 $ cd Blinky-Hello-World
