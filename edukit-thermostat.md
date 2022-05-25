@@ -51,6 +51,8 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 9) 이벤트 생성 시점을 1초에서 10초로 변경합니다.
 
+"main.c"에서는 아래와 같이 1초 간격으로 temperature를 측정하여, json으로 전송하고 있습니다. 온도의 변화에 비하여 1초 간격이 너무 빠르므로 아래와 같이 10초로 조정하였습니다.  
+
 ![noname](https://user-images.githubusercontent.com/52392004/170298699-8c930b15-8b74-4ded-a68a-c2855ff1ba52.png)
 
 10) 이제 [PlatformIO]를 선택한 후 [PROJECT TASK]에서 "Build"와 "Uplaod and Monitor"를 순차적으로 선택하여, 빌드 및 펌웨어 업그레이드를 진행합니다. 
