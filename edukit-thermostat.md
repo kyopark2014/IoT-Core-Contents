@@ -37,8 +37,11 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 ![noname](https://user-images.githubusercontent.com/52392004/170210914-d1fc38d6-d80a-4d42-ab47-7bd9bf5af4d0.png)
 
-9) 정상적으로 
-ㅅㅣㄹ행이 
+9) 정상적으로 동작하면 아래와 같이 M5Stack이 IoT Core로 publish를 하게 됩니다. 
+
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/52392004/170211449-45fb6882-54e8-4f24-9dcf-0361641a94b5.png">
+
+이때, Visual Studio Code에는 아래처럼 로그로 json형태로 device 상태가 IoT core로 전송중임을 알 수 있습니다. 
 
 ```c
 I (5584) wifi:AP's beacon interval = 102400 us, DTIM period = 1
