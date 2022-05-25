@@ -2,12 +2,12 @@
 
 ## PlatformIO IDE Extension 설치
 
-Visual Studio Code에 PlatformIO IDE Extension이 설치가 필요합니다. [Visual Studio Code에 PlatformIO IDE Extension 설치 및 활용](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-platformio.md)을 참조하여 [m5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)을 Visual Studio Code에 연결하여 디버깅할 수 있는 환경을 구성합니다. 
+Visual Studio Code에 PlatformIO IDE Extension이 설치가 필요합니다. [Visual Studio Code에 PlatformIO IDE Extension 설치 및 활용](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-platformio.md)을 참조하여 [M5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)을 Visual Studio Code에 연결하여 디버깅할 수 있는 환경을 구성합니다. 
 
 
 ## Device Provisioning
 
-[M5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)은 [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md) Protocol을 이용하여 AWS IoT Core와 연결할 수 있습니다. 이를 위해서는 Device Provisioning 동작이 필요합니다. 여기서는 Device를 등록할 수 있는 script를 이용하여 AWS IoT Core에 M5stack을 Provisioning 합니다. 이때 자동으로 생성한 Device ID는 M5stack의 serial number입니다.
+[M5Stack](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack.md)은 [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md) Protocol을 이용하여 AWS IoT Core와 연결할 수 있습니다. 이를 위해서는 Device Provisioning 동작이 필요합니다. 여기서는 Device를 등록할 수 있는 script를 이용하여 AWS IoT Core에 M5Stack을 등록하는 Provisioning 과정을 진행합니다. 이때 자동으로 생성한 Device ID는 M5Stack의 serial number입니다.
  
  Device Provisioning 동작 명령어는 아래와 같습니다.
  
