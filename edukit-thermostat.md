@@ -63,11 +63,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 ## Thermostate 동작 결과
 
-아래와 같이 M5Stack이 IoT Core로 publish를 하게 됩니다. 
-
-<img width="514" alt="image" src="https://user-images.githubusercontent.com/52392004/170211449-45fb6882-54e8-4f24-9dcf-0361641a94b5.png">
-
-이때, Visual Studio Code에는 아래처럼 로그로 json형태로 device 상태가 IoT core로 전송중임을 알 수 있습니다. 
+펌웨어 업그레이드 후에, Visual Studio Code의 Terminal에서는 아래처럼 로그로 device 상태가 IoT core로 10초마다 전송되는 것을 알 수 있습니다. 
 
 ```c
 ␛[0;32mI (634333) MAIN: Stack remaining for task 'aws_iot_task' is 2036 bytes␛[0m
@@ -80,6 +76,10 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 ␛[0;32mI (644553) MAIN: Update Shadow: {"state":{"reported":{"temperature":19.472862,"sound":6,"roomOccupancy":false,"hvacStatus":"STANDBY"}}, "clientToken":"0123501CB56E162101-62"}␛[0m
 ␛[0;32mI (644563) MAIN: *****************************************************************************************␛[0m
 ```
+
+이때 아래와 같이 M5Stack이 IoT Core로 publish를 하고 있는 것을 UI로 확인 할 수 있습니다. 
+
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/52392004/170211449-45fb6882-54e8-4f24-9dcf-0361641a94b5.png">
 
 
 IoT Core로 publish되는 데이터는 아래와 같은 json입니다.
