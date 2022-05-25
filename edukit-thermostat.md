@@ -33,7 +33,7 @@ $ git clone https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
 
 "aws-root-ca.pem"은 "AmazonRootCA1.cer", "certificate.pem.crt"은 "M5Stack.cert.pem", "private.pem.key"은 "M5Stack.private.key"와 동일한 파일이므로, 파일을 열어서 동일하게 복사하여 줍니다. 
 
-8) 이제 [PlatformIO]를 선택한 후 [PROJECT TASK]에서 "Build"와 "Uplaod and Monitor"를 순차적으로 선택합니다. 
+8) 이제 [PlatformIO]를 선택한 후 [PROJECT TASK]에서 "Build"와 "Uplaod and Monitor"를 순차적으로 선택하여, 빌드 및 펌웨어 업그레이드를 진행합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/170210914-d1fc38d6-d80a-4d42-ab47-7bd9bf5af4d0.png)
 
