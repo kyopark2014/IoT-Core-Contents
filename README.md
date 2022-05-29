@@ -11,6 +11,10 @@ AWS IoT Architecutre에는 아래와 같은 서비스들이 있습니다.
 
 [AWS IoT Core rules engine limits and quotas](https://docs.aws.amazon.com/general/latest/gr/iot-core.html#limits_iot)에 따라 아래와 같이 특성이 있으니 참고 바랍니다.
 
+- Maximum number of rules per AWS account : 1000
+
+- Rule evaluations per second per AWS account : 20000
+
 - Device Shadow API requests/second per account: 4000
 
 - Maximum number of in-flight, unacknowledged messages per thing: 10
