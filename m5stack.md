@@ -54,7 +54,7 @@ Platform Espressif 32: Espressif Systems is a privately held fabless semiconduct
 
 ## AWS Edukit Upgrade
 
-[AWS Edukit(M5Stack)](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/m5stack-upgrade.md)에서 업그레이드 방법에 대해 설명합니다.
+[AWS Edukit(M5Stack)](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-thermostat.md)에서 업그레이드 방법에 대해 설명합니다.
 
 [AWS Edukit Workshop](https://edukit.workshop.aws/en/)에는 Edukit 사용에 대한 여러 사례를 설명합니다.
 
