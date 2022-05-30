@@ -1,4 +1,4 @@
-## AWS Edukit
+## AWS Edukit (M5Stack)
 
 [M5Stack AWS](https://aws.amazon.com/ko/about-aws/whats-new/2020/12/introducing-aws-iot-edukit/)은 IoT Application을 개발할때 필요한 IoT hardware kit 입니다. 
 
