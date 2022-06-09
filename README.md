@@ -6,6 +6,7 @@ AWS IoT Architecutre에는 아래와 같은 서비스들이 있습니다.
 
 여기서는 IoT 관련된 중요 내용들을 요약 정리하고자 합니다. 
 
+![image](https://user-images.githubusercontent.com/52392004/172954318-da3283ac-991c-4cb7-934f-2a97fd49edcd.png)
 
 ## AWS IoT Core limits and quotas
 
