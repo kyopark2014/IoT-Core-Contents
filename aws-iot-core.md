@@ -29,4 +29,6 @@
 - 가공: 쉐도우, 머신러닝 등 외부소스에서 데이터 가져오기
 - 라우팅: AWS 서비스 및 3rd Party에 연결됨
 
+## Reference 
 
+[AWS IoT 톺아보기 - 디바이스에서 분석까지](https://www.youtube.com/watch?v=zZBXYSVSWI8)
