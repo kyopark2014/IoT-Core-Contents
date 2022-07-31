@@ -7,6 +7,9 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 여기서는 IoT 관련된 중요 내용들을 요약 정리하고자 합니다. 
 
 
+## AWS IoT Core
+
+[AWS IoT Core](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/aws-iot-core.md)에 대해 설명합니다. 
 
 
 ## MQTT: Message Queue Telemetry Transport
