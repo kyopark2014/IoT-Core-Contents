@@ -81,6 +81,10 @@ Workshop sample중 하나인 [CLOUD CONNECTED BLINKY](https://edukit.workshop.aw
 
 [AWS Edukit(M5Stack) - Thermostat](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/edukit-thermostat.md)에서는 IoT core에 인증서를 생성하고 이를 이용해 M5Stack을 연결한 후, Json으로 된 데이터를 수신하는 과정을 [SMART THERMOSTAT](https://edukit.workshop.aws/en/smart-thermostat.html)을 활용해 설명합니다. 
 
+## Topic과 Wildcard
+
+Topic 생성 규칙 및 Wildcard에 대해 설명합니다. 
+
 
 ## OPC UA
 
