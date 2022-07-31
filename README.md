@@ -35,6 +35,9 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 
 [Topic 생성 규칙 및 Wildcard](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/topic-wildcards.md)에 대해 설명합니다. 
 
+## Device Shadow
+
+[Device Shadwow](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/device-shadow.md)에 대해 설명합니다. 
 
 ## OPC UA
 
