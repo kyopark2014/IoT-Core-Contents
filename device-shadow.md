@@ -8,7 +8,7 @@ $aws/things/+/shadow/update/delta
 
 ```c
 $aws/things/+/shadow/update/accepted
-
+```
 
 모든 shadow는 예약된 MQTT Topic과 HTTP URL을 이용하여 Get, Update, Delete와 같은 action을 할 수 있습니다. 
 
