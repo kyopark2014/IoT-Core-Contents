@@ -10,6 +10,54 @@ Device Shadow를 사용하면 Device가 네트워크에 연결되지 않은 경�
 
 - delta: desired와 reported가 서로 다른 상태 (AWS IoT reports differences between the desired and the reported state in the delta object
 
+```java
+{
+  "state": {
+    "desired": {
+      "color": "RED",
+      "state": "STOP"
+    },
+    "reported": {
+      "color": "GREEN",
+      "engine": "ON"
+    },
+    "delta": {
+      "color": "RED",
+      "state": "STOP"
+    }
+  },
+  "metadata": {
+    "desired": {
+      "color": {
+        "timestamp": 12345
+      },
+      "state": {
+        "timestamp": 12345
+      }
+      },
+      "reported": {
+        "color": {
+          "timestamp": 12345
+        },
+        "engine": {
+          "timestamp": 12345
+        }
+      },
+      "delta": {
+        "color": {
+          "timestamp": 12345
+        },
+        "state": {
+          "timestamp": 12345
+        }
+      }
+    },
+    "version": 17,
+    "timestamp": 123456789
+  }
+}
+```
+
 ## Shadow example
 
 ### Duplicated state change
