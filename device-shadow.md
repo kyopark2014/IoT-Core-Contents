@@ -2,6 +2,14 @@
 
 Device Shadow를 사용하면 Device가 네트워크에 연결되지 않은 경우에도 Device의 상태를 사용 할 수 있습ㄴ디ㅏ. 
 
+```c
+$aws/things/+/shadow/update/delta
+```
+
+```c
+$aws/things/+/shadow/update/accepted
+
+
 모든 shadow는 예약된 MQTT Topic과 HTTP URL을 이용하여 Get, Update, Delete와 같은 action을 할 수 있습니다. 
 
 - desired: 사용자가 원하는 상태 (Apps specify the desired states of device properties by updating the desired object)
