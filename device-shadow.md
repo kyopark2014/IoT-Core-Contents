@@ -65,3 +65,5 @@ Device가 offline에서 online으로 변경되었을때 Update2가 먼저 도달
 [AWS IoT Device Shadow service](https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html)
 
 [How to Get Started with Device Shadows for AWS IoT Core](https://www.youtube.com/watch?v=XsKGRA5FhiE)
+
+[AWS Tutorials - Understanding Device Shadow Service in AWS IoT Core](https://www.youtube.com/watch?v=mPcvcsSL664)
