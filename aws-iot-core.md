@@ -29,6 +29,14 @@
 - 가공: 쉐도우, 머신러닝 등 외부소스에서 데이터 가져오기
 - 라우팅: AWS 서비스 및 3rd Party에 연결됨
 
+## Device Shadow
+
+- 클라우드 내 디바이스의 상태를 가지는 이미지 (쌍둥이모델)
+- 쉐도우 업데이트를 통한 디바이스 컨트롤
+- Dedicate된 MQTT 토픽들에 실시간의로 변경상태를 공지함
+- 오프라인 디바이스의 최종상태 추적
+- 어플리케이션을 위한 REST APIs
+
 ## Reference 
 
 [AWS IoT 톺아보기 - 디바이스에서 분석까지](https://www.youtube.com/watch?v=zZBXYSVSWI8)
