@@ -37,6 +37,15 @@
 - 오프라인 디바이스의 최종상태 추적
 - 어플리케이션을 위한 REST APIs
 
+## Registry
+
+- 고정된 디바이스 메타데이터의 클라우드 카탈로그
+- 자격증명이나 시리얼, 기능 성명 등을 설정
+- 공통 속성의 Things 그룹화
+- 그룹을 계층구조화 관리 기능
+- 상위 그룹에 적용된 Policy를 하위그룹에 상속 가능  
+
+
 ## Reference 
 
 [AWS IoT 톺아보기 - 디바이스에서 분석까지](https://www.youtube.com/watch?v=zZBXYSVSWI8)
