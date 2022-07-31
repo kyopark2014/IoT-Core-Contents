@@ -12,6 +12,8 @@ Device Shadow를 사용하면 Device가 네트워크에 연결되지 않은 경�
 
 ## Shadow example
 
+### Duplicated state change
+
 아래와 같이 BLUE에서 RED, GREEN으로 state를 변경하려는 요청이 순차적으로 내려갈 경우에 device에서는 마지막 state를 version으로 받아 들여서 사용할 수 있습니다. 
 
 #### Initial state
