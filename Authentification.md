@@ -2,10 +2,17 @@
 
 ## Server authentification
 
-When your device or other client attempts to connect to AWS IoT Core, the AWS IoT Core server will send an X.509 certificate that your device uses to authenticate the server.
+- When your device or other client attempts to connect to AWS IoT Core, the AWS IoT Core server will send an X.509 certificate that your device uses to authenticate the server.
 
-When your devices or other clients establish a TLS connection to an AWS IoT Core endpoint, AWS IoT Core presents a certificate chain that the devices use to verify that they're communicating with AWS IoT Core and not another server impersonating AWS IoT Core. The chain that is presented depends on a combination of the type of endpoint the device is connecting to and the cipher suite that the client and AWS IoT Core negotiated during the TLS handshake.
+- When your devices or other clients establish a TLS connection to an AWS IoT Core endpoint, AWS IoT Core presents a certificate chain that the devices use to verify that they're communicating with AWS IoT Core and not another server impersonating AWS IoT Core. The chain that is presented depends on a combination of the type of endpoint the device is connecting to and the cipher suite that the client and AWS IoT Core negotiated during the TLS handshake.
 
+### 상호 TLS 인증 
+
+- 인증서를 이용한 서버와 클라이언트간의 양방향 인증 진행합니다.
+
+- 디바이스에 x.509 인증서와 Private Key를 보관합니다.
+
+- 디바이스 인증서는 디바이스의 정보인 Thing과 IoT Policy에 연결하여 어떠한 디바이스를 인증할지와 어떤 권한을 가질지를 결정합니다.
 
 
 ### ATS(Amazon Trust Service) 인증서 다운로드 
