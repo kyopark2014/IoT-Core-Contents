@@ -35,6 +35,9 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 
 [Iot Policy](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/iot-policy.md)에서는 Policy에 대해 설명합니다.
 
+## Management
+
+[디바이스 속성 관리 체계](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/management.md)에 대해 설명합니다. 
 
 ## CloudWatch Logging
 
