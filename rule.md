@@ -20,3 +20,38 @@ Device Shadow 및 Amazon Machine Learning에서 또는 인라인 AWS Lambda 실�
 ### Route
 
 데이터를 20개 이상의 AWS 서비스와 Salesforce와 같은 타사 서비스에 전송합니다.
+
+
+## Basic Ingest
+
+Basic Ingest를 이용하여 메시지 비용을 절감할 수 있습니다.
+
+- Basic Ingest를 사용하면 AWS IoT 규칙 작업에서 지원하는 AWS 서비스로 디바이스 데이터를 안전하게 전송할 수 있으며, 이때 메시징 요금이 발생하지 않습니다. 
+
+
+- Basic Ingest 또는 AIA(Alexa Voice Service for AWS IoT Core)항목을 사용하여 송신하거나 수신하는 메시지에 대해서는 메시지 요금이 발생하지 않습니다. 
+
+- Basic Ingest는 수집 경로에서 publish/subscribe를 위한 message broker를 제거해 데이터 흐름을 최적화하므로 비용을 줄 일 수 있습니다.
+
+- Basic Ingest의 prefix는 $aws/rules/rule_name으로 $aws/rules/<rule-name>/<optional-customer-defined-segments> 형식으로 사용합니다. 여기서 rule-name은 trigger할 AWS IoT 규칙의 이름을 따릅니다. 
+  
+
+### AWS IoT SQL reference
+  
+```java
+SELECT color AS rgb FROM 'topic/subtopic' WHERE temperature > 50
+```
+  
+## Reference 
+
+[Reducing messaging costs with Basic Ingest](https://github.com/awsdocs/aws-iot-docs/blob/master/developerguide/iot-basic-ingest.md)  
+  
+[AWS IoT SQL reference](https://github.com/awsdocs/aws-iot-docs/blob/master/developerguide/iot-sql-reference.md)
+  
+
+  
+  
+
+  
+
+
