@@ -37,7 +37,12 @@
 ## AWS IoT Core message broker and protocol limits and quotas
 
 - Client ID (UTF-8) 기본값: 128 Bytes
-- MQTT CONNECT 요청  
-- Client ID (UTF-8) 기본값: 128 Bytes 
+- MQTT CONNECT 초당 요청수: 100개 (region)
+
+- AccountId와 ㅊ
+- AccountId
+
+
+
 
 [Limits and Quotas](https://docs.aws.amazon.com/general/latest/gr/iot-core.html#message-broker-limits)
