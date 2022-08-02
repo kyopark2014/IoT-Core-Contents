@@ -68,3 +68,7 @@ AWS IoT Greengrass is a software component that extends the Linux Operations
 System of your IoT devices. AWS IoT Greengrass allows you to run MQTT local routing
 between devices, data caching, AWS IoT shadow sync, local AWS Lambda functions,
 and machine learning algorithms. 
+
+## Reference 
+
+[Designing MQTT Topics for AWS IoT Core](https://docs.aws.amazon.com/whitepapers/latest/designing-mqtt-topics-aws-iot-core/applications-on-aws.html)
