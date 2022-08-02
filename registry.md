@@ -79,6 +79,16 @@ Resource example
 ```
 
 
+### Just-in-time provisioning
+
+
+
+
+### Fleet Provisioning
+
+![image](https://user-images.githubusercontent.com/52392004/182393672-7d794600-2f74-4b40-92b4-d3a91b5a165b.png)
+
+
 
 
 ## Multi-account registration
