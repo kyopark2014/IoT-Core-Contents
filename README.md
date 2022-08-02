@@ -14,7 +14,7 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 
 ## MQTT: Message Queue Telemetry Transport
 
-[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서는 MQTT Protocal에 대해 설명합니다. 
+[MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md)에서는 MQTT Protocal에 대해 설명합니다. 또한, [MQTT Persistent Session](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt-persistent-session.md)에 대해서도 설명합니다.
 
 ## Macbook을 MQTT client로 사용하기
 
