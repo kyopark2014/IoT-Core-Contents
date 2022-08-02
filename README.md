@@ -53,36 +53,7 @@ Open Platform Communications Unified Architecture (OPC UA)는 PLC(Programable Lo
 
 ## AWS IoT Core limits and quotas
 
-[AWS IoT Core rules engine limits and quotas](https://docs.aws.amazon.com/general/latest/gr/iot-core.html#limits_iot)에 따라 아래와 같이 특성이 있으니 참고 바랍니다.
-
-- Maximum number of rules per AWS account : 1000
-
-- Rule evaluations per second per AWS account : 20000
-
-- Device Shadow API requests/second per account: 4000
-
-- Maximum number of in-flight, unacknowledged messages per thing: 10
-
-- Maximum size of a JSON state document: 8k
-
-- Inbound publish requests per second per account: 2000 (Region)
-
-- Maximum concurrent client connections per account: 1,000,000 (Region)
-
-- Outbound publish requests per second per account: 2000
-
-- Connection inactivity (keep-alive interval): 1200s
-
-- Persistent session expiry period: 3600s
-
-- Publish requests per second per connection: 100
-
-- Queued messages per second per account: 500
-
-- Subscriptions per account: 100,000
-
-- WebSocket connection duration: 86,400s
-
+[Limits and Quotas](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/limit-and-quota.md)에 대해 설명합니다. 
 
 ## Others
 
