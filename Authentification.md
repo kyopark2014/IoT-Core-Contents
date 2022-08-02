@@ -2,6 +2,11 @@
 
 ## Server authentification
 
+인증방식에는 X.509 인증서, SigV4, Cognito, Custom Authentification(Lambda이용) 하는 방법이 있습니다. 
+
+
+![image](https://user-images.githubusercontent.com/52392004/182384968-47b660d2-43f6-4f2b-b8bb-52d789a8fc24.png)
+
 - When your device or other client attempts to connect to AWS IoT Core, the AWS IoT Core server will send an X.509 certificate that your device uses to authenticate the server.
 
 - When your devices or other clients establish a TLS connection to an AWS IoT Core endpoint, AWS IoT Core presents a certificate chain that the devices use to verify that they're communicating with AWS IoT Core and not another server impersonating AWS IoT Core. The chain that is presented depends on a combination of the type of endpoint the device is connecting to and the cipher suite that the client and AWS IoT Core negotiated during the TLS handshake.
