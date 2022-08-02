@@ -33,7 +33,7 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 
 ## IoT Policy
 
-[Iot Policy](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/iot-policy.md)에서는 Policy에 대해 설명합니다.
+[Iot Policy](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/iot-policy.md)를 이용하여 유연하고 세분화된 Access 제어를 할 수 있습니다. 
 
 ## Management
 
