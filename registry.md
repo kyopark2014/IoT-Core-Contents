@@ -14,6 +14,7 @@ Device가 onboard되면 아래 순서로 적용합니다.
 
 4) 디바이스에 IoT Policy를 적용합니다. (Thing Group으로 한꺼번에 적용 할 수도 있습니다.) 이때, Provisioning template이 필요합니다. 
 
+![image](https://user-images.githubusercontent.com/52392004/182492721-16597425-2fc7-417e-8629-f13b4803a08c.png)
 
 ## Provisining Template
 
