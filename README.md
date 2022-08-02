@@ -20,6 +20,11 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 
 [Macbook을 MQTT client로 사용하기](https://github.com/kyopark2014/IoT-Core-Contents/tree/main/MQTT-client-using-mac)을 이용하여 MQTT를 테스트 할 수 있도록 IoT core에 Macbook을 등록하여 테스트 메시지를 발송합니다. 
 
+## Registry
+
+[Registry](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/registry.md)에서는 AWS 서비스에서 쉽게 사용할 수 있도록 디바이스 정의 및 카탈로그화에 대해 설명합니다. 
+
+
 
 ## IoT Policy
 
