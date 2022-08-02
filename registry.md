@@ -93,8 +93,7 @@ Resource example
 
 ## Multi-account registration
 
-![image](https://user-images.githubusercontent.com/52392004/182389844-cff6751e-897e-4df5-8626-cfce345b0390.png)
-
+![image](https://user-images.githubusercontent.com/52392004/182394451-e71f95d6-d903-4bfd-81bc-759f114791e0.png)
 
 
 
