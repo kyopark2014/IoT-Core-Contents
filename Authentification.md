@@ -43,6 +43,38 @@ IoT device의 인증을 위하여 상기의 [Amazon Root CA 1](https://www.amazo
 $ curl https://www.amazontrust.com/repository/AmazonRootCA1.pem > AmazonRootCA1.cer
 ```
 
+## Custom authentication enhancements 
+
+```java
+{
+   "token":"a Token",
+   "signatureVerified":"boolean",
+   "protocols":[
+      "tls",
+      "http",
+      "mqtt"
+   ],
+   "protocolData":{
+      "tls":{
+         "serverName":"serverName"
+      },
+      "http":{
+         "headers":{
+            "#{name}":"#{value}"
+         },
+         "queryString":"?#{name}=#{value}"
+      },
+      "mqtt":{
+         "username":"myUserName",
+         "password":"myPassword",
+         // base64 encoded."clientId":"myClientId"
+      }
+   },
+   "connectionMetadata":{
+      "id":"UUID // The connection Id. You can use this for logging."
+   }
+}
+```
 ## Reference
 
 [Server authentification](https://docs.aws.amazon.com/iot/latest/developerguide/server-authentication.html)
