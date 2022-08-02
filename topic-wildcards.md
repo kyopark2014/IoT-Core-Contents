@@ -6,6 +6,8 @@
 
 - 토픽과 서버를 이용해 메시지를 중계하는 방식을 사용하기 때문에 송신자와 수신자는 IP주소와 같이 직접적으로 통신하기 위해 필요한 정보가 없어도 통신이 가능하다. 대신 송신자와 수신자는 서로의 정보 및 상태를 알 수 없다. 이 탓에 송신자는 자신이 보낸 메시지가 수신자에게 확실하게 전송되었는지 알 수 없다
 
+
+
 #### Topic Name과 Filter 작성 규칙
 
 - Topic Name 과 Topic Filter는 최소한 1글자 보다 길어야 합니다.
@@ -30,6 +32,11 @@
 “sport/tennis/player1/ranking”
 “sport/tennis/player1/score/wimbledon”
 ```
+
+
+## Wildcard Topic Filter
+
+사용자 지정 Topic space를 정의합니다. 
 
 #### Topic Filter에서의 wildcard 사용
 
