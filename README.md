@@ -6,12 +6,6 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 
 여기서는 IoT 관련된 중요 내용들을 요약 정리하고자 합니다. 
 
-
-## AWS IoT Core
-
-[AWS IoT Core](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/aws-iot-core.md)에 대해 설명합니다. 
-
-
 ## MQTT: Message Queue Telemetry Transport
 
 [MQTT](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt.md) Protocol과 [MQTT Persistent Session](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/mqtt-persistent-session.md)에 대해 설명합니다.
@@ -19,6 +13,17 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 ## Macbook을 MQTT client로 사용하기
 
 [Macbook을 MQTT client로 사용하기](https://github.com/kyopark2014/IoT-Core-Contents/tree/main/MQTT-client-using-mac)을 이용하여 MQTT를 테스트 할 수 있도록 IoT core에 Macbook을 등록하여 테스트 메시지를 발송합니다. 
+
+
+## AWS IoT Core
+
+[AWS IoT Core](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/aws-iot-core.md)에 대해 설명합니다. 
+
+
+## Rule engine
+
+[Rule](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/rule.md)에서는 효율적으로 메시지를 수집하는 Rule Engine에 대해 설명합니다. 
+
 
 ## Registry
 
