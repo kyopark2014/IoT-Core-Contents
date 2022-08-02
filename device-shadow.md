@@ -1,6 +1,6 @@
 # Device Shadow
 
-Device Shadow를 사용하면 Device가 네트워크에 연결되지 않은 경우에도 Device의 상태를 사용 할 수 있습ㄴ디ㅏ. 
+Device Shadow를 사용하면 Device가 네트워크에 연결되지 않은 경우에도 Device의 상태를 사용 할 수 있습니다.
 
 ```c
 $aws/things/+/shadow/update/delta
