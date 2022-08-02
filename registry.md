@@ -88,12 +88,84 @@ Resource example
 
 ![image](https://user-images.githubusercontent.com/52392004/182393672-7d794600-2f74-4b40-92b4-d3a91b5a165b.png)
 
+Fleet provisioning template example
 
+```java
+{
+    "Parameters" : {
+        "ThingName" : {
+            "Type" : "String"
+        },
+        "SerialNumber": {
+            "Type": "String"
+        },
+        "DeviceLocation": {
+            "Type": "String"
+        }
+    },
+    "Mappings": {
+        "LocationTable": {
+            "Seattle": {
+                "LocationUrl": "https://example.aws"
+            }
+        }
+    },
+    "Resources" : {
+        "thing" : {
+            "Type" : "AWS::IoT::Thing",
+            "Properties" : {
+                "AttributePayload" : { 
+                    "version" : "v1",
+                    "serialNumber" : "serialNumber"
+                },
+                "ThingName" : {"Ref" : "ThingName"},
+                "ThingTypeName" : {"Fn::Join":["",["ThingPrefix_",{"Ref":"SerialNumber"}]]},
+                "ThingGroups" : ["v1-lightbulbs", "WA"],
+                "BillingGroup": "LightBulbBillingGroup"
+            },
+            "OverrideSettings" : {
+                "AttributePayload" : "MERGE",
+                "ThingTypeName" : "REPLACE",
+                "ThingGroups" : "DO_NOTHING"
+            }
+        },
+        "certificate" : {
+            "Type" : "AWS::IoT::Certificate",
+            "Properties" : {
+                "CertificateId": {"Ref": "AWS::IoT::Certificate::Id"},
+                "Status" : "Active"
+            }
+        },
+        "policy" : {
+            "Type" : "AWS::IoT::Policy",
+            "Properties" : {
+                "PolicyDocument" : {
+                    "Version": "2012-10-17",
+                    "Statement": [{
+                        "Effect": "Allow",
+                        "Action":["iot:Publish"],
+                        "Resource": ["arn:aws:iot:us-east-1:123456789012:topic/foo/bar"]
+                    }]
+                }
+            }
+        }
+    },
+    "DeviceConfiguration": {
+        "FallbackUrl": "https://www.example.com/test-site",
+        "LocationUrl": {
+            "Fn::FindInMap": ["LocationTable",{"Ref": "DeviceLocation"}, "LocationUrl"]}
+        }
+}
+```
 
 
 ## Multi-account registration
 
 ![image](https://user-images.githubusercontent.com/52392004/182394451-e71f95d6-d903-4bfd-81bc-759f114791e0.png)
 
+
+## Reference
+
+[Provisioning templates](https://docs.aws.amazon.com/iot/latest/developerguide/provision-template.html)
 
 
