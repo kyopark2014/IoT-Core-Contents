@@ -5,7 +5,7 @@ IoT Policy를 이용하여 유연하고 세분화된 접근제어(Access Control
 
 - Device Identities와 registry와 연결할 수 있습니다. 
 
-- MQTT Topic 수준에서 접근제어할 수 있습니다.
+- MQTT Topic 수준에서 접근제어를 할 수 있습니다.
 
 ### 그룹 정책 적용 및 계층화
 
