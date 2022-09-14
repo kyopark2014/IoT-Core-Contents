@@ -9,7 +9,7 @@
 
 ### Thing Type
 
-Three attributes
+Thing attributes
 
 - Indexing 대상이 됨
 - Attributes 명칭만 정해지고, 실제 값은 Thing 등록 시점에 정해짐
