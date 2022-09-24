@@ -4,7 +4,7 @@
 
 기본적인 architecture는 아래와 같습니다.
 
-![image](https://user-images.githubusercontent.com/52392004/192094151-88a49f14-3c6a-42bd-ac79-3a74de0ef55d.png)
+<img src="https://user-images.githubusercontent.com/52392004/192094151-88a49f14-3c6a-42bd-ac79-3a74de0ef55d.png" width="800">
 
 ## IoT Device Provisioning
 
