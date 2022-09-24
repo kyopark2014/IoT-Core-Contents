@@ -8,8 +8,7 @@
 
 ## IoT Device Provisioning
 
-IoT Device를 위한 인증서를 
-
+[Device Provisioning](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/workshop/device-provisioning.md)에서는 IoT Device를 위한 인증서를 발급받고, MQTT로 메시지를 IoT Core로 전송하고 [MQTT Test client](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test)를 이용해 메시지를 확인합니다. 
 
 ## Rule Engine
 
