@@ -6,7 +6,7 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/192094151-88a49f14-3c6a-42bd-ac79-3a74de0ef55d.png)
 
-## IoT Device
+## IoT Device Provisioning
 
 1) Cloud9 또는 라즈베리파이로 디바이스를 준비합니다. 
 
@@ -45,7 +45,12 @@ Received message from topic 'sdk/test/Python': b'"Hello World! [3]"'
 6) [MQTT Test Client](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test)로 이동하여 아래처럼 "sdk/test/Python" topic으로 메시지가 들어옮을 확인 할 수 있습니다. 
 
 <img src="https://user-images.githubusercontent.com/52392004/192094869-a8f723b3-86ab-48c3-8357-1eacae3932d1.png" width="480">
- 
+
+## Rule Engine
+
+[Rule Engine](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/rule.md)을 이용해 [Basic Ingent](https://docs.aws.amazon.com/iot/latest/developerguide/iot-basic-ingest.html)을 구현하면, MQTT 메시지 비용없이 rule action에서 지원하는 AWS service로 데이터를 보낼 수 있습니다. 
+
+
 
 ## Reference
 
