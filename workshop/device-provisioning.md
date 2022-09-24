@@ -8,6 +8,7 @@
 
 ![noname](https://user-images.githubusercontent.com/52392004/192122657-7cce50ac-b19b-40e9-9302-2835d11dba48.png)
 
+![noname](https://user-images.githubusercontent.com/52392004/192122703-7f3d6643-345c-4371-bbf9-33b1a347c315.png)
 
 4) [Download connection kit]를 선택하여 zip 파일을 다운로드 한후에 1)에서 준비한 Cloud9 또는 라즈베리파이로 옮겨서 압축을 풉니다.
 
