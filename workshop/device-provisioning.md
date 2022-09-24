@@ -1,6 +1,6 @@
 # Device Provisioning
 
-1) Cloud9 또는 라즈베리파이로 디바이스를 준비합니다. 
+1) [Cloud9](https://ap-northeast-2.console.aws.amazon.com/cloud9/home?region=ap-northeast-2#) 또는 라즈베리파이로 디바이스를 준비합니다. 
 
 2) [Connect - one device Console](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/connectdevice)로 진입하여, Next를 선택합니다. 
 
