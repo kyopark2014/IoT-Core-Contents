@@ -9,10 +9,6 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/co
 
 2) 아래와 같이 [Linux/OSX]와 [Python]을 선택하고 [Next]를 선택합니다. 선호에 따라 [Node.js]나 [Java]를 선택할 수 있습니다. 
 
-<img src="https://user-images.githubusercontent.com/52392004/170202244-bcf39e71-381d-4a54-a823-2a45b471cb7f.png" width=“800">
-                       
-![noname](https://user-images.githubusercontent.com/52392004/170202244-bcf39e71-381d-4a54-a823-2a45b471cb7f.png)
-
 <img src="https://user-images.githubusercontent.com/52392004/170202244-bcf39e71-381d-4a54-a823-2a45b471cb7f.png" width="800">
 
 
