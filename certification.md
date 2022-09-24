@@ -11,6 +11,7 @@ https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/co
 
 <img src="https://user-images.githubusercontent.com/52392004/170202244-bcf39e71-381d-4a54-a823-2a45b471cb7f.png" width=“800">
                        
+![noname](https://user-images.githubusercontent.com/52392004/170202244-bcf39e71-381d-4a54-a823-2a45b471cb7f.png)
 
 3) [Register a thing] - [Name]에 적절한 디바이스 이름을 넣습니다. 여기서는 [M5Stack]이라고 입력했습니다. 이후 [Next step]을 선택합니다. 
 
