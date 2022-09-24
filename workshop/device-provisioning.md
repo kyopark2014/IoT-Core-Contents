@@ -4,7 +4,7 @@
 
 2) [Connect - one device Console](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/connectdevice)로 진입하여, Next를 선택합니다. 
 
-3) [Thing name]을 넣고 Next를 선택합니다. 이후 [Platfrom and SDK]에서 "Linux / maxOS"와 "Python"을 연속으로 선택하고 [Next]를 입력합니다. 
+3) [Thing name]에 "MyThing"을 넣고 Next를 선택합니다. 이후 [Platfrom and SDK]에서 "Linux / maxOS"와 "Python"을 연속으로 선택하고 [Next]를 입력합니다. 
 
 4) [Download connection kit]를 선택하여 zip 파일을 다운로드 한후에 1)에서 준비한 Cloud9 또는 라즈베리파이로 옮겨서 압축을 풉니다.
 
