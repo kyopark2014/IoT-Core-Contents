@@ -22,7 +22,17 @@
 
 ![noname](https://user-images.githubusercontent.com/52392004/192098474-4b6860d0-dae9-4f99-8886-9c974e4200c6.png)
 
-6) 
+6) 이후 아래와 같이 [Sort key]로 "TimeStamp"을 입력하고, [Sort key type]는 "NUMBER"를 [Sort key value]는 "${TimeStamp}"을 입력합니다. 편의상 [Write message data to this column]에 "Payload"라고 입력합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192098602-d34228db-157b-4612-be9e-a7c045ccf772.png)
+
+
+7) 아래처럼 [Create new role]을 선택하여, "iotdb_role"을 입력합니다. 이후 [Next]를 선택한후, [Create]를 눌러서 Rule을 생성합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192098809-b864e869-1b36-4466-8e0e-fcc04f2e41a9.png)
+
+
+
 
 ## Reference 
 
