@@ -1,5 +1,7 @@
 # Rule for DynamoDB
 
+## Rule 생성 
+
 1) [DynamoDB Tables Console](https://ap-northeast-2.console.aws.amazon.com/dynamodbv2/home?region=ap-northeast-2#tables)로 접속하여 [Create table]을 선택합니다. 
 
 2) 아래와 같이 [Table name]으로 "IoTDB"를 입력하고, [Partition key]로 "SensorId"를 Number로 등록합니다. 또한 [Sort key]로 "TimeStamp"을 Number로 등록합니다. 이후 아래로 이동하여 [Create table]을 선택합니다. 
@@ -32,7 +34,26 @@
 ![noname](https://user-images.githubusercontent.com/52392004/192098809-b864e869-1b36-4466-8e0e-fcc04f2e41a9.png)
 
 
+## IoT Core로 메시지를 보내서 DynamoDB로 저장하기 
 
+[Device Provisioning](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/workshop/device-provisioning.md)에서 다운로드한 start.sh의 마지막은 아래와 같습니다. 
+
+```c
+python3 aws-iot-device-sdk-python-v2/samples/pubsub.py \
+--endpoint sample34rul5-ats.iot.ap-northeast-2.amazonaws.com \
+--ca_file root-CA.crt \
+--cert cloud9.cert.pem \
+--key cloud9.private.key \
+--client_id basicPubSub \
+--topic sdk/test/Python \
+--count 0
+```
+
+상기의 IoT Core Endpoint는 [IoT Core - Settings Console](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/settings)에서 확인하거나, 아래와 같이 AWS CLI 명령어로 확인 할 수 있습니다. 
+
+```c
+aws iot describe-endpoint --endpoint-type iot:Data-ATS
+```
 
 ## Reference 
 
