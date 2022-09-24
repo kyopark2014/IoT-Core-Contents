@@ -36,6 +36,8 @@
 
 ## IoT Core로 메시지를 보내서 DynamoDB로 저장하기 
 
+1) "run_basicpubsub.sh" 생성합니다. 
+
 [Device Provisioning](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/workshop/device-provisioning.md)에서 다운로드한 start.sh의 마지막은 아래와 같습니다. 
 
 ```c
@@ -54,6 +56,28 @@ python3 aws-iot-device-sdk-python-v2/samples/pubsub.py \
 ```c
 aws iot describe-endpoint --endpoint-type iot:Data-ATS
 ```
+
+"run_basicpubsub.sh"을 상기의 명령어를 복사하거나, 아래처럼 "start.sh"에서 추출합니다. 
+
+```c
+tail -1 start.sh > run_basicpubsub.sh
+chmod +x run_basicpubsub.sh
+```
+
+2) MQTT 토픽과 메시지를 아래와 같이 변경합니다. 
+
+"aws-iot-device-sdk-python/samples/pubsub.py"파일을 열어서 아래와 같이 2개의 package를 import 합니다. 
+
+```python
+import random
+from datetime import datetime
+```
+
+basicPubSub.py파일의 46~50 line 부근에 default Client Id, MQTT 토픽, mode를 아래와 같이 변경합니다. 
+
+
+
+
 
 ## Reference 
 
