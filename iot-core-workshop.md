@@ -44,7 +44,7 @@ Received message from topic 'sdk/test/Python': b'"Hello World! [3]"'
 
 6) [MQTT Test Client](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test)로 이동하여 아래처럼 "sdk/test/Python" topic으로 메시지가 들어옮을 확인 할 수 있습니다. 
 
-<img src="https://user-images.githubusercontent.com/52392004/192094869-a8f723b3-86ab-48c3-8357-1eacae3932d1.png" width="480">
+<img src="https://user-images.githubusercontent.com/52392004/192094869-a8f723b3-86ab-48c3-8357-1eacae3932d1.png" width="600">
 
 ## Rule Engine
 
