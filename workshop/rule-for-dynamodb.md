@@ -109,6 +109,7 @@ client에서 JSON 형태의 센서 데이터를 전송하는것처럼 시뮬레�
 
 ![noname](https://user-images.githubusercontent.com/52392004/192132101-475461d9-7954-472c-af34-f79500ccd4e9.png)
 
+참고로, [수정된 pubsub.py](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/workshop/src/pubsub.py)에서 수정된 내역을 확인할 수 있습니다. 
 
 3) Policy를 수정합니다. 
 
