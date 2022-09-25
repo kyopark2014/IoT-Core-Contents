@@ -89,7 +89,7 @@ import random
 from datetime import datetime
 ```
 
-"pubsub.py"의 subscribe 부분을 모두 주석처리 합니다. 이것은 Ingest시에 사용할 Topic은 '$aws/rules/iotddb/iot/sensor'은 AWS가 reserved 한 Topic으로 subscribe를 할수 없기 때문입니다. 
+아래처럼 "pubsub.py"의 subscribe 부분을 모두 주석처리 합니다. 이것은 Ingest시에 사용할 Topic은 '$aws/rules/iotddb/iot/sensor'은 AWS가 reserved 한 Topic으로 subscribe를 할수 없기 때문입니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/192132024-7fad0622-efec-4572-9855-1b95e685ebaa.png)
 
