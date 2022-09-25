@@ -16,7 +16,7 @@
 
 ## Device Shadow
 
-[Device Shadow 예제](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/device-shadow.md)에서는 IoT 디바이스의 상태를 확인하고, 원하는 상태로 변경할 때 유용한 Device Shadow를 실습합니다. 
+[Device Shadow 예제](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/workshop/device-shadow.md)에서는 IoT 디바이스의 상태를 확인하고, 원하는 상태로 변경할 때 유용한 Device Shadow를 실습합니다. 
 
 ## Reference
 
