@@ -38,14 +38,14 @@
 
 1) "run_basicpubsub.sh" 생성합니다. 
 
-[Device Provisioning](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/workshop/device-provisioning.md)에서 다운로드한 start.sh의 마지막은 아래와 같습니다. 
+[Device Provisioning](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/workshop/device-provisioning.md)에서 다운로드한 start.sh의 마지막은 아래와 같습니다. 이것은 thing의 이름을 MyThing으로 했을때의 예제입니다. 
 
 ```c
 python3 aws-iot-device-sdk-python-v2/samples/pubsub.py \
---endpoint sample34rul5-ats.iot.ap-northeast-2.amazonaws.com \
+--endpoint anr3wll34rul5-ats.iot.ap-northeast-2.amazonaws.com \
 --ca_file root-CA.crt \
---cert cloud9.cert.pem \
---key cloud9.private.key \
+--cert MyThing.cert.pem \
+--key MyThing.private.key \
 --client_id basicPubSub \
 --topic sdk/test/Python \
 --count 0
