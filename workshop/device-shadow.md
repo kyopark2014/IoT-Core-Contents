@@ -47,11 +47,17 @@
 
 "aws-iot-device-sdk-python-v2/samples/shadow.py"을 파일을 열어서, "desired"로 시작하는 부분을 주석처리합니다.
 
-![image](https://user-images.githubusercontent.com/52392004/192134457-c69bf579-7e5e-4b9e-a812-d375b94cd967.png)
+![noname](https://user-images.githubusercontent.com/52392004/192134627-314acfd4-614d-45d1-a1ac-aad654988e84.png)
+
+
 
 아래와 같이 "Enter desired value"를 "Enter reported value"로 변경합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/192134572-d29a5299-5463-4e6f-bb4e-faf82ac9fae4.png)
+
+마찬가지로 아래 2개의 부분도 "Enter desired value"를 "Enter reported value"로 변경합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192134689-53b909d5-3367-450b-9c93-017be1fadfc1.png)
 
 
 
