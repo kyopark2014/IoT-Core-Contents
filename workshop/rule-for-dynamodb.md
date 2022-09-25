@@ -80,7 +80,7 @@ python3 aws-iot-device-sdk-python-v2/samples/pubsub.py \
 ```
 
 
-2) MQTT 토픽과 메시지를 아래와 같이 변경합니다. 
+2) 아래와 같이 "pubsub.py"에서 ingest를 위한 topic을 처리할수 있도록 변경하고, message로 JSON 형태의 데이터를 전송할 수 있도록 수정합니다. 
 
 "aws-iot-device-sdk-python-v2/samples/pubsub.py" 파일을 열어서 아래와 같이 2개의 package를 import 합니다. 
 
@@ -110,6 +110,95 @@ client에서 JSON 형태의 센서 데이터를 전송하는것처럼 시뮬레�
 ![noname](https://user-images.githubusercontent.com/52392004/192132101-475461d9-7954-472c-af34-f79500ccd4e9.png)
 
 
+3) Policy를 수정합니다. 
+
+[IoT Policy Console](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/policyhub)로 진입하여, thing 이름으로 policy를 찾습니다. 여기서는 thing 이름으로 "MyThing"을 사용하였으므로, "MyThing-Policy"라는 policy를 선택합니다. 
+
+수정전의 MyThing-Policy"의 JSON 포맷은 아래와 같습니다. 
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Publish",
+        "iot:Receive"
+      ],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:677146750822:topic/sdk/test/java",
+        "arn:aws:iot:ap-northeast-2:677146750822:topic/sdk/test/Python",
+        "arn:aws:iot:ap-northeast-2:677146750822:topic/topic_1",
+        "arn:aws:iot:ap-northeast-2:677146750822:topic/topic_2"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Subscribe"
+      ],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:677146750822:topicfilter/sdk/test/java",
+        "arn:aws:iot:ap-northeast-2:677146750822:topicfilter/sdk/test/Python",
+        "arn:aws:iot:ap-northeast-2:677146750822:topicfilter/topic_1",
+        "arn:aws:iot:ap-northeast-2:677146750822:topicfilter/topic_2"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Connect"
+      ],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:677146750822:client/sdk-java",
+        "arn:aws:iot:ap-northeast-2:677146750822:client/basicPubSub",
+        "arn:aws:iot:ap-northeast-2:677146750822:client/sdk-nodejs-*"
+      ]
+    }
+  ]
+}
+```
+
+Ingest에서 사용할 topic은 "$aws/rules/iotddb/\*"이고, thing의 이름을 resouce로 사용할수 있도록 "${iot:ClientId}"으로 아래와 같이 변경합니다. 
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Publish",
+        "iot:Receive"
+      ],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:677146750822:topic/sdk/test/java",
+        "arn:aws:iot:ap-northeast-2:677146750822:topic/sdk/test/Python",
+        "arn:aws:iot:ap-northeast-2:677146750822:$aws/rules/iotddb/*",
+        "arn:aws:iot:ap-northeast-2:677146750822:topic/topic_2"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:677146750822:topicfilter/sdk/test/java",
+        "arn:aws:iot:ap-northeast-2:677146750822:topicfilter/sdk/test/Python",
+        "arn:aws:iot:ap-northeast-2:677146750822:topicfilter/$aws/rules/iotddb/*",
+        "arn:aws:iot:ap-northeast-2:677146750822:topicfilter/topic_2"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Connect",
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:677146750822:client/${iot:ClientId}"
+      ]
+    }
+  ]
+}
+```
 
 ## Reference 
 
