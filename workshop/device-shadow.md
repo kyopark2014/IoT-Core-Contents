@@ -59,7 +59,59 @@
 
 ![noname](https://user-images.githubusercontent.com/52392004/192134689-53b909d5-3367-450b-9c93-017be1fadfc1.png)
 
- 
+[수정된 shadow.py](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/workshop/src/shadow.py)에는 상기 수정이 반영된 파일을 확인할 수 있습니다. 
+
+3) run_shadow.sh을 생성합니다. 
+
+"run_basicpubsub.sh"을 복사하여 "run_shadow.sh"을 생성한 후에, shadow.py로 변경후 "--thing_name MyThing"울 추가하고, "--topic '$aws/rules/iotddb/iot/sensor' --count 0"부분을 삭제합니다.
+
+이때의 "run_shadow.sh"의 예제는 아래와 같습니다.
+
+```c
+python3 aws-iot-device-sdk-python-v2/samples/shadow.py \
+--endpoint samplel34rul5-ats.iot.ap-northeast-2.amazonaws.com \
+--ca_file root-CA.crt \
+--cert MyThing.cert.pem \
+--key MyThing.private.key \
+--client_id MyThing \
+--thing_name MyThing
+```
+
+4) run_shadow.sh를 실행합니다. 
+
+아래와 같이 실행후 desired value를 넣도록 메시지가 표시됩니다. 
+
+```c
+$ ./run_shadow.sh 
+Connecting to anr3wll34rul5-ats.iot.ap-northeast-2.amazonaws.com with client ID 'MyThing'...
+Connected!
+Subscribing to Update responses...
+Subscribing to Get responses...
+Subscribing to Delta events...
+Requesting current shadow state...
+Launching thread to read user input...
+Thing has no shadow document. Creating with defaults...
+Changed local shadow value to 'off'.
+Updating reported shadow value to 'off'...
+Update request published.
+Finished updating reported shadow value to 'off'.
+Enter desired value: 
+```
+
+이때, white라고 입력합니다. 
+
+```c
+white
+```
+
+[Thing Console](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/thinghub)로 접속하여, "MyThing"을 선택합니다. 이후 아래처럼 [Device Shadows]에서 [Classic Shadow]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192135676-39a51551-0089-4450-9892-0c14d84e652b.png)
+
+아래와 같이 state가 업데이트 된것을 확인 할 수 있습니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192135766-196641c0-dc1e-4112-b54c-9ab176f3e9e8.png)
+
 
 
 ## Reference
