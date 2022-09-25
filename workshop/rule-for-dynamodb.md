@@ -115,7 +115,7 @@ client에서 JSON 형태의 센서 데이터를 전송하는것처럼 시뮬레�
 
 [IoT Policy Console](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/policyhub)로 진입하여, thing 이름으로 policy를 찾습니다. 여기서는 thing 이름으로 "MyThing"을 사용하였으므로, "MyThing-Policy"라는 policy를 선택합니다. 
 
-수정전의 MyThing-Policy"의 JSON 포맷은 아래와 같습니다. 
+수정전의 "MyThing-Policy"의 JSON 포맷은 아래와 같습니다. 
 
 ```json
 {
