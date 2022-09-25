@@ -175,7 +175,7 @@ Ingest에서 사용할 topic은 "$aws/rules/iotddb/\*"이고, thing의 이름을
       "Resource": [
         "arn:aws:iot:ap-northeast-2:677146750822:topic/sdk/test/java",
         "arn:aws:iot:ap-northeast-2:677146750822:topic/sdk/test/Python",
-        "arn:aws:iot:ap-northeast-2:677146750822:$aws/rules/iotddb/*",
+        "arn:aws:iot:ap-northeast-2:677146750822:topic/$aws/rules/iotddb/*",
         "arn:aws:iot:ap-northeast-2:677146750822:topic/topic_2"
       ]
     },
@@ -199,6 +199,30 @@ Ingest에서 사용할 topic은 "$aws/rules/iotddb/\*"이고, thing의 이름을
   ]
 }
 ```
+
+4) "run_basicpubsub.sh"을 실행합니다. 
+
+```c
+$ ./run_basicpubsub.sh 
+Connecting to anr3wll34rul5-ats.iot.ap-northeast-2.amazonaws.com with client ID 'MyThing'...
+Connected!
+Sending messages until program killed
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091576, 'Value': 7.64}
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091577, 'Value': 9.39}
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091578, 'Value': 3.83}
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091579, 'Value': 9.45}
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091580, 'Value': 9.24}
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091581, 'Value': 3.31}
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091582, 'Value': 4.13}
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091583, 'Value': 2.87}
+Publishing message to topic '$aws/rules/iotddb/iot/sensor': {'SensorId': 0, 'SensorName': 'UltraSonic', 'TimeStamp': 1664091584, 'Value': 7.65}
+```
+
+[DynamoDB Table Console](https://ap-northeast-2.console.aws.amazon.com/dynamodbv2/home?region=ap-northeast-2#tables)로 이동하여, 기생성한 "IotDB"을 선택한 후에 [Explore table items]을 선택하면 아래와 같이 센서로부터 수집된 데이터를 확인할 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/192133470-ea455035-9c11-461a-99d5-3ce15f3777e7.png)
+
+
 
 ## Reference 
 
