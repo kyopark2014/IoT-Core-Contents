@@ -42,7 +42,7 @@
 
 ```c
 python3 aws-iot-device-sdk-python-v2/samples/pubsub.py \
---endpoint anr3wll34rul5-ats.iot.ap-northeast-2.amazonaws.com \
+--endpoint samplel34rul5-ats.iot.ap-northeast-2.amazonaws.com \
 --ca_file root-CA.crt \
 --cert MyThing.cert.pem \
 --key MyThing.private.key \
@@ -63,6 +63,22 @@ aws iot describe-endpoint --endpoint-type iot:Data-ATS
 tail -1 start.sh > run_basicpubsub.sh
 chmod +x run_basicpubsub.sh
 ```
+
+run_basicpubsub.sh파일에서 client_id로 "MyThing"을 입력하고, topic으로 '$aws/rules/iotddb/iot/sensor'을 입력합니다. 
+
+즉, 아래와 같이 구성될 수 있습니다. 
+
+```c
+python3 aws-iot-device-sdk-python-v2/samples/pubsub.py \
+--endpoint samplel34rul5-ats.iot.ap-northeast-2.amazonaws.com \
+--ca_file root-CA.crt \
+--cert MyThing.cert.pem \
+--key MyThing.private.key \
+--client_id MyThing \
+--topic '$aws/rules/iotddb/iot/sensor' \
+--count 0
+```
+
 
 2) MQTT 토픽과 메시지를 아래와 같이 변경합니다. 
 
