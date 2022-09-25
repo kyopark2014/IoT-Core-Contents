@@ -84,15 +84,15 @@ if __name__ == '__main__':
     message_topic = cmdUtils.get_command(cmdUtils.m_cmd_topic)
     message_string = cmdUtils.get_command(cmdUtils.m_cmd_message)
 
-    # # Subscribe
-    # print("Subscribing to topic '{}'...".format(message_topic))
-    # subscribe_future, packet_id = mqtt_connection.subscribe(
-    #     topic=message_topic,
-    #     qos=mqtt.QoS.AT_LEAST_ONCE,
-    #     callback=on_message_received)
+    # Subscribe
+    #print("Subscribing to topic '{}'...".format(message_topic))
+    #subscribe_future, packet_id = mqtt_connection.subscribe(
+    #    topic=message_topic,
+    #    qos=mqtt.QoS.AT_LEAST_ONCE,
+    #    callback=on_message_received)
 
-    # subscribe_result = subscribe_future.result()
-    # print("Subscribed with {}".format(str(subscribe_result['qos'])))
+    #subscribe_result = subscribe_future.result()
+    #print("Subscribed with {}".format(str(subscribe_result['qos'])))
 
     # Publish message to server desired number of times.
     # This step is skipped if message is blank.
@@ -112,8 +112,10 @@ if __name__ == '__main__':
             message['SensorName'] = 'UltraSonic'
             message['TimeStamp'] = timeInSeconds
             message['Value'] = round(random.uniform(0.1, 9.9),2)
+            
+            #message = "{} [{}]".format(message_string, publish_count)
+            print("Publishing message to topic '{}': {}".format(message_topic, message))
             message_json = json.dumps(message)
-            print('Published topic %s: %s\n' % (message_topic, message_json))
             mqtt_connection.publish(
                 topic=message_topic,
                 payload=message_json,
