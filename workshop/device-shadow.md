@@ -137,6 +137,30 @@ white
 
 ![noname](https://user-images.githubusercontent.com/52392004/192136207-4e93cdab-da33-495c-b18f-bac61a2f98c3.png)
 
+이때 Subscribe의 로그를 보면 아래와 같이 409 (version conflict)가 발생한 것을 알 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/192136257-0d94521d-50f9-48ff-82db-341dba52b1a7.png)
+
+이제, 현재의 MyThing의 state를 [Thing Hub Console](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/thinghub)에서 확인하고 아래와 같이 publish를 수행합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192136840-17c6cadd-89ef-4d5a-97d7-79c7c2d987ea.png)
+
+이후 결과는 아래와 같습니다. 
+
+15와 16의 delta는 아래와 같습니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192136911-b35ecb2d-bf85-49bc-86f8-49b8b0b00126.png)
+
+이제 accepted가 "black" 입니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192136964-2ac6ab90-37dc-443e-a528-77bbf067c6a2.png)
+
+이때의 document에서 아래와 같이 previous와 current를 확인합니다. 
+
+device에서 state가 "reported"로 변경되면서, 아래와 같이 state가 "black"으로 변경된 것을 알 수 있습니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192137116-6b4cbea5-5396-4f3e-99d2-745374f3952f.png)
+
 
 
 ## Reference
