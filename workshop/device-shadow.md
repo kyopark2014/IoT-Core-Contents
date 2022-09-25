@@ -120,7 +120,23 @@ white
 
 ![noname](https://user-images.githubusercontent.com/52392004/192135952-d89901ea-199c-49aa-a68c-9c697906aff2.png)
 
-2) 
+2) [MQTT Client](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test)에서, [Publish to a topic]에서 [Topic name]으로 "$aws/things/MyThing/shadow/update"로 입력한 후에 [Message payload]로 아래의 값을 입력합니다. 
+
+```java
+{
+   "state":{
+      "desired":{
+         "color":"black"
+      }
+   },
+   "version":1
+}
+```
+
+이후 아래와 같이 [Publish]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192136207-4e93cdab-da33-495c-b18f-bac61a2f98c3.png)
+
 
 
 ## Reference
