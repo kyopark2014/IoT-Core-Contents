@@ -2,6 +2,7 @@
 
 여기서는 [Workshop: Devicd Shadow](https://catalog.us-east-1.prod.workshops.aws/workshops/f87a7c7a-0af8-416a-80ee-7c25c5789307/ko-KR/4/1)에 대해 설명합니다. [Device Shadow](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/device-shadow.md)를 활용하여 IoT 디바이스의 상태를 확인하고, 원하는 상태로 변경할 수 있습니다. 
 
+## Shadow로 디바이스의 상태를 확인
 
 1) shadow을 위하여 policy의 topic에 '$aws/things/${iot:Connection.Thing.ThingName}/shadow/\*'을 추가합니다. 
 
@@ -112,6 +113,14 @@ white
 
 ![noname](https://user-images.githubusercontent.com/52392004/192135766-196641c0-dc1e-4112-b54c-9ab176f3e9e8.png)
 
+
+## Shadow로 디바이스의 상태를 변경
+
+1) 아래와 같이 [MQTT Client](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/test)로 이동하여, [Subscribe to a topic]에서 [Topic filter]로 "$aws/things/MyThing/shadow/update/+"로 입력하고, [Subscribe]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/192135952-d89901ea-199c-49aa-a68c-9c697906aff2.png)
+
+2) 
 
 
 ## Reference
