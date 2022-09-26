@@ -41,8 +41,7 @@
 
 ## Last Will and Testament (LWT) 
 
-[Monitor AWS IoT connections in near-real time using MQTT LWT](https://aws.amazon.com/ko/blogs/iot/monitor-aws-iot-connections-in-near-real-time-using-mqtt-lwt/)을 활용할 수 있습니다. 
-
+[Monitor AWS IoT connections in near-real time using MQTT LWT](https://aws.amazon.com/ko/blogs/iot/monitor-aws-iot-connections-in-near-real-time-using-mqtt-lwt/)을 활용할 수 있습니다. LWT는 MQTT protocol에 있는 표준 Method로 디바이스의 끊어짐을 인지하고 알림을 만들 수 있습니다. 
 
 <img src="https://user-images.githubusercontent.com/52392004/192209753-475dc7d5-b6c2-4b8e-b359-30361ff2b64e.png" width="600">
 
