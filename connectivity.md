@@ -1,45 +1,24 @@
 # IoT Connectivity
 
-## Connect / Disconnect Topic Event 
+### Connect / Disconnect Topic Event 
 
-[Lifecycle events](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)를 이용하여 Connect/disconnect topic event을 이용하여 연결상태에 대한 event를 확인 할 수 있습니다. 이 event는 default가 enable이며, disable 할 수 없습니다. 
+[수명 주기 이벤트 (Lifecycle events)](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)를 이용하여 Connect/disconnect topic event을 이용하여 연결상태에 대한 event를 확인 할 수 있습니다. 이 event는 default가 enable이며, disable 할 수 없습니다. 
 
-
-#### 연결 해제 원인
-
-연결 해제 원인을 진단하려면 CloudWatch에서 AWSIotLogsV2 로그 그룹을 확인하여 로그 항목의 disconnectReason 필드에서 연결 해제 이유를 식별할 수 있습니다.
-
-또한 AWS IoT의 수명 주기 이벤트 기능을 사용하여 연결 해제 이유를 식별할 수 있습니다. 수명 주기의 연결 해제 이벤트($aws/events/presence/disconnected/clientId)를 구독한 경우 연결 해제가 발생하면 AWS IoT에서 알림을 받게 됩니다. 알림의 disconnectReason 필드에서 연결 해제 이유를 확인할 수 있습니다.
-
-
-
-#### Event 정보
+이와 관련된 Event Topic은 아래와 같습니다. 
 
 - connect event: $aws/events/presence/connected/clientId 
 
 - Disconnect event: $aws/events/presence/disconnected/clientId 
 
 
-#### Disconnect Reason
+### 연결 해제 원인
 
-[Disconnect 되었을때에 아래의 Reason](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)을 이용하여 원인을 확인할 수 있습니다.
+연결 해제 원인은 [IoT Core의 설정에서 Logs을 enable](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/settings/logging)했다먄, CloudWatch에서 AWSIotLogsV2 로그 그룹을 확인하여 로그 항목의 disconnectReason 필드에서 연결 해제 이유를 식별할 수 있습니다.
 
-에러의 형태에는 AUTH_ERROR, CLIENT_INITIATED_DISCONNECT, CLIENT_ERROR, CONNECTION_LOST, SERVER_ERROR 등이 있으며, 예는 아래와 같습니다. 
+또한, AWS IoT의 수명 주기 이벤트(Lifecycle events) 기능을 활용하여 연결 해제 이유를 식별할 수 있습니다. 수명 주기의 연결 해제 이벤트($aws/events/presence/disconnected/clientId)를 구독한 경우 연결 해제가 발생하면 AWS IoT에서 알림을 받게 됩니다. 알림의 disconnectReason 필드에서 연결 해제 이유를 확인할 수 있습니다. 에러의 형태에는 AUTH_ERROR, CLIENT_INITIATED_DISCONNECT, CLIENT_ERROR, CONNECTION_LOST, SERVER_ERROR 등이 있습니다.
 
-```java
-{
-    "clientId": "186b5",
-    "timestamp": 1573002340451,
-    "eventType": "disconnected",
-    "sessionIdentifier": "a4666d2a7d844ae4ac5d7b38c9cb7967",
-    "principalIdentifier": "12345678901234567890123456789012",
-    "clientInitiatedDisconnect": true,
-    "disconnectReason": "CLIENT_INITIATED_DISCONNECT",
-    "versionNumber": 0
-}
-```
 
-#### 설정 방법
+### 수명 주기 이벤트 확인 방법
 
 이벤트 메시지 수신 Policy에 아래와 같이 '$aws/events/\*'를 추가합니다. 
 
@@ -67,12 +46,12 @@
 
 ![noname](https://user-images.githubusercontent.com/52392004/192278792-afc6ece9-6cc7-4ba4-bb3d-58f33b4bad4a.png)
 
+### 주의사항 
+
+서버와 클라이언트간 TCP 연결이 갑자기 끊어지는 경우에, 때로는 keep alive가 만료될때까지 disconnected event message을 생성할 수 없습니다. 이 경우에 때로는 keep alive 시간 조정이 필요할 수 있습니다. (기본 keep alive timer는 1200초 입니다.)
 
 
 
-#### 주의사항 
-
-Event message로는 서버에서는 연결되어 있는 것으로 착각하고 실제 디바이스 쪽에서는 연결이 끊어진 half connection은 잡아낼 수 없습니다. 결국 저 이벤트 메시지 catch하시더라도, 서버 측에서는 keep alive가 만료되어야 그것을 인지하고 저 이벤트 메시지를 보내 주게 됩니다. (keep alive 시간 조정)
 
 ## FleetIndex Query
 
