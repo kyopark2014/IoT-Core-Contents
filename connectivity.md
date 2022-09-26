@@ -9,7 +9,7 @@
 - Disconnect event: $aws/events/presence/disconnected/clientId 
 
 
-### 연결 해제 원인
+### 연결 해제 원인 
 
 연결 해제 원인은 [IoT Core의 설정에서 Logs을 enable](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/settings/logging)했다, CloudWatch에서 AWSIotLogsV2 로그 그룹을 확인하여 로그 항목의 disconnectReason 필드에서 연결 해제 이유를 식별할 수 있습니다.
 
