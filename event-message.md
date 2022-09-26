@@ -11,6 +11,55 @@ API 또는 CLI를 사용하여 게시할 이벤트 유형을 제어하려면 Upd
 aws iot update-event-configurations --event-configurations "{\"THING\":{\"Enabled\": true}}"
 ```
 
+#### 설정 확인 
+
+```c
+aws iot describe-event-configurations
+```
+
+```java
+{
+    "eventConfigurations": {
+        "CA_CERTIFICATE": {
+            "Enabled": false
+        },
+        "CERTIFICATE": {
+            "Enabled": false
+        },
+        "JOB": {
+            "Enabled": false
+        },
+        "JOB_EXECUTION": {
+            "Enabled": false
+        },
+        "POLICY": {
+            "Enabled": false
+        },
+        "THING": {
+            "Enabled": false
+        },
+        "THING_GROUP": {
+            "Enabled": false
+        },
+        "THING_GROUP_HIERARCHY": {
+            "Enabled": false
+        },
+        "THING_GROUP_MEMBERSHIP": {
+            "Enabled": false
+        },
+        "THING_TYPE": {
+            "Enabled": false
+        },
+        "THING_TYPE_ASSOCIATION": {
+            "Enabled": false
+        }
+    },
+    "creationDate": "2022-05-07T23:38:55.809000+09:00",
+    "lastModifiedDate": "2022-05-07T23:39:22.960000+09:00"
+}
+```
+
+
 ## Reference 
 
 [Event Message](https://docs.aws.amazon.com/ko_kr/iot/latest/developerguide/iot-events.html#iot-events-settings-table)
