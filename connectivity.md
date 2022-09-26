@@ -4,17 +4,14 @@
 
 [Lifecycle events](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)의 Connect/disconnect topic event을 이용하여 연결상태에 대한 event를 확인 할 수 있습니다. 
 
-#### Event
+#### Event 정보
 
-- connect event
+- connect event: $aws/events/presence/connected/clientId 
 
-$aws/events/presence/connected/clientId 
+- Disconnect event: $aws/events/presence/disconnected/clientId 
 
-- Disconnect event
 
-$aws/events/presence/disconnected/clientId 
-
-#### DisconnectReason
+#### Disconnect Reason
 
 [Disconnect 되었을때에 아래의 Reason](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)을 이용하여 원인을 확인할 수 있습니다.
 
