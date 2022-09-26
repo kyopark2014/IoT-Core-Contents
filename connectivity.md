@@ -173,3 +173,4 @@ keep-alive 주기를 적절히 조정합니다. 세션이 exprie되면, AWS IoT 
 
 [AWS IoT Device SDK v2 for Python](https://github.com/aws/aws-iot-device-sdk-python-v2)
 
+[Troubleshooting device fleet disconnects](https://docs.aws.amazon.com/iot/latest/developerguide/ota-troubleshooting-fleet-disconnects.html)
