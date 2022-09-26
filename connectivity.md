@@ -1,5 +1,8 @@
 # IoT Connectivity
 
+여기서는 수명주기이벤트(Lifecycle events)로 연결상태의 변경을 이벤트로 받는 방법, FleetIndex Query로 online/offline을 확인하는 방법과 Last Will and Testament을 이용하여 알림을 생성하는 방법에 대해 설명합니다. 
+
+
 ### Connect / Disconnect Topic Event 
 
 [수명 주기 이벤트 (Lifecycle events)](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)를 이용하여 Connect/disconnect topic event을 이용하여 연결상태에 대한 event를 확인 할 수 있습니다. 이 event는 default가 enable이며, disable 할 수 없습니다. 이와 관련된 Event Topic은 아래와 같습니다. 
@@ -51,7 +54,7 @@
 
 
 
-## FleetIndex Query
+## FleetIndex Query을 이용한 Online/Offline 확인 
 
 [FleetIndex Query](https://docs.aws.amazon.com/iot/latest/developerguide/example-queries.html)로 특정 Thing이 online 상태인지 여부를 확인하거나 online 또는 offline 여부를 확인할 수 있습니다. 대신 FleetIndex의 connectivity 항목을 enable 해놓아야 합니다.
 
@@ -60,7 +63,7 @@
 
 
 
-## Last Will and Testament (LWT) 
+## Last Will and Testament (LWT)을 이용한 상태 알림 전송
 
 [Monitor AWS IoT connections in near-real time using MQTT LWT](https://aws.amazon.com/ko/blogs/iot/monitor-aws-iot-connections-in-near-real-time-using-mqtt-lwt/)을 활용할 수 있습니다. LWT는 MQTT protocol에 있는 표준 Method로 디바이스의 끊어짐을 인지하고 알림을 만들 수 있습니다. 
 
