@@ -49,7 +49,7 @@
 
 ### 주의사항 
 
-서버와 클라이언트간 TCP 연결이 갑자기 끊어지는 경우에, 때로는 keep alive가 만료될때까지 disconnected event message을 생성할 수 없습니다. 이 경우에 때로는 keep alive 시간 조정이 필요할 수 있습니다. (기본 keep alive timer는 1200초 입니다.)
+서버와 클라이언트간 TCP 연결이 갑자기 끊어지는 경우에, 때로는 keep alive가 만료될때까지 disconnected event message을 생성할 수 없습니다. 이 경우에 keep alive 시간 조정이 필요할 수 있습니다. (기본 keep alive timer는 1200초 입니다.)
 
 
 
