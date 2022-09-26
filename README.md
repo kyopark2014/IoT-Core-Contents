@@ -39,9 +39,16 @@ AWS IoT에는 아래와 같은 서비스들이 있습니다.
 
 [디바이스 속성 관리 체계](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/management.md)에 대해 설명합니다. 
 
+## IoT Connection 관리 
+
+[IoT Connectivity](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/connectivity.md)은 Device의 Connect/Disconnect에 대한 event 관리에 대해 설명합니다. 
+
+
 ## CloudWatch Logging
 
 [Cloudwatch Logging](https://github.com/kyopark2014/IoT-Core-Contents/blob/main/cloudwatch.md)을 참조하여 로그를 Enable 합니다. 
+
+
 
 ## Node-Red로 시험하기
 
