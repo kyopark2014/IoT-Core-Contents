@@ -104,7 +104,9 @@ aws iot describe-event-configurations
 }
 ```
 
+#### 주의사항 
 
+Event message로는 서버에서는 연결되어 있는 것으로 착각하고 실제 디바이스 쪽에서는 연결이 끊어진 half connection은 잡아낼 수 없습니다. 결국 저 이벤트 메시지 catch하시더라도, 서버 측에서는 keep alive가 만료되어야 그것을 인지하고 저 이벤트 메시지를 보내 주게 됩니다. (keep alive 시간 조정)
 
 ## FleetIndex Query
 
