@@ -11,7 +11,7 @@ FleetIndex Query로 특정 Thing이 online 상태인지 여부를 확인하거�
 https://docs.aws.amazon.com/iot/latest/developerguide/example-queries.html 
 
 
-# Last Will and Testament (LWT) 
+## Last Will and Testament (LWT) 
 
 [Monitor AWS IoT connections in near-real time using MQTT LWT](https://aws.amazon.com/ko/blogs/iot/monitor-aws-iot-connections-in-near-real-time-using-mqtt-lwt/)
 
