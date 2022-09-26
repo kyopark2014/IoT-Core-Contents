@@ -11,7 +11,7 @@
 
 ### 연결 해제 원인
 
-연결 해제 원인은 [IoT Core의 설정에서 Logs을 enable](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/settings/logging)했다먄, CloudWatch에서 AWSIotLogsV2 로그 그룹을 확인하여 로그 항목의 disconnectReason 필드에서 연결 해제 이유를 식별할 수 있습니다.
+연결 해제 원인은 [IoT Core의 설정에서 Logs을 enable](https://ap-northeast-2.console.aws.amazon.com/iot/home?region=ap-northeast-2#/settings/logging)했다, CloudWatch에서 AWSIotLogsV2 로그 그룹을 확인하여 로그 항목의 disconnectReason 필드에서 연결 해제 이유를 식별할 수 있습니다.
 
 또한, AWS IoT의 수명 주기 이벤트(Lifecycle events) 기능을 활용하여 연결 해제 이유를 식별할 수 있습니다. 수명 주기의 연결 해제 이벤트($aws/events/presence/disconnected/clientId)를 구독한 경우 연결 해제가 발생하면 AWS IoT에서 알림을 받게 됩니다. 알림의 disconnectReason 필드에서 연결 해제 이유를 확인할 수 있습니다. 에러의 형태에는 AUTH_ERROR, CLIENT_INITIATED_DISCONNECT, CLIENT_ERROR, CONNECTION_LOST, SERVER_ERROR 등이 있습니다.
 
