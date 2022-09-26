@@ -45,6 +45,22 @@
 
 <img src="https://user-images.githubusercontent.com/52392004/192209753-475dc7d5-b6c2-4b8e-b359-30361ff2b64e.png" width="600">
 
+이때의 state event의 예는 아래와 같습니다. 
+
+```java
+{
+  "state": {
+    "reported": {
+      "last_will": "yes",
+      "trigger_action": "on",
+      "client_id": "lwtThing"
+        }
+    }
+}
+```
+
+keep-alive 주기를 적절히 조정합니다. 세션이 exprie되면, AWS IoT Core로부터 Last Will Testament (LWT) trigger가 생성됩니다. 
+
 
 ## Reference 
 
