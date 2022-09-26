@@ -32,6 +32,26 @@
 
 #### 설정 방법
 
+이벤트 메시지 수신 Policy에 아래와 같이 '$aws/events/\*'를 추가합니다. 
+
+```java
+{
+    "Version":"2012-10-17",
+    "Statement":[{
+        "Effect":"Allow",
+        "Action":[
+            "iot:Subscribe",
+            "iot:Receive"
+        ],
+        "Resource":[
+            "arn:aws:iot:region:account:/$aws/events/*"
+        ]
+    }]
+}
+```
+
+
+
 API 또는 CLI를 사용하여 게시할 이벤트 유형을 제어하려면 UpdateEventConfigurations API를 호출하거나 update-event-configurations CLI 명령을 사용합니다.
 
 ```c
