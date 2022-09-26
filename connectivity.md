@@ -59,77 +59,11 @@
 }
 ```
 
-
-
-API 또는 CLI를 사용하여 게시할 이벤트 유형을 제어하려면 UpdateEventConfigurations API를 호출하거나 update-event-configurations CLI 명령을 사용합니다.
-
-```c
-aws iot update-event-configurations --event-configurations "{\"THING\":{\"Enabled\": true}}"
-```
-
-<img width="560" alt="image" src="https://user-images.githubusercontent.com/52392004/192221550-364d8d23-81ba-44ed-ba9a-d2a3c8e085ea.png">
+![noname](https://user-images.githubusercontent.com/52392004/192277910-ccfbaca2-6259-4b67-a840-36308c0d300e.png)
 
 
 
-https://docs.aws.amazon.com/ko_kr/iot/latest/developerguide/iot-events.html#iot-events-settings-table
 
-
-
-connected/disconnected event를 enable 하기 위한 명령어는 아래와 같습니다.  
-
-```java
-aws iot update-event-configurations --event-configurations "{\"CERTIFICATE\":{\"Enabled\": true}}"
-```
-
-아래와 같이 상태 확인이 가능합니다. 
-
-```java
-aws iot describe-event-configurations
-```
-
-이때의 결과는 아래와 같습니다. 
-
-```java
-{
-    "eventConfigurations": {
-        "CA_CERTIFICATE": {
-            "Enabled": false
-        },
-        "CERTIFICATE": {
-            "Enabled": false
-        },
-        "JOB": {
-            "Enabled": false
-        },
-        "JOB_EXECUTION": {
-            "Enabled": false
-        },
-        "POLICY": {
-            "Enabled": false
-        },
-        "THING": {
-            "Enabled": false
-        },
-        "THING_GROUP": {
-            "Enabled": false
-        },
-        "THING_GROUP_HIERARCHY": {
-            "Enabled": false
-        },
-        "THING_GROUP_MEMBERSHIP": {
-            "Enabled": false
-        },
-        "THING_TYPE": {
-            "Enabled": false
-        },
-        "THING_TYPE_ASSOCIATION": {
-            "Enabled": false
-        }
-    },
-    "creationDate": "2022-05-07T23:38:55.809000+09:00",
-    "lastModifiedDate": "2022-05-07T23:39:22.960000+09:00"
-}
-```
 
 #### 주의사항 
 
