@@ -1,6 +1,6 @@
 # IoT Connectivity
 
-여기서는 수명주기이벤트(Lifecycle events)로 연결상태의 변경을 이벤트로 받는 방법, FleetIndex Query로 online/offline을 확인하는 방법과 Last Will and Testament을 이용하여 알림을 생성하는 방법에 대해 설명합니다. 
+수명주기이벤트(Lifecycle events)로 연결상태의 변경을 이벤트로 받는 방법, FleetIndex Query로 online/offline을 확인하는 방법과 Last Will and Testament을 이용하여 알림을 생성하는 방법에 대해 설명합니다. 
 
 
 ### Connect / Disconnect Topic Event 
