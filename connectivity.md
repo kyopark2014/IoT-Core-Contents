@@ -4,6 +4,15 @@
 
 [Lifecycle events](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)를 이용하여 Connect/disconnect topic event을 이용하여 연결상태에 대한 event를 확인 할 수 있습니다. 이 event는 default가 enable이며, disable 할 수 없습니다. 
 
+
+#### 연결 해제 원인
+
+연결 해제 원인을 진단하려면 CloudWatch에서 AWSIotLogsV2 로그 그룹을 확인하여 로그 항목의 disconnectReason 필드에서 연결 해제 이유를 식별할 수 있습니다.
+
+또한 AWS IoT의 수명 주기 이벤트 기능을 사용하여 연결 해제 이유를 식별할 수 있습니다. 수명 주기의 연결 해제 이벤트($aws/events/presence/disconnected/clientId)를 구독한 경우 연결 해제가 발생하면 AWS IoT에서 알림을 받게 됩니다. 알림의 disconnectReason 필드에서 연결 해제 이유를 확인할 수 있습니다.
+
+
+
 #### Event 정보
 
 - connect event: $aws/events/presence/connected/clientId 
