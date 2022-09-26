@@ -2,9 +2,7 @@
 
 ## Connect / Disconnect Topic Event 
 
-[Lifecycle events](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)의 Connect/disconnect topic event을 이용하여 연결상태에 대한 event를 확인 할 수 있습니다. 
-
-기본적으로 iot core setting에 disable되어 있고, 해당 이벤트 메시지를 수신할 때마다 추가 과금이 될 수 있으므로 목적에 맞게 사용합니다.
+[Lifecycle events](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)를 이용하여 Connect/disconnect topic event을 이용하여 연결상태에 대한 event를 확인 할 수 있습니다. 이 event는 default가 enable이며, disable 할 수 없습니다. 
 
 #### Event 정보
 
