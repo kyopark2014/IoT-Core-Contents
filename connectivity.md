@@ -47,6 +47,65 @@ aws iot update-event-configurations --event-configurations "{\"THING\":{\"Enable
 https://docs.aws.amazon.com/ko_kr/iot/latest/developerguide/iot-events.html#iot-events-settings-table
 
 
+
+connected/disconnected event를 enable 하기 위한 명령어는 아래와 같습니다.  
+
+```java
+aws iot update-event-configurations --event-configurations "{\"CERTIFICATE\":{\"Enabled\": true}}"
+```
+
+아래와 같이 상태 확인이 가능합니다. 
+
+```java
+aws iot describe-event-configurations
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```java
+{
+    "eventConfigurations": {
+        "CA_CERTIFICATE": {
+            "Enabled": false
+        },
+        "CERTIFICATE": {
+            "Enabled": false
+        },
+        "JOB": {
+            "Enabled": false
+        },
+        "JOB_EXECUTION": {
+            "Enabled": false
+        },
+        "POLICY": {
+            "Enabled": false
+        },
+        "THING": {
+            "Enabled": false
+        },
+        "THING_GROUP": {
+            "Enabled": false
+        },
+        "THING_GROUP_HIERARCHY": {
+            "Enabled": false
+        },
+        "THING_GROUP_MEMBERSHIP": {
+            "Enabled": false
+        },
+        "THING_TYPE": {
+            "Enabled": false
+        },
+        "THING_TYPE_ASSOCIATION": {
+            "Enabled": false
+        }
+    },
+    "creationDate": "2022-05-07T23:38:55.809000+09:00",
+    "lastModifiedDate": "2022-05-07T23:39:22.960000+09:00"
+}
+```
+
+
+
 ## FleetIndex Query
 
 [FleetIndex Query](https://docs.aws.amazon.com/iot/latest/developerguide/example-queries.html)로 특정 Thing이 online 상태인지 여부를 확인하거나 online 또는 offline 여부를 확인할 수 있습니다. 대신 FleetIndex의 connectivity 항목을 enable 해놓아야 합니다.
