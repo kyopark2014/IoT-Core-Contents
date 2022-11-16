@@ -78,8 +78,8 @@
       "last_will": "yes",
       "trigger_action": "on",
       "client_id": "lwtThing"
-        }
     }
+  }
 }
 ```
 
