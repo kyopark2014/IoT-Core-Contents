@@ -7,7 +7,7 @@
 
 [수명 주기 이벤트 (Lifecycle events)](https://docs.aws.amazon.com/iot/latest/developerguide/life-cycle-events.html)를 이용하여 Connect/disconnect topic event을 이용하여 연결상태에 대한 event를 확인 할 수 있습니다. 이 event는 default가 enable이며, disable 할 수 없습니다. 이와 관련된 Event Topic은 아래와 같습니다. 
 
-- connect event: $aws/events/presence/connected/clientId 
+- Connect event: $aws/events/presence/connected/clientId 
 
 - Disconnect event: $aws/events/presence/disconnected/clientId 
 
