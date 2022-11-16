@@ -13,15 +13,10 @@
 #### Topic Name과 Filter 작성 규칙
 
 - Topic Name 과 Topic Filter는 최소한 1글자 보다 길어야 합니다.
-
 - Topic Name과 Topic Filter는 대소문자를 구분합니다.
-
 - 공백 문자의 사용은 가능합니다.
-
 - Null (Unicode U+0000) 문자는 포함할 수 없습니다.
-
 - Maximum topic 길이는 65535 bytes 입니다.
-
 - 앞, 뒤에 "/"가 붙으면 전혀 다른 Topic Name or Topic Filter가 됩니다.
 
 
