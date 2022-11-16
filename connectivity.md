@@ -43,7 +43,7 @@
 
 ![noname](https://user-images.githubusercontent.com/52392004/192277910-ccfbaca2-6259-4b67-a840-36308c0d300e.png)
 
-또한, 아래처럼 '$aws/events/presence/disconnected/clientId'을 구독하면, disconnected event를 확인할 수 있는데, 여기서, 테스트를 위해 client를 강제 종료하였으므로, "CLIENT_INITIATED_DISCONNECT"인 Reson을 확인 할 수 있습니다. 
+또한, 아래처럼 '$aws/events/presence/disconnected/clientId'을 구독하면, disconnected event를 확인할 수 있는데, 여기서, 테스트를 위해 client를 강제 종료하였으므로, "CLIENT_INITIATED_DISCONNECT"인 Reason을 확인 할 수 있습니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/192278792-afc6ece9-6cc7-4ba4-bb3d-58f33b4bad4a.png)
 
