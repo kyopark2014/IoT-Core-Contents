@@ -83,7 +83,7 @@
 }
 ```
 
-keep-alive 주기를 적절히 조정합니다. 세션이 exprie되면, AWS IoT Core로부터 Last Will Testament (LWT) trigger가 생성됩니다. 
+keep-alive 주기를 적절히 조정합니다. 세션이 expire되면, AWS IoT Core로부터 Last Will Testament (LWT) trigger가 생성됩니다. 
 
 
 ## Reference 
